@@ -1,8 +1,11 @@
 import React from 'react'
-
 import { Container } from './styles'
 
-const Header: React.FC= () => {
+interface Props {
+    toggleTheme(): void
+}
+
+const Header: React.FC<Props> = ({ toggleTheme }) => {
     return (
         <Container>
             <h1>AAAAAAAAAAA</h1>
