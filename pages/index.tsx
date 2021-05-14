@@ -21,7 +21,7 @@ export default function Home() {
     <ThemeProvider theme={theme}>
       <div className={styles.container}>
         <Header toggleTheme={toggleTheme}/>
-        <h1>TESTE</h1>
+        <h1>MATHEUS OLIVIERI</h1>
       </div>
     </ThemeProvider>
   )

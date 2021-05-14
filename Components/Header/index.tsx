@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, LinksNav, OptionsNav, LanguageIcon, ThemeToggle } from './styles'
+import { Container, LinksNav, OptionsNav, LanguageItem, ThemeToggleItem } from './styles'
 import NavItem from './NavItem'
 
 interface Props {
@@ -15,10 +15,10 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
                 <NavItem title="Projects" to="/Projects"/>
             </LinksNav>
             <OptionsNav>
-                <LanguageIcon>BR</LanguageIcon>
-                <LanguageIcon>EN</LanguageIcon>
-                <ThemeToggle>SOL</ThemeToggle>
-                <ThemeToggle>LUA</ThemeToggle>
+                <LanguageItem>BR</LanguageItem>
+                <LanguageItem>EN</LanguageItem>
+                <ThemeToggleItem>SOL</ThemeToggleItem>
+                <ThemeToggleItem>LUA</ThemeToggleItem>
             </OptionsNav>
         </Container>
     )

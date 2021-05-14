@@ -12,14 +12,14 @@ export const Container = styled.div`
 
 export const NavigationItem = styled.li`
     list-style-type: none;
-    margin: 0 0.5rem;
-    color: greenyellow;
+    margin: 0 3rem;
+    color: ${props => props.theme.colors.primary};
 `;
 
 export const LinksNav = styled.nav`
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
 `;
 
 export const OptionsNav = styled.nav`   
@@ -28,17 +28,17 @@ export const OptionsNav = styled.nav`
     justify-content: center;
 `;
 
-export const ThemeToggle = styled.div`   
+export const ThemeToggleItem = styled.div`   
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fe4;
+    color: ${props => props.theme.colors.primary};
     margin: 0 0.5rem;
 `;
-export const LanguageIcon = styled.div`   
+export const LanguageItem = styled.div`   
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fe4;
+    color: ${props => props.theme.colors.primary};
     margin: 0 0.5rem;
 `;
