@@ -1,14 +1,18 @@
-import React from 'react';
-import styles from '../styles/Home.module.scss'
-
-//COMPONENTS
+import Layout from "../Design/Layout"
 import Header from '../Components/Header'
 
-export default function Home({toggleTheme}) {
+
+interface Props {
+  toggleTheme(): void
+}
+
+export default function Home<Props>({toggleTheme}) {
   return (
-      <div className={styles.container}>
+    <Layout title="Matheus Aguiar Olivieri">
+      <div>
         <Header toggleTheme={toggleTheme}/>
         <h1>MATHEUS OLIVIERI</h1>
       </div>
+    </Layout> 
   )
 }

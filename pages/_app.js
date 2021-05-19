@@ -1,27 +1,10 @@
 import Head from "next/head";
-import { ThemeProvider, DefaultTheme, createGlobalStyle } from "styled-components";
+import { ThemeProvider } from "styled-components";
+import GlobalStyle from "../styles/global";
 import usePeristedState from "../utils/usePersistedState";
 
 import dark from "../styles/themes/dark";
 import light from "../styles/themes/light";
-
-const GlobalStyle = createGlobalStyle`
-    html,
-    body {
-      padding: 0;
-      margin: 0;
-      font-family: "Work Sans", sans-serif;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-`;
 
 export default function App({ Component, pageProps }) {
   const [theme, setTheme] = usePeristedState("theme", dark);

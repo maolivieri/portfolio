@@ -3,9 +3,9 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 interface Props {
-  title: string, 
-  keywords : string, 
-  description: string, 
+  title?: string, 
+  keywords? : string, 
+  description?: string, 
   children: any
 }
 
