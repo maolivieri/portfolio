@@ -1,6 +1,6 @@
 import React from 'react'
-import { Container, LinksNav, OptionsNav, LanguageItem, ThemeToggleItem } from './styles'
-import NavItem from './NavItem'
+import { Container, Language, ThemeToggle, NavLink } from './styles'
+import Image from "next/image"
 
 interface Props {
     toggleTheme(): void
@@ -9,17 +9,21 @@ interface Props {
 const Header: React.FC<Props> = ({ toggleTheme }) => {
     return (
         <Container>
-            <LinksNav>
-                <NavItem title="About" to="/About"/>
-                <NavItem title="Experiences" to="/Experiences"/>
-                <NavItem title="Projects" to="/Projects"/>
-            </LinksNav>
-            <OptionsNav>
-                <LanguageItem>BR</LanguageItem>
-                <LanguageItem>EN</LanguageItem>
-                <ThemeToggleItem>SOL</ThemeToggleItem>
-                <ThemeToggleItem>LUA</ThemeToggleItem>
-            </OptionsNav>
+            <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}> 
+                <NavLink href="/About" >About</NavLink>
+                <NavLink href="/Experiences">Experiences</NavLink>
+                <NavLink href="/Projects">Projects</NavLink>
+            </div>
+            <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}> 
+                <Language>
+                    <Image src="/BR.png" width="38px" height="38px"/>
+                </Language>
+                <Language>
+                    <Image src="/EN.png" width="38px" height="38px"/>
+                </Language>
+                <ThemeToggle>SOL</ThemeToggle>
+                <ThemeToggle>LUA</ThemeToggle>
+            </div>
         </Container>
     )
 }
