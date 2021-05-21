@@ -1,12 +1,12 @@
 export default {
     name: "light",
     colors: {
-        background: "#0E1027",
-        primary: "#D7DDE5",
+        background: "#fff",
+        primary: "#d59",
         secondary: "#09DEE5",
         highlights: "#296AF9",
         details: "#314464",
-        white: "#fff",
-        black: "#222",
+        white: "#222",
+        black: "#fff",
     }
 }

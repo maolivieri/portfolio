@@ -2,6 +2,17 @@ import styled from "styled-components";
 import StyledLink from "../../Design/StyledLink"
 import { darken } from "polished"
 
+export const Container = styled.div`
+  width: 100%;
+  /* background: ${(props) => props.theme.colors.background}; */
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 4rem 2rem 9rem;
+`;
+
+
 export const NavLink = styled(StyledLink)`
   margin: 0 3rem;
   color: ${(props) => props.theme.colors.primary};
@@ -19,23 +30,6 @@ export const NavLink = styled(StyledLink)`
   }
 `;
 
-export const Container = styled.div`
-  width: 100%;
-  /* background: ${(props) => props.theme.colors.background}; */
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem 4rem 2rem 9rem;
-`;
-
-export const ThemeToggle = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${(props) => props.theme.colors.primary};
-  margin: 0 0.5rem;
-`;
 
 export const Language = styled.div`
   display: flex;
