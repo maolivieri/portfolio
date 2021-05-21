@@ -1,15 +1,12 @@
 import React from "react";
-import styled from "styled-components"
+import styled, { ThemeContext, useTheme } from "styled-components"
 import { transparentize } from "polished"
 
 import Image from "next/image"
 
 interface Props {
     toggleTheme(): void;
-    theme: {
-        name: string;
-        colors: any
-    }
+    dark: boolean
 }
 
 const Container = styled.label`
@@ -57,9 +54,7 @@ const Input = styled.input`
     left: -99999px;
 `
 
-const ThemeToogle: React.FC<Props> = ({ toggleTheme, theme }) => {
-    const dark = theme.name === "dark"
-
+const ThemeToogle: React.FC<Props> = ({ toggleTheme, dark }) => {
 
     return (
         <>

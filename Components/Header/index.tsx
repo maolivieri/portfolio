@@ -1,17 +1,17 @@
 import React from 'react'
+import { ThemeContext } from "styled-components"
 import { Container, Language, NavLink } from './styles'
 import ThemeToggle from "../../Design/Toogle"
 import Image from "next/image"
 
 interface Props {
     toggleTheme(): void;
-    theme: {
-        name: string;
-        colors: any
-    }
 }
 
-const Header: React.FC<Props> = ({ toggleTheme, theme }) => {
+const Header: React.FC<Props> = ({ toggleTheme }) => {
+    const themeContext = React.useContext(ThemeContext)
+    const dark = themeContext.name === "dark"
+
     return (
         <Container>
             <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}> 
@@ -21,12 +21,12 @@ const Header: React.FC<Props> = ({ toggleTheme, theme }) => {
             </div>
             <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}> 
                 <Language>
-                    <Image src="/BR.png" width="38px" height="38px"/>
+                    <Image src={dark ? "/BR.png" : "/BRCor.png"} width="38px" height="38px"/>
                 </Language>
                 <Language>
-                    <Image src="/EN.png" width="38px" height="38px"/>
+                    <Image src={dark ? "/EN.png" : "/ENCor.png"} width="38px" height="38px"/>
                 </Language>
-                <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+                <ThemeToggle dark={dark} toggleTheme={toggleTheme} />
             </div>
         </Container>
     )

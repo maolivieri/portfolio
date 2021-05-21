@@ -1,4 +1,5 @@
 import { useState, useEffect, Dispatch, SetStateAction } from 'react';
+// import { setCookie, parseCookies } from "nookies" 
 
 type Response<T> = [
   T,
@@ -6,20 +7,22 @@ type Response<T> = [
 ];
 
 function usePersistedState<T>(key: string, initialState: T): Response<T> {
-  const [state, setState] = useState(() => {
-    const storageValue = typeof window !== 'undefined' && localStorage.getItem(key);
+    const [state, setState] = useState(() => {
+    const storageValue = typeof window !== 'undefined' ? localStorage.getItem(key) : null;
 
     if (storageValue) {
-      return JSON.parse(storageValue);
+        return JSON.parse(storageValue);
     } else {
-      return initialState;
+        return initialState;
     }
+
+
   });
 
   useEffect(() => {
     localStorage.setItem(key, JSON.stringify(state));
   }, [key, state]);
-
+  
   return [state, setState];
 }
 

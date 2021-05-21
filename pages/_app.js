@@ -1,16 +1,33 @@
 import Head from "next/head";
+import React from "react";
+import { setCookie } from "nookies";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "../styles/global";
-import usePeristedState from "../utils/usePersistedState";
+// import usePeristedState from "../utils/usePersistedState";
 
 import dark from "../styles/themes/dark";
 import light from "../styles/themes/light";
 
 export default function App({ Component, pageProps }) {
-  const [theme, setTheme] = usePeristedState("theme", dark);
+  // const [theme, setTheme] = usePeristedState("theme", dark);
+  const [theme, setTheme] = React.useState(dark);
+  const [initialLoading, setInitialLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    const parsedCookieTheme = pageProps.cookieTheme;
+    if (parsedCookieTheme) {
+      const themeToBeSet = parsedCookieTheme.name === "dark" ? dark : light;
+      setTheme(themeToBeSet);
+    }
+    setInitialLoading(false);
+  }, []);
 
   const toggleTheme = () => {
     setTheme(theme.name === "dark" ? light : dark);
+    setCookie(null, "theme", JSON.stringify(theme.name === "dark" ? light : dark), {
+      path: "/",
+      maxAge: 86400 * 7,
+    });
   };
 
   return (
@@ -26,7 +43,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} toggleTheme={toggleTheme} theme={theme} />
+        {!initialLoading && <Component {...pageProps} toggleTheme={toggleTheme} />}
       </ThemeProvider>
     </>
   );
