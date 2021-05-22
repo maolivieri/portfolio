@@ -3,12 +3,13 @@ import React from "react";
 import { setCookie } from "nookies";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "../styles/global";
+import { appWithTranslation } from "next-i18next";
 // import usePeristedState from "../utils/usePersistedState";
 
 import dark from "../styles/themes/dark";
 import light from "../styles/themes/light";
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   // const [theme, setTheme] = usePeristedState("theme", dark);
   const [theme, setTheme] = React.useState(dark);
   const [initialLoading, setInitialLoading] = React.useState(true);
@@ -48,3 +49,5 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
+
+export default appWithTranslation(App);

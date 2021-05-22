@@ -37,4 +37,5 @@ export const Language = styled.div`
   justify-content: center;
   color: ${(props) => props.theme.colors.primary};
   margin: 0 0.5rem;
+  cursor: pointer;
 `;

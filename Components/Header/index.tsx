@@ -3,6 +3,7 @@ import { ThemeContext } from "styled-components"
 import { Container, Language, NavLink } from './styles'
 import ThemeToggle from "../../Design/Toogle"
 import Image from "next/image"
+import { i18n } from "next-i18next";
 
 interface Props {
     toggleTheme(): void;
@@ -20,10 +21,10 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
                 <NavLink href="/Projects">Projects</NavLink>
             </div>
             <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}> 
-                <Language>
+                <Language onClick={() => i18n.changeLanguage('pt')}>
                     <Image src={dark ? "/BR.png" : "/BRCor.png"} width="38px" height="38px"/>
                 </Language>
-                <Language>
+                <Language onClick={() => i18n.changeLanguage('en')}>
                     <Image src={dark ? "/EN.png" : "/ENCor.png"} width="38px" height="38px"/>
                 </Language>
                 <ThemeToggle dark={dark} toggleTheme={toggleTheme} />
