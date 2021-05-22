@@ -5,6 +5,8 @@ import { parseCookies } from "nookies";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 
+import PageOne from "../Components/pageOne"
+
 interface Props {
   toggleTheme(): void;
 }
@@ -17,8 +19,7 @@ export default function Home<Props>({ toggleTheme }) {
     <Layout title="Matheus Aguiar Olivieri">
       <Container>
         <Header toggleTheme={toggleTheme}/>
-        <h1>MATHEUS OLIVIERI</h1>
-        <h1>{t('title')}</h1>
+        <PageOne t={t}/>
       </Container>
     </Layout> 
   )
