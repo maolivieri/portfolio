@@ -13,7 +13,7 @@ const PageOne = ({t}) => {
                 <Title>{t('pageOne.title')}</Title>
                 <Content>{t('pageOne.content')}</Content>
             </Body>
-            </Container>
+        </Container>
     )
 }
 

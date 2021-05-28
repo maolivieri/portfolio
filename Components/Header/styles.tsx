@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import StyledLink from "../../Design/StyledLink"
-import { darken } from "polished"
+import styled from 'styled-components';
+import StyledLink from '../../design/styledLink';
+import { darken } from 'polished';
 
 export const Container = styled.div`
   width: 100%;
@@ -12,7 +12,6 @@ export const Container = styled.div`
   padding: 3rem 4rem 2rem 9rem;
 `;
 
-
 export const NavLink = styled(StyledLink)`
   margin: 0 3rem;
   color: ${(props) => props.theme.colors.primary};
@@ -20,16 +19,15 @@ export const NavLink = styled(StyledLink)`
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    color: ${props => darken(0.2, props.theme.colors.primary)};
+    color: ${(props) => darken(0.2, props.theme.colors.primary)};
   }
 
   &:focus {
-    color: ${props => darken(0.3, props.theme.colors.primary)};
+    color: ${(props) => darken(0.3, props.theme.colors.primary)};
     outline: none;
     border: 0;
   }
 `;
-
 
 export const Language = styled.div`
   display: flex;

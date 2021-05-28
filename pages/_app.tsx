@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import { AppProps } from 'next/app';
 import { setCookie } from "nookies";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "../styles/global";
@@ -9,7 +10,7 @@ import { appWithTranslation } from "next-i18next";
 import dark from "../styles/themes/dark";
 import light from "../styles/themes/light";
 
-function App({ Component, pageProps }) {
+function App({ Component, pageProps }:AppProps) {
   // const [theme, setTheme] = usePeristedState("theme", dark);
   const [theme, setTheme] = React.useState(dark);
   const [initialLoading, setInitialLoading] = React.useState(true);
