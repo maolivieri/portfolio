@@ -10,6 +10,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 3rem 4rem 2rem 9rem;
+  z-index: 1000;
 `;
 
 export const NavLink = styled(StyledLink)`

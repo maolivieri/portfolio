@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     html,
@@ -6,7 +6,11 @@ const GlobalStyle = createGlobalStyle`
       padding: 0;
       margin: 0;
       font-family: "Work Sans", sans-serif;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
     }
+
+
 
     a {
       color: inherit;
@@ -18,4 +22,4 @@ const GlobalStyle = createGlobalStyle`
     }
 `;
 
-export default GlobalStyle
+export default GlobalStyle;

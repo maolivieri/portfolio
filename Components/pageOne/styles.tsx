@@ -7,6 +7,7 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  overflow: visible;
 `;
 
 export const Body = styled.div`

@@ -16,9 +16,15 @@ export const Container = styled.div`
       ],
       toDirection: '100deg',
       fallback: `${props.theme.colors.background}`
-    })}
+    })};
+  /* overflow: visible; */
 `;
 
-export const Body = styled.div``;
+export const Body = styled.div`
+  z-index: 100;
+  overflow: visible;
+`;
 
-export const PG = styled.div``;
+export const PG = styled.div`
+  overflow: visible;
+`;
