@@ -42,6 +42,15 @@ export const ArrowRight: React.FC<Props> = ({ disabled, onClick }) => {
   );
 };
 
+export const SlideBarContainer = styled.div`
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const SlideBar = styled.div`
   display: flex;
   align-items: center;

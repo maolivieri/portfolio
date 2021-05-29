@@ -1,6 +1,6 @@
 import { SlideBar, SlideBarDot, SlideBarContainer } from './styles';
 
-export const SliderButtons = ({ slider, currentSlide }) => {
+export const SliderBar = ({ slider, currentSlide }) => {
   return (
     <SlideBarContainer>
       <SlideBar>

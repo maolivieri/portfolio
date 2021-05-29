@@ -1,17 +1,11 @@
 import React from 'react';
 import Layout from '../design/layout';
 import Header from '../components/header';
-import {
-  Container,
-  BodyContainer,
-  PageContainer,
-  SlideBarContainer
-} from '../styles/Home';
+import { Container, Body, PG } from '../styles/Home';
 import { SliderArrows, SliderButtons } from '../design/Slider';
 import { parseCookies } from 'nookies';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
-import { motion } from 'framer-motion';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 import PageOne from '../components/pageOne';
@@ -37,28 +31,14 @@ export default function Home<Props>({ toggleTheme }) {
     <Layout title="Matheus Aguiar Olivieri">
       <Container>
         <Header toggleTheme={toggleTheme} />
-        <BodyContainer ref={ref} className="keen-slider">
-          <PageContainer className="keen-slider__slide">
-            <PageOne t={t} />
-          </PageContainer>
-          <PageContainer className="keen-slider__slide">
-            <PageTwo t={t} />
-          </PageContainer>
-          <PageContainer className="keen-slider__slide">
-            <PageThree t={t} />
-          </PageContainer>
-        </BodyContainer>
+        <Body ref={ref} className="keen-slider">
+          <PG className="keen-slider__slide" children={<PageOne t={t} />} />
+          <PG className="keen-slider__slide" children={<PageTwo t={t} />} />
+          <PG className="keen-slider__slide" children={<PageThree t={t} />} />
+        </Body>
       </Container>
-      {slider && (
-        <>
-          <SliderArrows slider={slider} currentSlide={currentSlide} />
-        </>
-      )}
-      {slider && (
-        <SlideBarContainer>
-          <SliderButtons slider={slider} currentSlide={currentSlide} />
-        </SlideBarContainer>
-      )}
+      {slider && <SliderArrows slider={slider} currentSlide={currentSlide} />}
+      {slider && <SliderButtons slider={slider} currentSlide={currentSlide} />}
     </Layout>
   );
 }

@@ -18,15 +18,6 @@ export const Container = styled.div`
     })}
 `;
 
-export const BodyContainer = styled.div``;
+export const Body = styled.div``;
 
-export const PageContainer = styled.div``;
-
-export const SlideBarContainer = styled.div`
-  position: absolute;
-  bottom: 3rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
+export const PG = styled.div``;
