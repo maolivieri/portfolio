@@ -20,11 +20,9 @@ export const Container = styled.div`
   /* overflow: visible; */
 `;
 
-export const Body = styled.div`
-  z-index: 100;
-  overflow: visible;
-`;
+export const Body = styled.div``;
 
 export const PG = styled.div`
   overflow: visible;
+  z-index: 10;
 `;

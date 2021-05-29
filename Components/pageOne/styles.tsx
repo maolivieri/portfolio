@@ -3,6 +3,7 @@ import StyledLink from '../../design/styledLink';
 import { darken } from 'polished';
 
 export const Container = styled.div`
+  padding-top: calc(60px + 5vh);
   display: flex;
   flex-direction: row;
   align-items: flex-start;

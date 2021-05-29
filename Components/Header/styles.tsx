@@ -3,14 +3,16 @@ import StyledLink from '../../design/styledLink';
 import { darken } from 'polished';
 
 export const Container = styled.div`
-  width: 100%;
   /* background: ${(props) => props.theme.colors.background}; */
+  width: 100%;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 4rem 2rem 9rem;
+  /* padding: 3rem 4rem 2rem 9rem; */
   z-index: 1000;
+  position: absolute;
+  top: 5vh;
 `;
 
 export const NavLink = styled(StyledLink)`
