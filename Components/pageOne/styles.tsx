@@ -19,7 +19,7 @@ export const Body = styled.div`
 `;
 
 export const Header = styled.h2`
-  margin: 3rem 0rem 1rem 0rem;
+  margin-top: 3rem;
   color: ${(props) => props.theme.colors.secondary};
   font-family: Harmattan;
 `;
@@ -34,6 +34,5 @@ export const Title = styled.h1`
 
 export const Content = styled.p`
   padding: 0;
-  margin: 5rem 0rem 1rem 0rem;
   color: ${(props) => props.theme.colors.primary};
 `;

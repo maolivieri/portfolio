@@ -5,7 +5,8 @@ import { cover, linearGradient, transparentize } from 'polished';
 //#0E1027
 
 export const Container = styled.div`
-  ${cover()};
+  min-height: 100vh;
+  /* ${cover()}; */
   background: ${(props) => props.theme.colors.background};
   ${(props) =>
     linearGradient({

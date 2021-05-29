@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../design/layout';
 import Header from '../components/header';
 import { Container, Body, PG } from '../styles/Home';
-import { SliderArrows, SliderButtons } from '../design/Slider';
+import { SliderArrows, SliderBar } from '../design/Slider';
 import { parseCookies } from 'nookies';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
@@ -36,9 +36,9 @@ export default function Home<Props>({ toggleTheme }) {
           <PG className="keen-slider__slide" children={<PageTwo t={t} />} />
           <PG className="keen-slider__slide" children={<PageThree t={t} />} />
         </Body>
+        {slider && <SliderArrows slider={slider} currentSlide={currentSlide} />}
+        {slider && <SliderBar slider={slider} currentSlide={currentSlide} />}
       </Container>
-      {slider && <SliderArrows slider={slider} currentSlide={currentSlide} />}
-      {slider && <SliderButtons slider={slider} currentSlide={currentSlide} />}
     </Layout>
   );
 }

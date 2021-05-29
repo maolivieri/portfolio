@@ -1,2 +1,2 @@
-export { SliderButtons as SliderButtons } from './sliderButtons';
+export { SliderBar as SliderBar } from './sliderBar';
 export { SliderArrows as SliderArrows } from './sliderArrows';
