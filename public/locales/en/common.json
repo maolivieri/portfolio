@@ -1,8 +1,15 @@
 {
-    "pageOne": {
-        "header": "Thinking differently",
-        "title": "Full-stack Software Developer",
-        "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium."
-    }
-   
+  "pageOne": {
+    "header": "Thinking differently",
+    "title": "Full-stack Software Developer",
+    "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium."
+  },
+  "pageTwo": {
+    "header": "Hey there, I'm",
+    "title": "Matheus Olivieri",
+    "firstparagraph": "Engineer by grad and developer by heart, I’ve been working in Australia’s IT industry for the past 4 years. Since the beggining of my journey as a developer, nearly 3 years ago, I’ve been working on personal projects. I’m naturally curious and confident that I can deliver a good code. I wish to continue to perpetually working on improving and learning new programming skills.",
+    "subtitle": "When I’m not coding, you can find me",
+    "secondparagraph": "playing bass with my band, watching soccer or, as a good Brazilian, in a barbecue with family and friends. I love traveling and being outside getting to know new people, but I’m also a huge fan of Netflix & chill days.",
+    "dowload": "Download Resume"
+  }
 }

@@ -1,16 +1,39 @@
-import { Container, Body, Title, Content, Header } from './styles';
+import {
+  PageContainer,
+  Container,
+  Body,
+  Title,
+  Content,
+  Header,
+  Subtitle,
+  HeaderTitles,
+  BodyContent,
+  DowloadButton
+} from './styles';
+
+import Side from './side';
 
 const PageTwo = ({ t }) => {
   return (
-    <Container>
-      <Body>
-        <Header>Page 2 Header</Header>
-        <Title>PAGE 2</Title>
-        {/* <Header>{t('pageOne.header')}</Header>
-        <Title>{t('pageOne.title')}</Title>
-        <Content>{t('pageOne.content')}</Content> */}
-      </Body>
-    </Container>
+    <PageContainer>
+      <Container>
+        <HeaderTitles>
+          <Header>{t('pageTwo.header')}</Header>
+          <Title>{t('pageTwo.title')}</Title>
+        </HeaderTitles>
+        <Body>
+          <Side />
+          <BodyContent>
+            <Content>{t('pageTwo.firstparagraph')}</Content>
+            <div>
+              <Subtitle>{t('pageTwo.subtitle')}</Subtitle>
+              <Content>{t('pageTwo.secondparagraph')}</Content>
+            </div>
+            <DowloadButton>{t('pageTwo.dowload')}</DowloadButton>
+          </BodyContent>
+        </Body>
+      </Container>
+    </PageContainer>
   );
 };
 

@@ -33,17 +33,17 @@ export default function Home<Props>({ toggleTheme }) {
         <Header toggleTheme={toggleTheme} />
         <Body ref={ref} className="keen-slider">
           <PG
-            style={{ zIndex: 100 }}
+            style={{ zIndex: 100, minHeight: '100vh' }}
             className="keen-slider__slide"
             children={<PageOne t={t} />}
           />
           <PG
-            style={{ zIndex: 90 }}
+            style={{ zIndex: 90, minHeight: '100vh' }}
             className="keen-slider__slide"
             children={<PageTwo t={t} />}
           />
           <PG
-            style={{ zIndex: 80 }}
+            style={{ zIndex: 80, minHeight: '100vh' }}
             className="keen-slider__slide"
             children={<PageThree t={t} />}
           />
