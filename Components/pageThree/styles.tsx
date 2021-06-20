@@ -3,23 +3,32 @@ import StyledLink from '../../design/styledLink';
 import { darken } from 'polished';
 
 export const Container = styled.div`
+  padding-top: calc(60px + 5vh);
+  padding-bottom: 1.5rem;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: column; */
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
+  overflow: visible;
+  width: 100%;
+  /* min-height: 90%; */
 `;
 
-export const Body = styled.div`
-  padding-left: 3rem;
+export const Techs = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: stretch;
+  justify-content: space-between;
   width: 50%;
 `;
 
+export const TextBody = styled.div`
+  width: 30%;
+  margin-left: 6rem;
+`;
+
 export const Header = styled.h2`
-  margin: 3rem 0rem 1rem 0rem;
+  margin-top: 3rem;
   color: ${(props) => props.theme.colors.secondary};
   font-family: Harmattan;
 `;
@@ -34,6 +43,5 @@ export const Title = styled.h1`
 
 export const Content = styled.p`
   padding: 0;
-  margin: 5rem 0rem 1rem 0rem;
   color: ${(props) => props.theme.colors.primary};
 `;

@@ -1,15 +1,80 @@
-import { Container, Body, Title, Content, Header } from './styles';
+import { Container, TextBody, Techs, Header, Title, Content } from './styles';
+import TechRow from './TechRow';
 
 const PageThree = ({ t }) => {
   return (
     <Container>
-      <Body>
-        <Header>Page 3 Header</Header>
-        <Title>PAGE 3</Title>
-        {/* <Header>{t('pageOne.header')}</Header> */}
-        {/* <Title>{t('pageOne.title')}</Title> */}
-        {/* <Content>{t('pageOne.content')}</Content> */}
-      </Body>
+      <Techs>
+        <TechRow
+          title="Front-End"
+          subtitle="Sed ut perspiciatis."
+          iconsArray={[
+            '/icons/techs/react.png',
+            `/icons/techs/css.png`,
+            `/icons/techs/redux.png`,
+            `/icons/techs/gatsby.png`,
+            `/icons/techs/nextjs`,
+            `/icons/techs/jest.png`,
+            `/icons/techs/html5.png`
+          ]}
+        />
+        <TechRow
+          title="Mobile App"
+          subtitle="Sed ut perspiciatis unde omnis iste natus."
+          iconsArray={['/icons/techs/react.png', '/icons/techs/expo.png']}
+        />
+        <TechRow
+          title="Back-End"
+          subtitle="Sed ut perspiciatis unde omnis iste natus."
+          iconsArray={[
+            '/icons/techs/postgres.png',
+            '/icons/techs/django.png',
+            '/icons/techs/node.png',
+            '/icons/techs/express.png',
+            '/icons/techs/mongo.png'
+          ]}
+        />
+        <TechRow
+          title={`DevOps & CI/CD`}
+          subtitle="Sed ut perspiciatis unde omnis iste natus."
+          iconsArray={[
+            '/icons/techs/docker.png',
+            '/icons/techs/jira.png',
+            '/icons/techs/bitbucket.png',
+            '/icons/techs/git.png',
+            '/icons/techs/jenkins.png',
+            '/icons/techs/nginx.png',
+            '/icons/techs/aws.png'
+          ]}
+        />
+        <TechRow
+          title="Tools"
+          subtitle="Sed ut perspiciatis."
+          iconsArray={[
+            '/icons/techs/stripe.png',
+            '/icons/techs/materialui.png',
+            '/icons/techs/bootstrap.png',
+            '/icons/techs/twilio.png',
+            '/icons/techs/onesignal.png',
+            '/icons/techs/postman.png',
+            '/icons/techs/firebase.png'
+          ]}
+        />
+        <TechRow
+          title="Languages"
+          subtitle="Sed ut perspiciatis unde omnis iste natus."
+          iconsArray={[
+            '/icons/techs/sql.png',
+            '/icons/techs/python.png',
+            '/icons/techs/js.png'
+          ]}
+        />
+      </Techs>
+      <TextBody>
+        <Header>{t('pageThree.header')}</Header>
+        <Title>{t('pageThree.title')}</Title>
+        <Content>{t('pageThree.content')}</Content>
+      </TextBody>
     </Container>
   );
 };

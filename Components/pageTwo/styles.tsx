@@ -24,7 +24,6 @@ export const Container = styled.div`
 `;
 
 export const Body = styled.div`
-  padding-left: 3rem;
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
@@ -32,7 +31,6 @@ export const Body = styled.div`
 `;
 
 export const HeaderTitles = styled.div`
-  padding-left: 3rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -56,10 +54,11 @@ export const Header = styled.h2`
 `;
 
 export const Title = styled.h1`
+  width: 50%;
   padding: 0;
   margin: 0;
   font-family: Yeseva One;
-  font-size: 5rem;
+  font-size: 4.5rem;
   color: ${(props) => props.theme.colors.white};
 `;
 

@@ -35,14 +35,14 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
       >
         <Language onClick={() => i18n.changeLanguage('pt')}>
           <Image
-            src={dark ? '/BR.png' : '/BRCor.png'}
+            src={dark ? '/icons/header/BR.png' : '/icons/header/BRCor.png'}
             width="38px"
             height="38px"
           />
         </Language>
         <Language onClick={() => i18n.changeLanguage('en')}>
           <Image
-            src={dark ? '/EN.png' : '/ENCor.png'}
+            src={dark ? '/icons/header/EN.png' : '/icons/header/ENCor.png'}
             width="38px"
             height="38px"
           />
