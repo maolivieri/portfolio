@@ -11,6 +11,7 @@ import 'keen-slider/keen-slider.min.css';
 import PageOne from '../components/pageOne';
 import PageTwo from '../components/pageTwo';
 import PageThree from '../components/pageThree';
+import PageFour from '../components/pageFour';
 
 interface Props {
   toggleTheme(): void;
@@ -46,6 +47,11 @@ export default function Home<Props>({ toggleTheme }) {
             style={{ zIndex: 80, minHeight: '100vh' }}
             className="keen-slider__slide"
             children={<PageThree t={t} />}
+          />
+          <PG
+            style={{ zIndex: 80, minHeight: '100vh' }}
+            className="keen-slider__slide"
+            children={<PageFour t={t} />}
           />
         </Body>
         {slider && <SliderArrows slider={slider} currentSlide={currentSlide} />}

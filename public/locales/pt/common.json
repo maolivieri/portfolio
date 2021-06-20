@@ -15,6 +15,10 @@
   "pageThree": {
     "header": "Technologias",
     "title": "Toolbox",
-    "content": "Engeneer by grad and developer by heart, I’ve been working in Australia’s IT industry for the past 4 years. Since the beggining of my journey as a developer, nearly 3 years ago, I’ve been working on personal projects. I’m naturally curious and confident that I can deliver a good code. I wish to continue to perpetually working on improving and learning new programming skills."
+    "content": "Engineer by grad and developer by heart, I’ve been working in Australia’s IT industry for the past 4 years. Since the beggining of my journey as a developer, nearly 3 years ago, I’ve been working on personal projects. I’m naturally curious and confident that I can deliver a good code. I wish to continue to perpetually working on improving and learning new programming skills."
+  },
+  "pageFour": {
+    "header": "Território Criativo",
+    "title": "Meu Laboratório"
   }
 }
