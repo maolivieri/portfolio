@@ -21,6 +21,9 @@ export const Container = styled.div`
   justify-content: flex-start;
   width: 50%;
   min-height: 100%;
+  @media (max-width: 992px) {
+    width: 80%;
+  }
 `;
 
 export const Body = styled.div`
@@ -28,6 +31,9 @@ export const Body = styled.div`
   align-items: stretch;
   justify-content: flex-start;
   flex: 1;
+  @media (max-width: 992px) {
+    flex-direction: column;
+  }
 `;
 
 export const HeaderTitles = styled.div`
@@ -44,20 +50,23 @@ export const BodyContent = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  @media (max-width: 992px) {
+    padding-left: 0rem;
+  }
 `;
 
 export const Header = styled.h2`
   margin: 3rem 0rem 0rem 0rem;
   padding: 0;
   color: ${(props) => props.theme.colors.secondary};
-  font-family: Harmattan;
+  font-family: 'Harmattan', sans-serif;
 `;
 
 export const Title = styled.h1`
   width: 50%;
   padding: 0;
   margin: 0;
-  font-family: Yeseva One;
+  font-family: 'Yeseva One', cursive;
   font-size: 4.5rem;
   color: ${(props) => props.theme.colors.white};
 `;
@@ -79,6 +88,7 @@ export const DowloadButton = styled.button`
   /* margin: 1rem 0rem 1rem 0rem; */
   background-color: ${(props) => props.theme.colors.secondary};
   border-radius: 15px;
+  font-size: 0.9rem;
   box-sizing: border-box;
   border: 0.1em solid rgba(255, 255, 255, 0.1);
   color: ${(props) => props.theme.colors.black};
@@ -90,5 +100,8 @@ export const DowloadButton = styled.button`
     border: 0.1em solid rgba(255, 255, 255, 0.5);
     background: ${(props) => darken('0.1', props.theme.colors.secondary)};
     color: ${(props) => props.theme.colors.white};
+  }
+  @media (max-width: 992px) {
+    margin-top: 1.5rem;
   }
 `;

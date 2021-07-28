@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../design/layout';
 import Header from '../components/header';
-import { Container, Body, PG } from '../styles/Home';
+import { Container, Body, PG, MobileBody } from '../styles/Home';
 import { SliderArrows, SliderBar } from '../design/Slider';
 import { parseCookies } from 'nookies';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -32,6 +32,12 @@ export default function Home<Props>({ toggleTheme }) {
     <Layout title="Matheus Aguiar Olivieri">
       <Container>
         <Header toggleTheme={toggleTheme} />
+        <MobileBody>
+          <PageOne t={t} />
+          <PageTwo t={t} />
+          <PageThree t={t} />
+          <PageFour t={t} />
+        </MobileBody>
         <Body ref={ref} className="keen-slider">
           <PG
             style={{ zIndex: 100, minHeight: '100vh' }}

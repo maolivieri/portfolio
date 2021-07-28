@@ -51,6 +51,10 @@ export const SlideBarContainer = styled.div`
   position: absolute;
   bottom: 3rem;
   z-index: 1000;
+
+  @media (max-width: 576px) {
+    display: none;
+  }
 `;
 
 export const SlideBar = styled.div`

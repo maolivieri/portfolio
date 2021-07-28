@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeContext } from 'styled-components';
-import { Container, Language, NavLink } from './styles';
+import { Container, Language, NavLink, MainLinks, ButtonLinks } from './styles';
 import ThemeToggle from '../../design/toogle';
 import Image from 'next/image';
 import { i18n } from 'next-i18next';
@@ -15,24 +15,12 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
 
   return (
     <Container>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}
-      >
+      <MainLinks>
         <NavLink href="/About">About</NavLink>
         <NavLink href="/Experiences">Experiences</NavLink>
         <NavLink href="/Projects">Projects</NavLink>
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}
-      >
+      </MainLinks>
+      <ButtonLinks>
         <Language onClick={() => i18n.changeLanguage('pt')}>
           <Image
             src={dark ? '/icons/header/BR.png' : '/icons/header/BRCor.png'}
@@ -48,7 +36,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
           />
         </Language>
         <ThemeToggle dark={dark} toggleTheme={toggleTheme} />
-      </div>
+      </ButtonLinks>
     </Container>
   );
 };

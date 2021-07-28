@@ -20,7 +20,18 @@ export const Container = styled.div`
   /* overflow: visible; */
 `;
 
-export const Body = styled.div``;
+export const Body = styled.div`
+  @media (max-width: 992px) {
+    display: none;
+  }
+`;
+
+export const MobileBody = styled.div`
+  ///mobile
+  @media (min-width: 992px) {
+    display: none;
+  }
+`;
 
 export const PG = styled.div`
   overflow: visible;

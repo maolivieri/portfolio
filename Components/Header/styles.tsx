@@ -13,6 +13,27 @@ export const Container = styled.div`
   z-index: 1000;
   position: absolute;
   top: 5vh;
+
+  @media (max-width: 768px) {
+    align-items: flex-start;
+  }
+`;
+
+export const MainLinks = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`;
+
+export const ButtonLinks = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const NavLink = styled(StyledLink)`
@@ -30,6 +51,10 @@ export const NavLink = styled(StyledLink)`
     outline: none;
     border: 0;
   }
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+    margin-bottom: 0.7rem;
+  }
 `;
 
 export const Language = styled.div`
@@ -39,4 +64,8 @@ export const Language = styled.div`
   color: ${(props) => props.theme.colors.primary};
   margin: 0 0.5rem;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 30px;
+  }
 `;

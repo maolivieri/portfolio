@@ -20,6 +20,13 @@ const Container = styled.label`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    height: 30px;
+    width: 65px;
+    border-radius: 16px;
+    margin: 0 0.8rem;
+  }
 `;
 
 const Sun = styled.span`
@@ -34,10 +41,20 @@ const Sun = styled.span`
   justify-content: center;
   background: ${(props) => transparentize(0.4, props.theme.colors.white)};
   border-radius: 50%;
+  @media (max-width: 768px) {
+    top: 1px;
+    right: 1px;
+    width: 28px;
+    height: 28px;
+    padding: 1.5px;
+  }
 `;
 
 const Moon = styled(Sun)`
   left: 2px;
+  @media (max-width: 768px) {
+    left: 1px;
+  }
 `;
 
 const Icon = styled.div`
@@ -46,6 +63,9 @@ const Icon = styled.div`
   justify-content: center;
   padding: 2px 4px;
   z-index: 2;
+  @media (max-width: 768px) {
+    padding: 1px 1px;
+  }
 `;
 
 const Input = styled.input`

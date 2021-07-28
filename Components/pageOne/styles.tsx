@@ -18,20 +18,27 @@ export const Body = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   width: 50%;
+  @media (max-width: 992px) {
+    width: 80%;
+  }
 `;
 
 export const Header = styled.h2`
   margin-top: 3rem;
   color: ${(props) => props.theme.colors.secondary};
-  font-family: Harmattan;
+  font-family: 'Harmattan', sans-serif;
+  font-size: 1.8rem;
 `;
 
 export const Title = styled.h1`
   padding: 0;
   margin: 0;
-  font-family: Yeseva One;
-  font-size: 7rem;
+  font-family: 'Yeseva One', cursive;
+  font-size: 6.2rem;
   color: ${(props) => props.theme.colors.white};
+  @media (max-width: 576px) {
+    font-size: 11vw;
+  }
 `;
 
 export const Content = styled.p`

@@ -30,13 +30,13 @@ export const TextBody = styled.div`
 export const Header = styled.h2`
   margin-top: 3rem;
   color: ${(props) => props.theme.colors.secondary};
-  font-family: Harmattan;
+  font-family: 'Harmattan', sans-serif;
 `;
 
 export const Title = styled.h1`
   padding: 0;
   margin: 0;
-  font-family: Yeseva One;
+  font-family: 'Yeseva One', cursive;
   font-size: 7rem;
   color: ${(props) => props.theme.colors.white};
 `;

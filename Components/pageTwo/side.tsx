@@ -20,6 +20,10 @@ const Whapper = styled.div`
   align-items: center;
   justify-content: space-between;
   flex: 1;
+  @media (max-width: 992px) {
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 export const LinkItem = styled.a`
