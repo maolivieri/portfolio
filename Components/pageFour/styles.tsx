@@ -37,16 +37,16 @@ export const Body = styled.div`
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: flex-start;
-  /* overflow-y: scroll; */
+  overflow-y: scroll;
   @media (max-width: 992px) {
-    /* height: 70vh; */
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     justify-content: flex-start;
     flex-wrap: nowrap;
-    padding: 0rem;
+    padding: 0;
     margin: 0;
-    overflow-y: auto;
+    overflow: auto;
   }
 `;
 

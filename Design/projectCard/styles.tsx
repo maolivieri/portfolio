@@ -19,7 +19,7 @@ export const CardContainer = styled.div`
   margin: 2rem 2rem;
   overflow: hidden;
   @media (max-width: 992px) {
-    width: 90vw;
+    width: 78vw;
     margin: 2rem 0rem;
     /// small pc screens
   }
@@ -37,6 +37,8 @@ export const BodyWrapper = styled.div`
   right: -18px;
   @media (max-width: 992px) {
     flex-direction: column;
+    right: -15px;
+
     /// small pc screens
   }
 `;
@@ -48,6 +50,7 @@ export const TextWrapper = styled.div`
   padding: 2rem 1.4rem;
   @media (max-width: 992px) {
     width: 100%;
+    padding: 2rem 1.3rem 2rem 0.8rem;
     /// small pc screens
   }
 `;
@@ -64,6 +67,10 @@ export const SideWrapper = styled.div`
   background: ${(props) => props.theme.colors.highlights};
   width: 68px;
   z-index: 0;
+  @media (max-width: 992px) {
+    width: 55px;
+    /// small pc screens
+  }
 `;
 
 export const Title = styled.h3`
@@ -78,7 +85,7 @@ export const Text = styled.p`
 `;
 
 export const SeeProjectButton = styled.a`
-  margin: 0rem 0.3rem 0rem 0.3rem;
+  margin: 0rem 0.3rem 0rem 0rem;
   color: ${(props) => props.theme.colors.highlights};
   text-decoration: none;
   transition: all 0.2s ease-in-out;
