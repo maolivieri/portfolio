@@ -12,13 +12,22 @@ export const Container = styled.div`
   overflow: visible;
   width: 100%;
   /* min-height: 90%; */
+  @media (max-width: 992px) {
+    padding-top: 1rem;
+    padding-left: 3rem;
+    width: 90%;
+  }
 `;
 
 export const Header = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 20%;
+  @media (max-width: 992px) {
+    margin-left: 0;
+  }
 `;
+
 export const Body = styled.div``;
 
 export const HeaderTitle = styled.h2`

@@ -13,7 +13,7 @@ const TechRow: React.FC<Props> = ({ title, subtitle, iconsArray }) => {
     <Container>
       <TitleContainer>
         <Title>{title}</Title>
-        <SubTitle>{subtitle}</SubTitle>
+        {/* <SubTitle>{subtitle}</SubTitle> */}
       </TitleContainer>
       <IconsContainer>
         {/* {iconsArray} */}
@@ -36,33 +36,35 @@ export default TechRow;
 const Container = styled.div`
   flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   background: #050822;
-  padding: 0.5rem 2rem;
+  /* padding: 0.5rem 2rem; */
+  padding: 0.5rem 1rem;
   margin-bottom: 2rem;
 `;
 
 const TitleContainer = styled.div`
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-right: 4rem;
+  justify-content: space-between; */
+  /* margin-right: 4rem; */
+  margin-bottom: 0.8rem;
 `;
 
 const IconsContainer = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
   color: #fff;
 `;
 
 const Title = styled.h3`
   margin: 0;
   padding: 0;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: #314464;
+  @media (max-width: 992px) {
+    font-size: 1.6rem;
+  }
 `;
 
 const SubTitle = styled.p`
@@ -72,5 +74,8 @@ const SubTitle = styled.p`
   font-size: 0.8rem;
 `;
 const IconC = styled.div`
-  margin: 0 1rem;
+  /* margin: 0 1rem; */
+  margin-right: 1.5rem;
+  width: 2rem;
+  height: 2rem;
 `;

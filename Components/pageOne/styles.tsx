@@ -9,6 +9,10 @@ export const Container = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   overflow: visible;
+  @media (max-width: 992px) {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
 `;
 
 export const Body = styled.div`

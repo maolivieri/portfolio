@@ -18,6 +18,10 @@ export const Container = styled.div`
       fallback: `${props.theme.colors.background}`
     })};
   /* overflow: visible; */
+  @media (max-width: 992px) {
+    /// small pc screens
+    /* overflow-x: hidden; */
+  }
 `;
 
 export const Body = styled.div`
@@ -28,6 +32,7 @@ export const Body = styled.div`
 
 export const MobileBody = styled.div`
   ///mobile
+  overflow-x: hidden;
   @media (min-width: 992px) {
     display: none;
   }

@@ -12,6 +12,10 @@ export const PageContainer = styled.div`
   overflow: visible;
   width: 100%;
   min-height: 90%;
+  @media (max-width: 992px) {
+    overflow-x: hidden;
+    padding-top: 1rem;
+  }
 `;
 
 export const Container = styled.div`
@@ -23,6 +27,7 @@ export const Container = styled.div`
   min-height: 100%;
   @media (max-width: 992px) {
     width: 80%;
+    overflow-x: hidden;
   }
 `;
 
@@ -60,6 +65,10 @@ export const Header = styled.h2`
   padding: 0;
   color: ${(props) => props.theme.colors.secondary};
   font-family: 'Harmattan', sans-serif;
+  font-size: 1.8rem;
+  @media (max-width: 992px) {
+    margin: 0rem;
+  }
 `;
 
 export const Title = styled.h1`
