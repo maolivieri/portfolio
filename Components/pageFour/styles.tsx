@@ -28,19 +28,40 @@ export const Header = styled.div`
   }
 `;
 
-export const Body = styled.div``;
+export const Body = styled.div`
+  height: 70vh;
+  width: 100%;
+  padding-right: 3rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  /* overflow-y: scroll; */
+  @media (max-width: 992px) {
+    /* height: 70vh; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    padding: 0rem;
+    margin: 0;
+    overflow-y: auto;
+  }
+`;
 
 export const HeaderTitle = styled.h2`
   margin-top: 3rem;
   margin-bottom: 0;
   color: ${(props) => props.theme.colors.secondary};
   font-family: 'Harmattan', sans-serif;
+  font-size: 1.3rem;
 `;
 
 export const Title = styled.h1`
   padding: 0;
   margin: 0;
   font-family: 'Yeseva One', cursive;
-  font-size: 5rem;
+  font-size: 4.5rem;
   color: ${(props) => props.theme.colors.white};
 `;

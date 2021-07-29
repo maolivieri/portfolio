@@ -25,6 +25,8 @@ export const Container = styled.div`
 `;
 
 export const Body = styled.div`
+  max-height: 100vh;
+  overflow: hidden;
   @media (max-width: 992px) {
     display: none;
   }
