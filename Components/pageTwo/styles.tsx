@@ -77,7 +77,10 @@ export const Title = styled.h1`
   margin: 0;
   font-family: 'Yeseva One', cursive;
   font-size: 4.5rem;
-  color: ${(props) => props.theme.colors.white};
+  color: ${(props) =>
+    props.theme.name === 'dark'
+      ? props.theme.colors.white
+      : props.theme.colors.primary};
 `;
 
 export const Subtitle = styled.p`
@@ -89,7 +92,10 @@ export const Subtitle = styled.p`
 export const Content = styled.p`
   padding: 0;
   margin: 0rem 0rem 0.5rem 0rem;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) =>
+    props.theme.name === 'dark'
+      ? props.theme.colors.primary
+      : props.theme.colors.details};
 `;
 
 export const DowloadButton = styled.button`

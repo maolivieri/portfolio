@@ -23,8 +23,10 @@ export const Header = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 20%;
+  margin-bottom: 2rem;
   @media (max-width: 992px) {
     margin-left: 0;
+    margin-bottom: 0.5rem;
   }
 `;
 
@@ -32,6 +34,7 @@ export const Body = styled.div`
   height: 70vh;
   width: 100%;
   padding-right: 3rem;
+  padding-bottom: 5rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

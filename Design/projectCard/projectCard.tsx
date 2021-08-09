@@ -8,6 +8,7 @@ import {
   Text,
   SeeProjectButton
 } from './styles';
+import { useTheme } from 'styled-components';
 import Image from 'next/image';
 
 import StyledLinkAlternative from '../../design/styledLinkAlternative';
@@ -31,6 +32,8 @@ const ProjectCard: React.FC<IProps> = ({
   text,
   link
 }) => {
+  const theme = useTheme();
+
   return (
     <CardContainer isFullW={isFullW}>
       <BodyWrapper isFullW={isFullW}>
@@ -46,7 +49,7 @@ const ProjectCard: React.FC<IProps> = ({
             src={
               imageName
                 ? `/images/projects/${imageName}`
-                : '/images/projects/placeholder.png'
+                : `/images/projects/${theme.name}placeholder.png`
             }
             width="920"
             height="557"

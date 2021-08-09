@@ -1,15 +1,15 @@
-import { lighten } from 'polished';
+// import { lighten } from 'polished';
 
 export default {
   name: 'light',
   colors: {
-    background: '#fff',
-    primary: lighten(0.2, '#222222'),
-    secondary: '#09DEE5',
-    highlights: '#296AF9',
-    details: '#314464',
+    background: '#F5F5F5',
+    primary: '#1C3117',
+    secondary: '#BDDE00',
+    highlights: '#FF8400',
+    details: '#4B634A',
     white: '#222',
     black: '#fff',
-    cardBackground: '#314464'
+    cardBackground: '#fff'
   }
 };

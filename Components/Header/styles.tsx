@@ -37,6 +37,7 @@ export const ButtonLinks = styled.div`
 `;
 
 export const NavLink = styled(StyledLink)`
+  font-size: 1.2rem;
   margin: 0 3rem;
   color: ${(props) => props.theme.colors.primary};
   text-decoration: none;
@@ -64,8 +65,12 @@ export const Language = styled.div`
   color: ${(props) => props.theme.colors.primary};
   margin: 0 0.5rem;
   cursor: pointer;
+  width: 3rem;
 
+  @media (max-width: 1200px) {
+    width: 2.8rem;
+  }
   @media (max-width: 768px) {
-    width: 30px;
+    width: 2.8rem;
   }
 `;

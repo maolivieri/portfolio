@@ -39,7 +39,10 @@ export const Title = styled.h1`
   margin: 0;
   font-family: 'Yeseva One', cursive;
   font-size: 6.2rem;
-  color: ${(props) => props.theme.colors.white};
+  color: ${(props) =>
+    props.theme.name === 'dark'
+      ? props.theme.colors.white
+      : props.theme.colors.primary};
   @media (max-width: 576px) {
     font-size: 11vw;
   }
@@ -47,5 +50,8 @@ export const Title = styled.h1`
 
 export const Content = styled.p`
   padding: 0;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) =>
+    props.theme.name === 'dark'
+      ? props.theme.colors.primary
+      : props.theme.colors.details};
 `;

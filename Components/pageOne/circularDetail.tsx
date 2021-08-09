@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { size, transparentize } from 'polished';
+import Image from 'next/image';
 
 // const wHeight = typeof window !== 'undefined' ? window.innerHeight : `0`;
 // const getOpacity = typeof window !== 'undefined' ? '0' : '1';
@@ -16,6 +17,11 @@ const Circle = styled.div`
   height: 100vh;
   border-radius: 999999px;
   z-index: -1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   @media (max-width: 992px) {
     position: relative;
     /* right: -0rem; */
@@ -31,8 +37,27 @@ const Circle = styled.div`
   }
 `;
 
-const CircularDetail = () => {
-  return <Circle />;
+const CircularDetail = ({ page }) => {
+  return (
+    <Circle>
+      <div
+        style={{
+          // position: 'absolute',
+          // top: '15vh',
+          // right: '-3vw',
+          width: '120vh'
+        }}
+      >
+        <Image
+          src="/images/darkmap.png"
+          width={1301}
+          height={739}
+          layout="responsive"
+        />
+      </div>
+      <div></div>
+    </Circle>
+  );
 };
 
 export default CircularDetail;

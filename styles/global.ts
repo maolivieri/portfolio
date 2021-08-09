@@ -9,13 +9,16 @@ const GlobalStyle = createGlobalStyle`
       -ms-overflow-style: none; /* IE and Edge */
       scrollbar-width: none; /* Firefox */
 
+      @media (min-width: 1200px) {
+          font-size: 18px
+        }
 
       @media (max-width: 1200px) {
-          font-size: 14px
+          font-size: 16px
         }
 
       @media (max-width: 992px) {
-          font-size: 13px
+          font-size: 13.5px
         }
       @media (max-width: 768px) {
           font-size: 11px

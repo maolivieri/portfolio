@@ -13,11 +13,16 @@ import PageTwo from '../components/pageTwo';
 import PageThree from '../components/pageThree';
 import PageFour from '../components/pageFour';
 
+import { useTheme } from 'styled-components';
+
+import loadingStyles from '../styles/Loading.module.css';
+
 interface Props {
   toggleTheme(): void;
 }
 
 export default function Home<Props>({ toggleTheme }) {
+  const [isLoading, setIsLoading] = React.useState(true);
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const [ref, slider] = useKeenSlider<HTMLDivElement>({
     initial: 0,
@@ -26,10 +31,37 @@ export default function Home<Props>({ toggleTheme }) {
     }
   });
 
+  React.useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    return () => {
+      // cleanup
+    };
+  }, []);
+
   const { t } = useTranslation('common');
+  const theme = useTheme();
 
   return (
     <Layout title="Matheus Aguiar Olivieri">
+      <div
+        style={{
+          zIndex: isLoading ? 100000 : -100000,
+          position: 'absolute',
+          inset: 0,
+          background: theme.colors.background,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+      >
+        <div className={loadingStyles.ldsripple}>
+          <div style={{ borderColor: theme.colors.highlights }}></div>
+          <div style={{ borderColor: theme.colors.highlights }}></div>
+          <div style={{ borderColor: theme.colors.highlights }}></div>
+        </div>
+      </div>
       <Container>
         <Header toggleTheme={toggleTheme} />
         <MobileBody>

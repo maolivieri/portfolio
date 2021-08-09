@@ -3,7 +3,9 @@ import { ArrowLeft, ArrowRight } from './styles';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  @media (max-width: 576px) {
+  display: block;
+
+  @media (max-width: 768px) {
     display: none;
   }
 `;
@@ -16,7 +18,7 @@ export const SliderArrows = ({ slider, currentSlide }) => {
         style={{
           position: 'absolute',
           top: '50%',
-          left: '7rem',
+          left: '3rem',
           zIndex: 1000
         }}
       >
@@ -29,7 +31,7 @@ export const SliderArrows = ({ slider, currentSlide }) => {
         style={{
           position: 'absolute',
           top: '50%',
-          right: '5rem',
+          right: '3rem',
           zIndex: 1000
         }}
       >

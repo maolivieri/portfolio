@@ -7,7 +7,7 @@ export const Container = styled.div`
   padding-bottom: 1.5rem;
   display: flex;
   /* flex-direction: column; */
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   overflow: visible;
   width: 100%;
@@ -23,8 +23,15 @@ export const Techs = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: space-between;
-  width: 43%;
+  justify-content: center;
+  height: calc(95vh - 60px - 5vh);
+  width: 40%;
+  @media (max-width: 1680px) {
+    width: 50%;
+  }
+  @media (max-width: 1200px) {
+    width: 55%;
+  }
   @media (max-width: 992px) {
     order: 1;
     width: 80%;
@@ -34,6 +41,12 @@ export const Techs = styled.div`
 export const TextBody = styled.div`
   width: 30%;
   margin-left: 6rem;
+  @media (max-width: 1680px) {
+    margin-left: 5rem;
+  }
+  @media (max-width: 1200px) {
+    margin-left: 4rem;
+  }
   @media (max-width: 992px) {
     order: 0;
     width: 80%;

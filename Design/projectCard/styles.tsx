@@ -16,7 +16,7 @@ export const CardContainer = styled.div`
   display: flex;
   background: ${(props) => props.theme.colors.cardBackground};
   border-radius: 1vw;
-  margin: 2rem 2rem;
+  margin: 0.4rem 2rem 2rem 2rem;
   overflow: hidden;
   @media (max-width: 992px) {
     width: 78vw;
