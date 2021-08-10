@@ -4,7 +4,7 @@ import { transparentize } from 'polished';
 
 import Image from 'next/image';
 
-interface Props {
+interface IProps {
   toggleTheme(): void;
   dark: boolean;
 }
@@ -100,28 +100,16 @@ const Input = styled.input`
   left: -99999px;
 `;
 
-const ThemeToogle: React.FC<Props> = ({ toggleTheme, dark }) => {
+const ThemeToogle: React.FC<IProps> = ({ toggleTheme, dark }) => {
   return (
     <>
       <Input type="checkbox" />
       <Container onClick={() => toggleTheme()}>
         <Icon>
-          <Image
-            // src={
-            //   dark ? '/icons/header/sun.svg' : '/icons/header/sunwhite.svg'
-            // }
-            src="/icons/header/sunwhite.svg"
-            width="28px"
-            height="28px"
-          />
+          <Image src="/icons/header/sunwhite.svg" width="28px" height="28px" />
         </Icon>
         <Icon>
-          <Image
-            // src={dark ? '/icons/header/moon.png' : '/icons/header/moonwhite.png'}
-            src="/icons/header/moon.png"
-            width="28px"
-            height="28px"
-          />
+          <Image src="/icons/header/moon.png" width="28px" height="28px" />
         </Icon>
         {dark ? <Sun /> : <Moon />}
       </Container>
