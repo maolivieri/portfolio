@@ -25,11 +25,11 @@ function App({ Component, pageProps }: AppProps) {
   }, []);
 
   const toggleTheme = () => {
-    setTheme(theme.name === 'dark' ? dark : light);
+    setTheme(theme.name === 'dark' ? light : dark);
     setCookie(
       null,
       'theme',
-      JSON.stringify(theme.name === 'dark' ? dark : light),
+      JSON.stringify(theme.name === 'dark' ? light : dark),
       {
         path: '/',
         maxAge: 86400 * 7

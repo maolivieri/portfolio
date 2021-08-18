@@ -115,6 +115,12 @@ export const Title = styled.h1`
   color: ${(props) => props.theme.colors.white};
 `;
 
+export const CodeSnippetScrollFull = styled(ScrollerStyles)`
+  width: 100%;
+  max-height: 50vh;
+  overflow-y: scroll;
+`;
+
 export const ImageScrollFull = styled(ScrollerStyles)`
   width: 100%;
   max-height: 50vh;
