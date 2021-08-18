@@ -6,8 +6,9 @@ const GlobalStyle = createGlobalStyle`
       padding: 0;
       margin: 0;
       font-family: 'Work Sans', sans-serif;
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge
+      scrollbar-width: none; Firefox */
+      
 
       @media (min-width: 1200px) {
           font-size: 18px

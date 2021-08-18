@@ -2,6 +2,52 @@ import styled from 'styled-components';
 import StyledLink from '../../design/styledLink';
 import { darken } from 'polished';
 
+export const ScrollerStyles = styled.div`
+  &::-webkit-scrollbar {
+    width: 0.7rem;
+    /* border: 1px solid red; */
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 5px grey; */
+    border-radius: 1rem;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: ${(props) => props.theme.colors.primary};
+    border-radius: 1rem;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: ${(props) => darken(0.2, props.theme.colors.primary)};
+  }
+`;
+
+export const ScrollerStylesBody = styled.div`
+  &::-webkit-scrollbar {
+    width: 0.7rem;
+    /* border: 1px solid red; */
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 5px grey; */
+    border-radius: 1rem;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: ${(props) => props.theme.colors.primary};
+    border-radius: 1rem;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: ${(props) => darken(0.2, props.theme.colors.primary)};
+  }
+`;
+
 export const Container = styled.div`
   padding-top: calc(60px + 5vh);
   padding-bottom: 1.5rem;
@@ -30,7 +76,7 @@ export const Header = styled.div`
   }
 `;
 
-export const Body = styled.div`
+export const Body = styled(ScrollerStylesBody)`
   height: 70vh;
   width: 100%;
   padding-right: 3rem;
@@ -67,4 +113,24 @@ export const Title = styled.h1`
   font-family: 'Yeseva One', cursive;
   font-size: 4.5rem;
   color: ${(props) => props.theme.colors.white};
+`;
+
+export const ImageScrollFull = styled(ScrollerStyles)`
+  width: 100%;
+  max-height: 50vh;
+  overflow-y: scroll;
+`;
+
+export const ImageScrollHalf = styled(ScrollerStyles)`
+  width: 100%;
+  max-height: 35vh;
+  overflow-y: scroll;
+`;
+
+export const VideoScrollFull = styled(ScrollerStyles)`
+  width: 100%;
+`;
+
+export const VideoScrollHalf = styled(ScrollerStyles)`
+  width: 100%;
 `;

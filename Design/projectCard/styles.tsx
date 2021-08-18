@@ -35,6 +35,7 @@ export const BodyWrapper = styled.div`
   border-radius: 1vw;
   position: relative;
   right: -18px;
+  overflow: hidden;
   @media (max-width: 992px) {
     flex-direction: column;
     right: -15px;

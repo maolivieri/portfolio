@@ -21,6 +21,7 @@ interface IProps {
   text: string;
   link: string;
   imageName?: string;
+  content?: any;
 }
 
 const ProjectCard: React.FC<IProps> = ({
@@ -30,7 +31,8 @@ const ProjectCard: React.FC<IProps> = ({
   imageName,
   title,
   text,
-  link
+  link,
+  content
 }) => {
   const theme = useTheme();
 
@@ -44,18 +46,22 @@ const ProjectCard: React.FC<IProps> = ({
             <SeeProjectButton>See project</SeeProjectButton>
           </StyledLinkAlternative>
         </TextWrapper>
-        <ImageWrapper isFullW={isFullW}>
-          <Image
-            src={
-              imageName
-                ? `/images/projects/${imageName}`
-                : `/images/projects/${theme.name}placeholder.png`
-            }
-            width="920"
-            height="557"
-            layout="responsive"
-          ></Image>
-        </ImageWrapper>
+        {content ? (
+          content
+        ) : (
+          <ImageWrapper isFullW={isFullW}>
+            <Image
+              src={
+                imageName
+                  ? `/images/projects/${imageName}`
+                  : `/images/projects/${theme.name}placeholder.png`
+              }
+              width="920"
+              height="557"
+              layout="responsive"
+            ></Image>
+          </ImageWrapper>
+        )}
       </BodyWrapper>
       <SideWrapper isFullW={isFullW}></SideWrapper>
     </CardContainer>
