@@ -1,21 +1,21 @@
 import {
   CardContainer,
   TextWrapper,
-  ContentWrapper,
+  ImageWrapper,
   SideWrapper,
   BodyWrapper,
   Title,
   Text,
-  SeeProjectButton
-} from './styles';
+  SeeProjectButton,
+  TitleWrapper
+} from './stylesForMobile';
 import { useTheme } from 'styled-components';
 import Image from 'next/image';
 
-import StyledLinkAlternative from '../../design/styledLinkAlternative';
+import StyledLinkAlternative from '../styledLinkAlternative';
 
 interface IProps {
   t: any;
-  isFullW: boolean;
   iconsArray: any;
   title: string;
   text: string;
@@ -25,9 +25,8 @@ interface IProps {
   hasLink?: boolean;
 }
 
-const ProjectCard: React.FC<IProps> = ({
+const ProjectCardMobile: React.FC<IProps> = ({
   t,
-  isFullW,
   iconsArray,
   imageName,
   title,
@@ -39,9 +38,9 @@ const ProjectCard: React.FC<IProps> = ({
   const theme = useTheme();
 
   return (
-    <CardContainer isFullW={isFullW}>
-      <BodyWrapper isFullW={isFullW}>
-        <TextWrapper isFullW={isFullW}>
+    <CardContainer>
+      <BodyWrapper>
+        <TextWrapper>
           <Title>{title}</Title>
           <Text>{text}</Text>
           {hasLink && (
@@ -51,9 +50,9 @@ const ProjectCard: React.FC<IProps> = ({
           )}
         </TextWrapper>
         {content ? (
-          <ContentWrapper isFullW={isFullW}>{content}</ContentWrapper>
+          content
         ) : (
-          <ContentWrapper isFullW={isFullW}>
+          <ImageWrapper>
             <Image
               src={
                 imageName
@@ -64,12 +63,12 @@ const ProjectCard: React.FC<IProps> = ({
               height="557"
               layout="responsive"
             ></Image>
-          </ContentWrapper>
+          </ImageWrapper>
         )}
       </BodyWrapper>
-      <SideWrapper isFullW={isFullW}></SideWrapper>
+      <SideWrapper />
     </CardContainer>
   );
 };
 
-export default ProjectCard;
+export default ProjectCardMobile;

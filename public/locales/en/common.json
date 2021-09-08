@@ -2,7 +2,7 @@
   "pageOne": {
     "header": "Thinking differently",
     "title": "Full-stack Software Developer",
-    "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium."
+    "content": "Personal portfolio and resume."
   },
   "pageTwo": {
     "header": "Hey there, I'm",
@@ -14,11 +14,12 @@
   },
   "pageThree": {
     "header": "Technology",
-    "title": "Toolbox",
-    "content": "Engineer by grad and developer by heart, I’ve been working in Australia’s IT industry for the past 4 years. Since the beggining of my journey as a developer, nearly 3 years ago, I’ve been working on personal projects. I’m naturally curious and confident that I can deliver a good code. I wish to continue to perpetually working on improving and learning new programming skills."
+    "title": "Caixa de ferramentas",
+    "content": "As product owner I was deeply involved on DevOps processes and decisions. 2 years ago I started a personal project using Django for the backend and React for the frontend. I have always valued the importance of tests on my code, CD/CI and clean code. I have recently started an immersion on Node and Typescript and I love React and NextJs."
   },
   "pageFour": {
     "header": "Creative territory",
     "title": "My Lab"
-  }
+  },
+  "projects": {}
 }

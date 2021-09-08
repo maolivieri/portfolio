@@ -1,5 +1,5 @@
 import styled, { ThemedStyledProps } from 'styled-components';
-import StyledLink from '../../design/styledLink';
+import StyledLink from '../styledLink';
 import { darken, lighten } from 'polished';
 
 // CardContainer, TextWrapper, ImageWrapper, SideWrapper;
@@ -12,8 +12,9 @@ import { darken, lighten } from 'polished';
 // }
 
 export const CardContainer = styled.div`
-  width: ${(props) => (props.isFullW ? '73vw' : '40vw')};
+  width: 40vw;
   display: flex;
+  flex-direction: row;
   background: ${(props) => props.theme.colors.cardBackground};
   border-radius: 1vw;
   margin: 0.4rem 2rem 2rem 2rem;
@@ -21,8 +22,6 @@ export const CardContainer = styled.div`
   @media (max-width: 992px) {
     width: 78vw;
     margin: 2rem 0rem;
-    border-radius: 3vw;
-    height: 100%;
     /// small pc screens
   }
 `;
@@ -30,27 +29,24 @@ export const CardContainer = styled.div`
 export const BodyWrapper = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: ${(props) => (props.isFullW ? 'row' : 'column')};
+  /* flex-direction: column; */
+  justify-content: space-between;
   background: ${(props) => props.theme.colors.cardBackground};
   z-index: 10;
-  justify-content: space-between;
-  border-radius: 1vw;
+  border-radius: 1vw 1vw 1vw 1vw;
   position: relative;
   right: -18px;
   overflow: hidden;
   @media (max-width: 992px) {
     flex-direction: column;
-    align-items: stretch;
     right: -15px;
-    border-radius: 3vw;
-    padding: 0;
 
     /// small pc screens
   }
 `;
 
 export const TextWrapper = styled.div`
-  width: ${(props) => (props.isFullW ? '40%' : '100%')};
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 2rem 1.4rem;
@@ -61,11 +57,8 @@ export const TextWrapper = styled.div`
   }
 `;
 
-export const ContentWrapper = styled.div`
-  width: ${(props) => (props.isFullW ? '60%' : '100%')};
-  display: flex;
-  align-items: center;
-  justify-content: center;
+export const ImageWrapper = styled.div`
+  width: 100%;
   @media (max-width: 992px) {
     width: 100%;
     /// small pc screens

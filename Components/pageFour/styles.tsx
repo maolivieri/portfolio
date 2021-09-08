@@ -69,10 +69,10 @@ export const Header = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 20%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   @media (max-width: 992px) {
     margin-left: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
   }
 `;
 
@@ -96,11 +96,12 @@ export const Body = styled(ScrollerStylesBody)`
     padding: 0;
     margin: 0;
     overflow: auto;
+    height: 100%;
   }
 `;
 
 export const HeaderTitle = styled.h2`
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   margin-bottom: 0;
   color: ${(props) => props.theme.colors.secondary};
   font-family: 'Harmattan', sans-serif;
@@ -115,9 +116,36 @@ export const Title = styled.h1`
   color: ${(props) => props.theme.colors.white};
 `;
 
+export const ContainerScrollFull = styled(ScrollerStyles)`
+  width: 100%;
+  max-height: 50vh;
+  overflow-y: scroll;
+  @media (max-width: 992px) {
+    /* width: 55px; */
+    max-height: 100%;
+    /// small pc screens
+  }
+`;
+
+export const ContainerScrollHalf = styled(ScrollerStyles)`
+  width: 100%;
+  max-height: 60vh;
+  overflow-y: scroll;
+  @media (max-width: 992px) {
+    max-height: 100%;
+    /// small pc screens
+  }
+`;
+
 export const CodeSnippetScrollFull = styled(ScrollerStyles)`
   width: 100%;
   max-height: 50vh;
+  overflow-y: scroll;
+`;
+
+export const CodeSnippetScrollHalf = styled(ScrollerStyles)`
+  width: 100%;
+  max-height: 35vh;
   overflow-y: scroll;
 `;
 

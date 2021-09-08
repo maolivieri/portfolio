@@ -1,38 +1,12 @@
-import {
-  Container,
-  Header,
-  Body,
-  HeaderTitle,
-  Title,
-  ImageScrollFull,
-  ImageScrollHalf,
-  VideoScrollFull,
-  VideoScrollHalf,
-  CodeSnippetScrollFull
-} from './styles';
-import ProjectCard from '../../design/projectCard/projectCard';
-import Image from 'next/image';
 import { useTheme } from 'styled-components';
 
-import { CodeBlock, dracula, monokaiSublime, github } from 'react-code-blocks';
+import { Container, Header, Body, HeaderTitle, Title } from './styles';
 
-const codeSnippetA = `const Layout = (props) => {
- 
-  return (
-    <div>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Harmattan:wght@400;700&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&family=Yeseva+One&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-      <div>{children}</div>
-    </div>
-  );
-};`;
+import ProjectCardMobile from '../../design/projectCard/projectCardMobile';
+import ProjectCard from '../../design/projectCard/projectCard';
+import { GullieManager } from './projects/GullieManager';
+import { GullieMenu } from './projects/GullieMenu';
+import { GullieAPI } from './projects/GullieAPI';
 
 const PageFour = ({ t }) => {
   const pageTheme = useTheme();
@@ -45,23 +19,25 @@ const PageFour = ({ t }) => {
       <Body>
         <ProjectCard
           t={t}
-          link="/projects"
+          hasLink={false}
+          link="/"
           // imageName=""
           iconsArray={[]}
           isFullW={true}
-          title="Gullie Backend"
+          title="Gullie Admin"
+          text={`Gullie é um projeto pessoal de um ecomerce e menu interativo para restaurantes. 
+          No painel administrativo desse projeto, usuários podem criar produtos, adicionar e recortar imagem do produto e criar conogramas pelo uso de um calendário criado por mim. 
+          O calendario tem funcoes de 'drag and drop' e permite facilmente que o usuário edite e atualize cronogramas.`}
+          content={<GullieManager />}
+        />
+        <ProjectCardMobile
+          t={t}
+          link="/projects"
+          // imageName=""
+          iconsArray={[]}
+          title="Gullie Menu"
           text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi."
-          content={
-            <CodeSnippetScrollFull>
-              <CodeBlock
-                text={codeSnippetA}
-                language="tsx"
-                showLineNumbers
-                wrapLines
-                theme={pageTheme.name === 'dark' ? dracula : github}
-              />
-            </CodeSnippetScrollFull>
-          }
+          content={<GullieMenu />}
         />
         <ProjectCard
           t={t}
@@ -71,63 +47,7 @@ const PageFour = ({ t }) => {
           isFullW={false}
           title="Gullie Backend"
           text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi."
-          content={
-            <ImageScrollHalf>
-              <Image
-                src="/images/snippets/djangoCustomAPIHandling_811_767.png"
-                width="811"
-                height="767"
-                layout="responsive"
-              />
-            </ImageScrollHalf>
-          }
-        />
-        <ProjectCard
-          t={t}
-          link="/projects"
-          // imageName=""
-          iconsArray={[]}
-          isFullW={false}
-          title="Gullie Backend"
-          text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi."
-          content={
-            <VideoScrollHalf>
-              <video
-                width="100%"
-                // height="100%"
-                autoPlay
-                playsInline
-                loop
-                muted
-                // controls
-              >
-                <source
-                  src="/images/videos/calendarDragandDrop2.webm"
-                  type="video/mp4"
-                />
-                Your browser does not support the video tag.
-              </video>
-            </VideoScrollHalf>
-          }
-        />
-        <ProjectCard
-          t={t}
-          link="/projects"
-          // imageName=""
-          iconsArray={[]}
-          isFullW={true}
-          title="Gullie Backend"
-          text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi."
-          content={
-            <ImageScrollFull>
-              <Image
-                src="/images/snippets/djangoCustomAPIHandling_811_767.png"
-                width="811"
-                height="767"
-                layout="responsive"
-              />
-            </ImageScrollFull>
-          }
+          content={<GullieAPI />}
         />
       </Body>
     </Container>

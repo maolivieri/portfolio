@@ -2,23 +2,24 @@
   "pageOne": {
     "header": "Sempre pensando fora da caixa",
     "title": "Desenvolvedor de Software Full-stack",
-    "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium."
+    "content": "Portifólio pessoal e curriculo."
   },
   "pageTwo": {
     "header": "E aí, eu sou o",
     "title": "Matheus Olivieri",
-    "firstparagraph": "Engineer by grad and developer by heart, I’ve been working in Australia’s IT industry for the past 4 years. Since the beggining of my journey as a developer, nearly 3 years ago, I’ve been working on personal projects. I’m naturally curious and confident that I can deliver a good code. I wish to continue to perpetually working on improving and learning new programming skills.",
+    "firstparagraph": "Graduado em engenharia mas desenvolvedor por paixão, trabalhando em TI na Australia pelos ultimos 4 anos. Quando iniciei minha jornada como desenvolvedor, hà 3 anos atrás, venho trabalhando com projetos pessoais e muito estudo. Sou naturalmente curioso e tenho confiança de que posso entregar um bom código. Meu desejo é continuar trabalhando continuamente para melhorar e aprender novas habilidades de programação.",
     "subtitle": "Quando eu não estou codando, o que estou fazendo?",
-    "secondparagraph": "playing bass with my band, watching soccer or, as a good Brazilian, in a barbecue with family and friends. I love traveling and being outside getting to know new people, but I’m also a huge fan of Netflix & chill days.",
+    "secondparagraph": "tocando baixo com minha banda, assistindo futebol ou, como um bom Brasileiro, em um churrasco com minha familia e amigos. Amo viajar e sair por ai conhecendo pessoas, mas também sou um grande fã de relaxar e curtir Netflix.",
     "dowload": "Baixar currículo"
   },
   "pageThree": {
     "header": "Technologias",
     "title": "Toolbox",
-    "content": "Engineer by grad and developer by heart, I’ve been working in Australia’s IT industry for the past 4 years. Since the beggining of my journey as a developer, nearly 3 years ago, I’ve been working on personal projects. I’m naturally curious and confident that I can deliver a good code. I wish to continue to perpetually working on improving and learning new programming skills."
+    "content": "Trabalhando como Product Owner eu sempre estive envolvido nos processos e decisoes de DevOps. Há 2 anos atrás eu inicie um projeto pessoal usando Django para o backend e React para o frontend. Sempre valorizei a importancia de ter testes no meu codigo, aplicar CD/CI e tem um código limpo."
   },
   "pageFour": {
     "header": "Território Criativo",
     "title": "Meu Laboratório"
-  }
+  },
+  "projects": {}
 }
