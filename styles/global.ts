@@ -8,25 +8,21 @@ const GlobalStyle = createGlobalStyle`
       font-family: 'Work Sans', sans-serif;
       -ms-overflow-style: none; /* IE and Edge
       scrollbar-width: none; Firefox */
+      font-size: 15px;
       
-
-      @media (min-width: 1200px) {
-          font-size: 18px
-        }
-
       @media (max-width: 1200px) {
-          font-size: 16px
+          font-size: 94%
         }
 
       @media (max-width: 992px) {
-          font-size: 13.5px
+          font-size: 84%
         }
       @media (max-width: 768px) {
-          font-size: 11px
+          font-size: 68%
         }
 
       @media (max-width: 576px) {
-          font-size: 10px
+          font-size: 62.5%
         }
 
 

@@ -95,7 +95,8 @@ export const Body = styled(ScrollerStylesBody)`
     flex-wrap: nowrap;
     padding: 0;
     margin: 0;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     height: 100%;
   }
 `;
@@ -112,8 +113,20 @@ export const Title = styled.h1`
   padding: 0;
   margin: 0;
   font-family: 'Yeseva One', cursive;
-  font-size: 4.5rem;
+  font-size: 5vw;
   color: ${(props) => props.theme.colors.white};
+  @media (max-width: 1200) {
+    /* width: 55px; */
+    max-height: 100%;
+    font-size: 5.5vw;
+    /// small pc screens
+  }
+  @media (max-width: 992px) {
+    /* width: 55px; */
+    max-height: 100%;
+    font-size: 10vw;
+    /// small pc screens
+  }
 `;
 
 export const ContainerScrollFull = styled(ScrollerStyles)`

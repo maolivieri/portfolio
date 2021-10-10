@@ -8,7 +8,8 @@ export const Container = styled.div`
   display: flex;
   /* flex-direction: column; */
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 3rem;
   overflow: visible;
   width: 100%;
   /* min-height: 90%; */
@@ -16,6 +17,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     padding-top: 1rem;
+    padding-left: 0;
   }
 `;
 
@@ -23,11 +25,11 @@ export const Techs = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: center;
-  height: calc(95vh - 60px - 5vh);
+  justify-content: space-between;
+  height: calc(95vh - 60px - 7vh);
   width: 40%;
   @media (max-width: 1680px) {
-    width: 50%;
+    width: 45%;
   }
   @media (max-width: 1200px) {
     width: 55%;
@@ -35,17 +37,20 @@ export const Techs = styled.div`
   @media (max-width: 992px) {
     order: 1;
     width: 80%;
+    height: calc(65vh);
   }
 `;
 
 export const TextBody = styled.div`
-  width: 30%;
+  width: 40%;
   margin-left: 6rem;
   @media (max-width: 1680px) {
     margin-left: 5rem;
+    width: 38%;
   }
   @media (max-width: 1200px) {
     margin-left: 4rem;
+    width: 30%;
   }
   @media (max-width: 992px) {
     order: 0;
@@ -70,13 +75,18 @@ export const Title = styled.h1`
   padding: 0;
   margin: 0;
   font-family: 'Yeseva One', cursive;
-  font-size: 5rem;
+  font-size: 4vw;
   color: ${(props) => props.theme.colors.white};
   @media (max-width: 992px) {
+    font-size: 10vw;
   }
 `;
 
 export const Content = styled.p`
   padding: 0;
   color: ${(props) => props.theme.colors.primary};
+  font-size: 1rem;
+  @media (max-width: 992px) {
+    font-size: 1.1rem;
+  }
 `;

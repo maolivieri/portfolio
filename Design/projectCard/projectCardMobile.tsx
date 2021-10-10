@@ -66,7 +66,7 @@ const ProjectCardMobile: React.FC<IProps> = ({
           </ImageWrapper>
         )}
       </BodyWrapper>
-      <SideWrapper />
+      <SideWrapper isFullW={true}/>
     </CardContainer>
   );
 };

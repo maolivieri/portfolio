@@ -38,7 +38,7 @@ export const Title = styled.h1`
   padding: 0;
   margin: 0;
   font-family: 'Yeseva One', cursive;
-  font-size: 6.2rem;
+  font-size: 8.5vw;
   color: ${(props) =>
     props.theme.name === 'dark'
       ? props.theme.colors.white
@@ -50,6 +50,7 @@ export const Title = styled.h1`
 
 export const Content = styled.p`
   padding: 0;
+  font-size: 1.1rem;
   color: ${(props) =>
     props.theme.name === 'dark'
       ? props.theme.colors.primary

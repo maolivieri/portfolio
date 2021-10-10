@@ -21,7 +21,15 @@ const PageThree = ({ t }) => {
         <TechRow
           title="Mobile App"
           subtitle="Sed ut perspiciatis unde omnis iste natus."
-          iconsArray={['/icons/techs/react.png', '/icons/techs/expo.png']}
+          iconsArray={[
+            '/icons/techs/react.png', 
+            '/icons/techs/expo.png', 
+            '/icons/techs/null.png', 
+            '/icons/techs/null.png', 
+            '/icons/techs/null.png', 
+            '/icons/techs/null.png', 
+            '/icons/techs/null.png'
+          ]}
         />
         <TechRow
           title="Back-End"
@@ -31,7 +39,9 @@ const PageThree = ({ t }) => {
             '/icons/techs/django.png',
             '/icons/techs/node.png',
             '/icons/techs/express.png',
-            '/icons/techs/mongo.png'
+            '/icons/techs/mongo.png',
+            '/icons/techs/null.png', 
+            '/icons/techs/null.png'
           ]}
         />
         <TechRow
@@ -66,7 +76,11 @@ const PageThree = ({ t }) => {
           iconsArray={[
             '/icons/techs/sql.png',
             '/icons/techs/python.png',
-            '/icons/techs/js.png'
+            '/icons/techs/js.png', 
+            '/icons/techs/null.png', 
+            '/icons/techs/null.png', 
+            '/icons/techs/null.png', 
+            '/icons/techs/null.png'
           ]}
         />
       </Techs>

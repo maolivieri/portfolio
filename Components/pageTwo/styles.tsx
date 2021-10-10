@@ -12,9 +12,11 @@ export const PageContainer = styled.div`
   overflow: visible;
   width: 100%;
   min-height: 90%;
+  
   @media (max-width: 992px) {
     overflow-x: hidden;
     padding-top: 1rem;
+    
   }
 `;
 
@@ -23,11 +25,13 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  width: 50%;
+  width: 58%;
   min-height: 100%;
+  margin-left: 5vw;
   @media (max-width: 992px) {
     width: 80%;
     overflow-x: hidden;
+    margin-left: 0;
   }
 `;
 
@@ -68,6 +72,7 @@ export const Header = styled.h2`
   font-size: 1.8rem;
   @media (max-width: 992px) {
     margin: 0rem;
+    font-size: 2remrem;
   }
 `;
 
@@ -76,17 +81,24 @@ export const Title = styled.h1`
   padding: 0;
   margin: 0;
   font-family: 'Yeseva One', cursive;
-  font-size: 4.5rem;
+  font-size: 7vw;
   color: ${(props) =>
     props.theme.name === 'dark'
       ? props.theme.colors.white
       : props.theme.colors.primary};
+  @media (max-width: 992px) {
+    font-size: 10vw;
+  }    
 `;
 
 export const Subtitle = styled.p`
   padding: 0;
   margin: 1rem 0rem 0.2rem 0rem;
   color: ${(props) => props.theme.colors.highlights};
+  font-size: 1rem;
+  @media (max-width: 992px) {
+    font-size: 1rem;
+  }    
 `;
 
 export const Content = styled.p`
@@ -96,6 +108,10 @@ export const Content = styled.p`
     props.theme.name === 'dark'
       ? props.theme.colors.primary
       : props.theme.colors.details};
+  font-size: 0.9rem;    
+  @media (max-width: 992px) {
+    font-size: 1rem;
+  }     
 `;
 
 export const DowloadButton = styled.button`
@@ -111,6 +127,7 @@ export const DowloadButton = styled.button`
   text-align: center;
   text-decoration: none;
   transition: all 0.2s;
+  cursor: pointer;
   :hover {
     border: 0.1em solid rgba(255, 255, 255, 0.5);
     background: ${(props) => darken('0.1', props.theme.colors.secondary)};

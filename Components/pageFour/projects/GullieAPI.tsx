@@ -5,23 +5,20 @@ import { CodeBlock, dracula, monokaiSublime, github } from 'react-code-blocks';
 
 import { ContainerScrollHalf } from '../styles';
 
-const codeSnippetA = `const Layout = (props) => {
- 
-  return (
-    <div>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Harmattan:wght@400;700&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&family=Yeseva+One&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-      <div>{children}</div>
-    </div>
-  );
-};`;
+const codeSnippetA = `class AreasUpdateAPI(UpdateAPIView):
+    queryset = Area.objects.all()
+    permission_classes = [HasAreaVenueObjAccess]
+    serializer_class = AreaSerializer
+    lookup_field = 'pk'
+
+    def update(self, request, *ards, **kwargs):
+        partial = kwargs.pop('partial', False)
+        instance = self.get_object()
+        serializer = self.get_serializer(instance, data=request.data, partial=partial)
+        serializer.is_calid(raise_exception=True)
+        area = serializer.save()
+        return Response(AreaFullSerializer(area).data)
+`;
 
 const GullieAPI = (props) => {
   const globalTheme = useTheme();
@@ -90,7 +87,7 @@ const GullieAPI = (props) => {
         <div>
           <CodeBlock
             text={codeSnippetA}
-            language="tsx"
+            language="typescript"
             showLineNumbers
             wrapLines
             theme={globalTheme.name === 'dark' ? dracula : github}
@@ -99,7 +96,7 @@ const GullieAPI = (props) => {
         <div>
           <CodeBlock
             text={codeSnippetA}
-            language="tsx"
+            language="python"
             showLineNumbers
             wrapLines
             theme={globalTheme.name === 'dark' ? dracula : github}
@@ -108,7 +105,7 @@ const GullieAPI = (props) => {
         <div>
           <CodeBlock
             text={codeSnippetA}
-            language="tsx"
+            language="python"
             showLineNumbers
             wrapLines
             theme={globalTheme.name === 'dark' ? dracula : github}
@@ -117,7 +114,7 @@ const GullieAPI = (props) => {
         <div>
           <CodeBlock
             text={codeSnippetA}
-            language="tsx"
+            language="python"
             showLineNumbers
             wrapLines
             theme={globalTheme.name === 'dark' ? dracula : github}

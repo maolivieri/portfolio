@@ -37,12 +37,17 @@ const Container = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-around;
   background: ${(props) => props.theme.colors.cardBackground};
   /* padding: 0.5rem 2rem; */
-  padding: 0.5rem 1rem;
-  margin-bottom: 2rem;
+  max-height: 12vh;
+  min-height: rem;
+  padding: 0.7rem 1rem;
+  @media (max-width: 992px) {
+    padding: 0rem 1rem;
+    margin-bottom: 2rem;
+  }
 `;
 
 const TitleContainer = styled.div`
@@ -55,16 +60,25 @@ const TitleContainer = styled.div`
 
 const IconsContainer = styled.div`
   display: flex;
+  align-items: stretch;
+  justify-content: space-between;
   color: #fff;
+  @media (max-width: 992px) {
+    align-items: center;
+
+  }
+  
 `;
 
 const Title = styled.h3`
   margin: 0;
-  padding: 0;
+  padding-bottom: 0.5rem;
   font-size: 1.3rem;
   color: ${(props) => props.theme.colors.details};
   @media (max-width: 992px) {
     font-size: 1.6rem;
+    padding: 0;
+    text-align: center
   }
 `;
 
@@ -74,20 +88,25 @@ const SubTitle = styled.p`
   color: #fff;
   font-size: 0.8rem;
 `;
+
 const ImageWrapper = styled.div`
   /* margin: 0 1rem; */
-  margin-right: 1.5rem;
-  margin-left: 1.5rem;
+  /* margin-right: 1.5rem;
+  margin-left: 1.5rem; */
   width: 1.5rem;
   height: 1.5rem;
 
   @media (max-width: 1200px) {
-    width: 2rem;
-    height: 2rem;
+    width: 5vw;
+    height: 5vw;
+    /* margin-right: 1vw;
+    margin-left: 1vw; */
   }
 
   @media (max-width: 992px) {
-    width: 2rem;
-    height: 2rem;
+    width: 5vw;
+    height: 5vw;
+    /* margin-right: 1vw;
+    margin-left: 1vw; */
   }
 `;
