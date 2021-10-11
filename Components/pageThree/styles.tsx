@@ -62,6 +62,7 @@ export const TextBody = styled.div`
 
 export const Header = styled.h2`
   margin-top: 0rem;
+  margin-bottom: 0;
   color: ${(props) => props.theme.colors.secondary};
   font-family: 'Harmattan', sans-serif;
   font-size: 1.8rem;
@@ -86,6 +87,7 @@ export const Content = styled.p`
   padding: 0;
   color: ${(props) => props.theme.colors.primary};
   font-size: 1rem;
+  line-height: 150%;
   @media (max-width: 992px) {
     font-size: 1.1rem;
   }

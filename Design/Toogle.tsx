@@ -10,46 +10,46 @@ interface IProps {
 }
 
 const Container = styled.label`
-  height: 48px;
-  width: 95px;
-  border-radius: 25px;
-  margin: 0 1.25rem;
+  cursor: pointer;
   background: ${(props) => transparentize(0.8, props.theme.colors.white)};
   position: relative;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 1.25rem;
+  height: 2.6rem;
+  width: 5rem;
+  border-radius: 1.5rem;
 
   @media (max-width: 1200px) {
-    height: 38px;
-    width: 75px;
-    border-radius: 20px;
+    /* height: 38px;
+    width: 75px; */
+    /* border-radius: 20px; */
     margin: 0 1rem;
   }
 
   @media (max-width: 768px) {
-    height: 30px;
-    width: 65px;
-    border-radius: 16px;
+    /* height: 30px;
+    width: 65px; */
+    /* border-radius: 16px; */
     margin: 0 0.8rem;
   }
 `;
 
-const Sun = styled.span`
+const Left = styled.span`
   position: absolute;
-  top: 2.5px;
-  right: 2.5px;
-  width: 43px;
-  height: 43px;
-  padding: 5px;
+  top: 0.2rem;
+  right: 0.2rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  padding: 0.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background: ${(props) => transparentize(0.4, props.theme.colors.white)};
   border-radius: 50%;
 
-  @media (max-width: 1200px) {
+  /* @media (max-width: 1200px) {
     top: 2px;
     right: 2px;
     width: 34px;
@@ -63,34 +63,34 @@ const Sun = styled.span`
     width: 28px;
     height: 28px;
     padding: 1.5px;
-  }
+  } */
 `;
 
-const Moon = styled(Sun)`
-  left: 2.5px;
+const Right = styled(Left)`
+  left: 0.2rem;
 
-  @media (max-width: 1200px) {
+  /* @media (max-width: 1200px) {
     left: 2px;
   }
 
   @media (max-width: 768px) {
     left: 1px;
-  }
+  } */
 `;
 
 const Icon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2.5px 9px;
+  padding: 0 9px;
   z-index: 2;
 
   @media (max-width: 1200px) {
-    padding: 2px 4px;
+    padding: 0 4px;
   }
 
   @media (max-width: 768px) {
-    padding: 1px 1px;
+    padding: 0 1px;
   }
 `;
 
@@ -106,12 +106,12 @@ const ThemeToogle: React.FC<IProps> = ({ toggleTheme, dark }) => {
       <Input type="checkbox" />
       <Container onClick={() => toggleTheme()}>
         <Icon>
-          <Image src="/icons/header/sunwhite.svg" width="28px" height="28px" />
+          <Image src="/icons/header/sunwhite.svg" width="100%" height="100%" />
         </Icon>
         <Icon>
-          <Image src="/icons/header/moon.png" width="28px" height="28px" />
+          <Image src="/icons/header/moon.png" width="100%" height="100%" />
         </Icon>
-        {dark ? <Sun /> : <Moon />}
+        {dark ? <Left /> : <Right />}
       </Container>
     </>
   );

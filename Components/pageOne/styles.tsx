@@ -29,16 +29,17 @@ export const Body = styled.div`
 
 export const Header = styled.h2`
   margin-top: 3rem;
+  margin-bottom: 0;
   color: ${(props) => props.theme.colors.secondary};
   font-family: 'Harmattan', sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 `;
 
 export const Title = styled.h1`
   padding: 0;
   margin: 0;
   font-family: 'Yeseva One', cursive;
-  font-size: 8.5vw;
+  font-size: 7vw;
   color: ${(props) =>
     props.theme.name === 'dark'
       ? props.theme.colors.white
@@ -50,7 +51,7 @@ export const Title = styled.h1`
 
 export const Content = styled.p`
   padding: 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: ${(props) =>
     props.theme.name === 'dark'
       ? props.theme.colors.primary

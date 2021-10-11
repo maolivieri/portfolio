@@ -27,6 +27,6 @@
     "node_modules"
   ],
   "files": [
-    "src/styles/themes/styled.d.ts"
+    "./styles/themes/styled.d.ts"
   ]
 }

@@ -6,7 +6,7 @@ interface ILinkProps extends LinkProps {
   customStyle?: string;
 }
 
-const StyledLink: React.FC<React.PropsWithChildren<ILinkProps>> = ({
+export const StyledLink: React.FC<React.PropsWithChildren<ILinkProps>> = ({
   as,
   children,
   href,
@@ -18,5 +18,3 @@ const StyledLink: React.FC<React.PropsWithChildren<ILinkProps>> = ({
     {/* {children} */}
   </Link>
 );
-
-export default StyledLink;

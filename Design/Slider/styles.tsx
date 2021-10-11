@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { StyledComponent } from 'styled-components';
+import styled, { DefaultTheme } from 'styled-components';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import { transparentize } from 'polished';
 
@@ -17,8 +17,8 @@ interface DotProps {
 const Circle = styled.div`
   background: ${(props) => transparentize('0.5', props.theme.colors.white)};
   color: ${(props) => props.theme.colors.black};
-  width: 50px;
-  height: 50px;
+  width: 2.8rem;
+  height: 2.8rem;
   border-radius: 50%;
   display: flex;
   align-items: center;

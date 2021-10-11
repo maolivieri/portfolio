@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import StyledLink from '../../design/styledLink';
+import { StyledLink } from '../../Design/StyledLink';
 import { darken } from 'polished';
 
 export const Container = styled.div`
@@ -37,7 +37,7 @@ export const ButtonLinks = styled.div`
 `;
 
 export const NavLink = styled(StyledLink)`
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0 3rem;
   color: ${(props) => props.theme.colors.primary};
   text-decoration: none;
@@ -65,7 +65,7 @@ export const Language = styled.div`
   color: ${(props) => props.theme.colors.primary};
   margin: 0 0.5rem;
   cursor: pointer;
-  width: 3rem;
+  width: 2.6rem;
 
   @media (max-width: 1200px) {
     width: 2.8rem;

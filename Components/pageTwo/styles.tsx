@@ -81,7 +81,7 @@ export const Title = styled.h1`
   padding: 0;
   margin: 0;
   font-family: 'Yeseva One', cursive;
-  font-size: 7vw;
+  font-size: 5.5vw;
   color: ${(props) =>
     props.theme.name === 'dark'
       ? props.theme.colors.white
@@ -96,6 +96,7 @@ export const Subtitle = styled.p`
   margin: 1rem 0rem 0.2rem 0rem;
   color: ${(props) => props.theme.colors.highlights};
   font-size: 1rem;
+  /* line-height: 1.3rem; */
   @media (max-width: 992px) {
     font-size: 1rem;
   }    
@@ -108,7 +109,8 @@ export const Content = styled.p`
     props.theme.name === 'dark'
       ? props.theme.colors.primary
       : props.theme.colors.details};
-  font-size: 0.9rem;    
+  font-size: 0.9rem;
+  line-height: 150%;
   @media (max-width: 992px) {
     font-size: 1rem;
   }     
