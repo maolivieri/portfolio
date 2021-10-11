@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import StyledLink from '../../design/styledLink';
 import { darken, transparentize, lighten } from 'polished';
-import Image from 'next/image';
 import { useTheme } from 'styled-components';
 
 const Side = () => {

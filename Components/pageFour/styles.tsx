@@ -68,7 +68,7 @@ export const Container = styled.div`
 export const Header = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 20%;
+  margin-left: calc(25vw - 4rem - 2.7rem + 18px);
   margin-bottom: 1rem;
   @media (max-width: 992px) {
     margin-left: 0;

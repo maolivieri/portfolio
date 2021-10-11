@@ -36,7 +36,7 @@ const PageFour = ({ t }) => {
           // imageName=""
           iconsArray={[]}
           title="Gullie Menu"
-          text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi."
+          text="Gullie menu é um menu interativo para celulares."
           content={<GullieMenu />}
         />
         <ProjectCard
@@ -46,7 +46,7 @@ const PageFour = ({ t }) => {
           iconsArray={[]}
           isFullW={false}
           title="Gullie Backend"
-          text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi."
+          text="Gullie API built in Django."
           content={<GullieAPI />}
         />
       </Body>

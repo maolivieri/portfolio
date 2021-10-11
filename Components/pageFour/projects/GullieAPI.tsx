@@ -1,11 +1,11 @@
 import Carousel from 'nuka-carousel';
 import { FaAngleRight, FaAngleLeft } from 'react-icons/fa';
 import { useTheme } from 'styled-components';
-import { CodeBlock, dracula, monokaiSublime, github } from 'react-code-blocks';
+import { CodeBlock, dracula, github } from 'react-code-blocks';
 
 import { ContainerScrollHalf } from '../styles';
 
-const codeSnippetA = `class AreasUpdateAPI(UpdateAPIView):
+const customAPI = `class AreasUpdateAPI(UpdateAPIView):
     queryset = Area.objects.all()
     permission_classes = [HasAreaVenueObjAccess]
     serializer_class = AreaSerializer
@@ -17,8 +17,42 @@ const codeSnippetA = `class AreasUpdateAPI(UpdateAPIView):
         serializer = self.get_serializer(instance, data=request.data, partial=partial)
         serializer.is_calid(raise_exception=True)
         area = serializer.save()
-        return Response(AreaFullSerializer(area).data)
-`;
+        return Response(AreaFullSerializer(area).data)`;
+
+const customSerializer = `class VenueUpdateSerializer(serializers.ModelSerializer):
+banner_image = Base64ImageField(
+    max_length=None, use_url=True, allow_null=True)
+
+class Meta:
+    model = Venues
+    fields = '__all__'
+
+def update(self, instance, validated_data):
+    try:
+        ACCESSIBILITY = validated_data.pop('accessibility')
+        instance.accessibility.set(ACCESSIBILITY)
+    except:
+        pass
+    try:
+        CUISINE = validated_data.pop('cuisine')
+        instance.cuisine.set(CUISINE)
+    except:
+        pass
+    instance.name = validated_data.get('name', instance.name)
+    [setattr(instance, k, v) for k, v in validated_data.items()]
+
+    instance.save()
+
+    return instance`;
+
+const modelRelations = `class ModifierPrice(models.Model):
+modifier = models.ForeignKey(Modifier, on_delete=models.CASCADE, related_name="prices")
+size = models.PositiveIntegerField(validators=[MinValueValidator(1), MaxValueValidator(6)])
+price = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
+
+class Meta:
+    unique_together = ('size', 'modifier',)
+    ordering = ['size', 'pk']`;
 
 const GullieAPI = (props) => {
   const globalTheme = useTheme();
@@ -86,7 +120,7 @@ const GullieAPI = (props) => {
       >
         <div>
           <CodeBlock
-            text={codeSnippetA}
+            text={customAPI}
             language="typescript"
             showLineNumbers
             wrapLines
@@ -95,7 +129,7 @@ const GullieAPI = (props) => {
         </div>
         <div>
           <CodeBlock
-            text={codeSnippetA}
+            text={customSerializer}
             language="python"
             showLineNumbers
             wrapLines
@@ -104,16 +138,7 @@ const GullieAPI = (props) => {
         </div>
         <div>
           <CodeBlock
-            text={codeSnippetA}
-            language="python"
-            showLineNumbers
-            wrapLines
-            theme={globalTheme.name === 'dark' ? dracula : github}
-          />
-        </div>
-        <div>
-          <CodeBlock
-            text={codeSnippetA}
+            text={modelRelations}
             language="python"
             showLineNumbers
             wrapLines

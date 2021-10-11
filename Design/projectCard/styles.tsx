@@ -1,6 +1,5 @@
-import styled, { ThemedStyledProps } from 'styled-components';
-import StyledLink from '../../design/styledLink';
-import { darken, lighten } from 'polished';
+import styled, { DefaultTheme } from 'styled-components';
+import { lighten } from 'polished';
 
 // CardContainer, TextWrapper, ImageWrapper, SideWrapper;
 
@@ -11,8 +10,13 @@ import { darken, lighten } from 'polished';
 //   isFullW: boolean;
 // }
 
+interface CustomProps {
+  isFullW: boolean;
+  theme: DefaultTheme;
+}
+
 export const CardContainer = styled.div`
-  width: ${(props) => (props.isFullW ? '73vw' : '40vw')};
+  width: ${(props: CustomProps) => (props.isFullW ? '75vw' : '40vw')};
   display: flex;
   background: ${(props) => props.theme.colors.cardBackground};
   border-radius: 1vw;
@@ -30,8 +34,8 @@ export const CardContainer = styled.div`
 export const BodyWrapper = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: ${(props) => (props.isFullW ? 'row' : 'column')};
-  background: ${(props) => props.theme.colors.cardBackground};
+  flex-direction: ${(props: CustomProps) => (props.isFullW ? 'row' : 'column')};
+  background: ${(props: CustomProps) => props.theme.colors.cardBackground};
   z-index: 10;
   justify-content: space-between;
   border-radius: 1vw;
@@ -50,7 +54,7 @@ export const BodyWrapper = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-  width: ${(props) => (props.isFullW ? '40%' : '100%')};
+  width: ${(props: CustomProps) => (props.isFullW ? '40%' : '100%')};
   display: flex;
   flex-direction: column;
   padding: 2rem 1.4rem;
@@ -62,7 +66,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const ContentWrapper = styled.div`
-  width: ${(props) => (props.isFullW ? '60%' : '100%')};
+  width: ${(props: CustomProps) => (props.isFullW ? '60%' : '100%')};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,7 +77,7 @@ export const ContentWrapper = styled.div`
 `;
 
 export const SideWrapper = styled.div`
-  background: ${(props) => props.theme.colors.highlights};
+  background: ${(props: CustomProps) => props.theme.colors.highlights};
   width: 68px;
   z-index: 0;
   @media (max-width: 992px) {
@@ -83,28 +87,28 @@ export const SideWrapper = styled.div`
 `;
 
 export const Title = styled.h3`
-  color: ${(props) => props.theme.colors.white};
+  color: ${(props: CustomProps) => props.theme.colors.white};
   font-size: 1.2rem;
   margin: 0;
   padding: 0;
 `;
 
 export const Text = styled.p`
-  color: ${(props) => props.theme.colors.details};
+  color: ${(props: CustomProps) => props.theme.colors.details};
 `;
 
 export const SeeProjectButton = styled.a`
   margin: 0rem 0.3rem 0rem 0rem;
-  color: ${(props) => props.theme.colors.highlights};
+  color: ${(props: CustomProps) => props.theme.colors.highlights};
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    color: ${(props) => lighten(0.2, props.theme.colors.highlights)};
+    color: ${(props: CustomProps) => lighten(0.2, props.theme.colors.highlights)};
   }
 
   &:focus {
-    color: ${(props) => lighten(0.3, props.theme.colors.highlights)};
+    color: ${(props: CustomProps) => lighten(0.3, props.theme.colors.highlights)};
     outline: none;
     border: 0;
   }
