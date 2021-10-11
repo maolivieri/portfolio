@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { size, transparentize } from 'polished';
 import Image from 'next/image';
 
+
 const Circle = styled.div`
   position: absolute;
   top: -1px;
@@ -53,3 +54,4 @@ export const CircularDetail = ({ page }) => {
     </Circle>
   );
 };
+

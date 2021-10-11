@@ -1,13 +1,11 @@
 import styled from 'styled-components';
-import StyledLink from '../../design/styledLink';
-import { darken } from 'polished';
 
 export const Container = styled.div`
-  padding-top: calc(60px + 5vh);
+  padding-top: calc(60px + 5vh + 2.5rem);
   padding-bottom: 1.5rem;
   display: flex;
   /* flex-direction: column; */
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   padding-left: 3rem;
   overflow: visible;
@@ -26,27 +24,30 @@ export const Techs = styled.div`
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  height: calc(95vh - 60px - 7vh);
-  width: 40%;
+  height: calc(92vh - 60px - 5vh - 2.5rem);
+  padding-left: 4rem;
+  width: 50%;
   @media (max-width: 1680px) {
-    width: 45%;
+    width: 55%;
   }
   @media (max-width: 1200px) {
-    width: 55%;
+    width: 60%;
   }
   @media (max-width: 992px) {
     order: 1;
     width: 80%;
     height: calc(65vh);
+    padding-left: 0;
   }
 `;
 
 export const TextBody = styled.div`
-  width: 40%;
+  width: 35%;
   margin-left: 6rem;
+  text-align: right;
   @media (max-width: 1680px) {
     margin-left: 5rem;
-    width: 38%;
+    width: 32%;
   }
   @media (max-width: 1200px) {
     margin-left: 4rem;

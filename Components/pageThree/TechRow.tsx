@@ -36,14 +36,13 @@ export default TechRow;
 const Container = styled.div`
   flex: 1;
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: flex-start;
   background: ${(props) => props.theme.colors.cardBackground};
+  margin-bottom: 1.5rem;
   /* padding: 0.5rem 2rem; */
-  max-height: 12vh;
-  min-height: rem;
-  padding: 0.7rem 1rem;
+  /* max-height: 12vh; */
+  padding: 0.5rem 1rem;
   @media (max-width: 992px) {
     padding: 0rem 1rem;
     margin-bottom: 2rem;
@@ -51,28 +50,26 @@ const Container = styled.div`
 `;
 
 const TitleContainer = styled.div`
-  /* display: flex;
+  width: 14rem;
+  display: flex;
   flex-direction: column;
-  justify-content: space-between; */
-  /* margin-right: 4rem; */
-  /* margin-bottom: 1rem; */
+  justify-content: center;
 `;
 
 const IconsContainer = styled.div`
+  flex: 1;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
   color: #fff;
   @media (max-width: 992px) {
     align-items: center;
-
   }
-  
 `;
 
 const Title = styled.h3`
   margin: 0;
-  padding-bottom: 0.5rem;
+  /* padding-bottom: 0.5rem; */
   font-size: 1.3rem;
   color: ${(props) => props.theme.colors.details};
   @media (max-width: 992px) {

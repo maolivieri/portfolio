@@ -1,7 +1,7 @@
 import { Container, Body, Title, Content, Header } from './styles';
 
 import Side from './side';
-import CircularDetail from './circularDetail';
+import { CircularDetail } from './CircularDetail';
 
 const PageOne = ({ t }) => {
   return (
