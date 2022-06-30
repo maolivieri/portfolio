@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { StyledLink } from '../../Design/StyledLink';
-import { darken } from 'polished';
+import { darken, rgba } from 'polished';
+
+interface ActiveProps {
+  active: boolean;
+}
 
 export const Container = styled.div`
   /* background: ${(props) => props.theme.colors.background}; */
@@ -36,12 +40,26 @@ export const ButtonLinks = styled.div`
   justify-content: center;
 `;
 
-export const NavLink = styled(StyledLink)`
+// export const NavLink = styled(StyledLink)`
+export const NavLink = styled.div<ActiveProps>`
+  position: relative;
   font-size: 1.1rem;
   margin: 0 3rem;
   color: ${(props) => props.theme.colors.primary};
   text-decoration: none;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    bottom: -4px;
+    left: -0.25rem;
+    position: absolute;
+    min-width: calc(100% + 0.5rem);
+    min-height: 1.5px;
+    background: ${(props) =>
+      props.active ? props.theme.colors.primary : rgba(0, 0, 0, 0)};
+  }
 
   &:hover {
     color: ${(props) => darken(0.2, props.theme.colors.primary)};

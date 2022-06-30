@@ -1,21 +1,21 @@
 import React from 'react';
-import Layout from '../design/layout';
-import Header from '../components/header';
 import { Container, Body, PG, MobileBody } from '../styles/Home';
-import { SliderArrows, SliderBar } from '../design/Slider';
 import { parseCookies } from 'nookies';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
-import PageOne from '../components/pageOne';
-import PageTwo from '../components/pageTwo';
-import PageThree from '../components/pageThree';
-import PageFour from '../components/pageFour';
 
 import { useTheme } from 'styled-components';
 
 import loadingStyles from '../styles/Loading.module.css';
+import Header from '../Components/Header';
+import PageOne from '../Components/pageOne';
+import PageTwo from '../Components/pageTwo';
+import PageThree from '../Components/pageThree';
+import PageFour from '../Components/pageFour';
+import { SliderArrows, SliderBar } from '../Design/Slider';
+import Layout from '../Design/Layout';
 
 interface Props {
   toggleTheme(): void;
@@ -63,7 +63,11 @@ export default function Home<Props>({ toggleTheme }) {
         </div>
       </div>
       <Container>
-        <Header toggleTheme={toggleTheme} />
+        <Header
+          currentSlide={currentSlide}
+          toggleTheme={toggleTheme}
+          instanceRef={slider}
+        />
         <MobileBody>
           <PageOne t={t} />
           <PageTwo t={t} />
