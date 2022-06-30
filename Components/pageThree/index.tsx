@@ -22,12 +22,12 @@ const PageThree = ({ t }) => {
           title="Mobile App"
           subtitle="Sed ut perspiciatis unde omnis iste natus."
           iconsArray={[
-            '/icons/techs/react.png', 
-            '/icons/techs/expo.png', 
-            '/icons/techs/null.png', 
-            '/icons/techs/null.png', 
-            '/icons/techs/null.png', 
-            '/icons/techs/null.png', 
+            '/icons/techs/react.png',
+            '/icons/techs/expo.png',
+            '/icons/techs/null.png',
+            '/icons/techs/null.png',
+            '/icons/techs/null.png',
+            '/icons/techs/null.png',
             '/icons/techs/null.png'
           ]}
         />
@@ -40,12 +40,12 @@ const PageThree = ({ t }) => {
             '/icons/techs/node.png',
             '/icons/techs/express.png',
             '/icons/techs/mongo.png',
-            '/icons/techs/null.png', 
+            '/icons/techs/null.png',
             '/icons/techs/null.png'
           ]}
         />
         <TechRow
-          title={`DevOps & CI/CD`}
+          title={`DevOps`}
           subtitle="Sed ut perspiciatis unde omnis iste natus."
           iconsArray={[
             '/icons/techs/docker.png',
@@ -76,10 +76,10 @@ const PageThree = ({ t }) => {
           iconsArray={[
             '/icons/techs/sql.png',
             '/icons/techs/python.png',
-            '/icons/techs/js.png', 
-            '/icons/techs/null.png', 
-            '/icons/techs/null.png', 
-            '/icons/techs/null.png', 
+            '/icons/techs/js.png',
+            '/icons/techs/null.png',
+            '/icons/techs/null.png',
+            '/icons/techs/null.png',
             '/icons/techs/null.png'
           ]}
         />

@@ -50,7 +50,7 @@ const Container = styled.div`
 `;
 
 const TitleContainer = styled.div`
-  width: 14rem;
+  width: 12rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,7 +75,7 @@ const Title = styled.h3`
   @media (max-width: 992px) {
     font-size: 1.6rem;
     padding: 0;
-    text-align: center
+    text-align: center;
   }
 `;
 
@@ -90,20 +90,6 @@ const ImageWrapper = styled.div`
   /* margin: 0 1rem; */
   /* margin-right: 1.5rem;
   margin-left: 1.5rem; */
-  width: 1.5rem;
-  height: 1.5rem;
-
-  @media (max-width: 1200px) {
-    width: 5vw;
-    height: 5vw;
-    /* margin-right: 1vw;
-    margin-left: 1vw; */
-  }
-
-  @media (max-width: 992px) {
-    width: 5vw;
-    height: 5vw;
-    /* margin-right: 1vw;
-    margin-left: 1vw; */
-  }
+  width: 1.9rem;
+  height: 1.9rem;
 `;
