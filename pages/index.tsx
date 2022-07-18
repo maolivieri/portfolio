@@ -26,6 +26,7 @@ export default function Home<Props>({ toggleTheme }) {
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const [ref, slider] = useKeenSlider<HTMLDivElement>({
     initial: 0,
+    rubberband: false,
     slideChanged(s) {
       setCurrentSlide(s.details().relativeSlide);
     }
@@ -97,7 +98,9 @@ export default function Home<Props>({ toggleTheme }) {
           />
         </Body>
         {slider && <SliderArrows slider={slider} currentSlide={currentSlide} />}
-        {slider && <SliderBar slider={slider} currentSlide={currentSlide} />}
+        {slider && currentSlide !== 3 && (
+          <SliderBar slider={slider} currentSlide={currentSlide} />
+        )}
       </Container>
     </Layout>
   );
