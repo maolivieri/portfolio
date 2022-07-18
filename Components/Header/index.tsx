@@ -1,8 +1,14 @@
 import React from 'react';
 import { ThemeContext } from 'styled-components';
-import { Container, Language, NavLink, MainLinks, ButtonLinks } from './styles';
+import {
+  Container,
+  Language,
+  NavLink,
+  MainLinks,
+  ButtonLinks,
+  LanguageFlag
+} from './styles';
 import ThemeToggle from '../../Design/Toogle';
-import Image from 'next/image';
 import { i18n } from 'next-i18next';
 import KeenSlider from 'keen-slider';
 
@@ -54,17 +60,19 @@ const Header: React.FC<Props> = ({
       </MainLinks>
       <ButtonLinks>
         <Language onClick={() => i18n.changeLanguage('pt')}>
-          <Image
+          <LanguageFlag
             src={dark ? '/icons/header/BR.png' : '/icons/header/BRCor.png'}
             width="100%"
             height="100%"
+            active={i18n.language === 'pt'}
           />
         </Language>
         <Language onClick={() => i18n.changeLanguage('en')}>
-          <Image
+          <LanguageFlag
             src={dark ? '/icons/header/EN.png' : '/icons/header/ENCor.png'}
             width="100%"
             height="100%"
+            active={i18n.language === 'en'}
           />
         </Language>
         <ThemeToggle dark={dark} toggleTheme={toggleTheme} />

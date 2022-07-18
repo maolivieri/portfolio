@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { StyledLink } from '../../Design/StyledLink';
 import { darken, rgba } from 'polished';
+import Image from 'next/image';
 
 interface ActiveProps {
   active: boolean;
@@ -91,4 +92,8 @@ export const Language = styled.div`
   @media (max-width: 768px) {
     width: 2.8rem;
   }
+`;
+
+export const LanguageFlag = styled(Image)<ActiveProps>`
+  opacity: ${({ active }) => (active ? 1 : 0.5)};
 `;
