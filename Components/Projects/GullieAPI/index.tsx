@@ -49,7 +49,7 @@ const GullieAPICard = () => {
           wrapLines
           theme={globalTheme.name === 'dark' ? dracula : github}
         />
-        {/* <video
+        {/* <VideoPlayer
           // width="100%"
           // height="100%"
           autoPlay
@@ -60,7 +60,7 @@ const GullieAPICard = () => {
         >
           <source src="/images/videos/menu.webm" type="video/mp4" />
           Your browser does not support the video tag.
-        </video> */}
+        </VideoPlayer> */}
       </Graphics>
     </Container>
   );

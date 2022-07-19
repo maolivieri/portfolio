@@ -10,6 +10,8 @@ export const Container = styled.div`
   overflow: visible;
   width: 100%;
   min-height: 100vh;
+  padding-left: 15rem;
+
   /* min-height: 90%; */
   @media (max-width: 992px) {
     padding-top: 1rem;
@@ -21,8 +23,8 @@ export const Container = styled.div`
 export const Header = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: calc(10rem);
-  margin-bottom: 1rem;
+  /* margin-left: calc(15rem); */
+  margin-bottom: 3rem;
   @media (max-width: 992px) {
     margin-left: 0;
     margin-bottom: 0.4rem;
@@ -75,8 +77,14 @@ export const Body = styled(Carousel).attrs((props) => ({
   /* background: red; */
   flex: 1;
   min-height: 100%;
-  max-width: calc(100% - 20rem);
+  /* max-width: calc(100% - 20rem); */
   margin: 0 auto;
+
+  /* .slider-frame {
+    overflow: visible !important;
+    overflow-x: hidden;
+  } */
+
   @media (max-width: 992px) {
     flex: 1;
     display: flex;

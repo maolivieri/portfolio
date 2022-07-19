@@ -1,4 +1,11 @@
-import { Container, Content, Description, Graphics, Title } from './styles';
+import {
+  Container,
+  Content,
+  Description,
+  Graphics,
+  Title,
+  VideoPlayer
+} from './styles';
 
 const GullieManagerCard = () => {
   return (
@@ -12,7 +19,7 @@ const GullieManagerCard = () => {
         </Description>
       </Content>
       <Graphics>
-        <video
+        <VideoPlayer
           // width="100%"
           // height="100%"
           autoPlay
@@ -23,7 +30,7 @@ const GullieManagerCard = () => {
         >
           <source src="/images/videos/productdetails.webm" type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </VideoPlayer>
       </Graphics>
     </Container>
   );

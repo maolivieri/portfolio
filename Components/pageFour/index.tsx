@@ -41,19 +41,19 @@ const PageFour = ({ t }) => {
         )}
         renderCenterLeftControls={({ previousSlide }) => (
           <>
-            {slideIndex !== 0 && (
+            {/* {slideIndex !== 0 && (
               <SideControls
                 navigateToSlide={() => {
                   previousSlide();
                   slideIndex !== 0 && setSlideIndex((state) => state - 1);
                 }}
               />
-            )}
+            )} */}
           </>
         )}
         renderCenterRightControls={({ nextSlide }) => (
           <>
-            {slideIndex !== 3 && (
+            {/* {slideIndex !== 3 && (
               <SideControls
                 next
                 navigateToSlide={() => {
@@ -61,9 +61,12 @@ const PageFour = ({ t }) => {
                   slideIndex !== 3 && setSlideIndex((state) => state + 1);
                 }}
               />
-            )}
+            )} */}
           </>
         )}
+        style={{
+          overflow: 'visible'
+        }}
       >
         <GullieWebCard />
         <GullieManagerCard />

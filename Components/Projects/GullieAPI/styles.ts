@@ -3,17 +3,20 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   max-height: 50vh;
+  min-height: 50vh;
   background: ${({ theme }) => theme.colors.cardBackground};
   border-radius: 2rem;
   overflow: hidden;
   padding: 0;
+  margin-right: 5rem;
 `;
 
 export const Content = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 1rem 2rem;
+  padding: 1rem 5rem 2rem 2rem;
+  width: 40%;
 `;
 
 export const Title = styled.h3`
@@ -25,9 +28,17 @@ export const Title = styled.h3`
 export const Description = styled.p`
   color: ${({ theme }) => theme.colors.white};
   opacity: 0.5;
+  line-height: 1.5rem;
 `;
 
 export const Graphics = styled.div`
-  max-height: 100%;
+  /* flex: 1; */
+  //1920x1080 = ratio of 1.78  //   0.56
+  width: 60%;
+  height: 100%;
+`;
+
+export const VideoPlayer = styled.video`
   max-width: 100%;
+  height: auto;
 `;

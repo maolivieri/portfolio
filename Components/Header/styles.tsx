@@ -45,10 +45,12 @@ export const ButtonLinks = styled.div`
 export const NavLink = styled.div<ActiveProps>`
   position: relative;
   font-size: 1.1rem;
+  min-width: 5rem;
   margin: 0 3rem;
   color: ${(props) => props.theme.colors.primary};
   text-decoration: none;
   transition: all 0.2s ease-in-out;
+  text-align: center;
   cursor: pointer;
 
   &::after {
