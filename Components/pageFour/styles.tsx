@@ -60,10 +60,32 @@ export const HeaderTitle = styled.h2`
 `;
 
 export const AbsoluteCircularControl = styled.div`
+  position: relative;
   align-self: center;
   /* background: red; */
   display: flex;
   max-height: 15vh;
+  margin-right: 15rem;
+  margin-top: 1rem;
+`;
+export const NavigateArrowButton = styled.div`
+  display: flex;
+  justify-content: center;
+  min-width: 2rem;
+`;
+
+export const ArrowsWrapper = styled.div`
+  z-index: 1000;
+  position: absolute;
+  top: -0.5rem;
+  min-width: 100%;
+  padding-right: 1rem;
+  /* left: 50%; */
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  /* transform: translateX(-50%); */
+  color: ${({ theme }) => theme.colors.highlights};
 `;
 
 export const Body = styled(Carousel).attrs((props) => ({

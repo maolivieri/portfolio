@@ -4,6 +4,11 @@ interface ActiveProp {
   active: boolean;
 }
 
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const ControlWheel = styled.div`
   position: relative;
   //   background: white;
@@ -57,5 +62,6 @@ export const Item = styled.li<ActiveProp>`
     /* color: #9098f7; */
     opacity: ${(props) => (props.active ? 1 : 0.6)};
     font-weight: 600;
+    cursor: pointer;
   }
 `;

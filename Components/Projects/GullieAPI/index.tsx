@@ -2,48 +2,22 @@ import { CodeBlock, dracula, github } from 'react-code-blocks';
 import { useTheme } from 'styled-components';
 import { Container, Content, Description, Graphics, Title } from './styles';
 
-const customAPI = `class VenueUpdateSerializer(serializers.ModelSerializer):
-banner_image = Base64ImageField(
-    max_length=None, use_url=True, allow_null=True)
+type IProps = {
+  translate: any;
+};
 
-class Meta:
-    model = Venues
-    fields = '__all__'
-
-def update(self, instance, validated_data):
-    try:
-        ACCESSIBILITY = validated_data.pop('accessibility')
-        instance.accessibility.set(ACCESSIBILITY)
-    except:
-        pass
-    try:
-        CUISINE = validated_data.pop('cuisine')
-        instance.cuisine.set(CUISINE)
-    except:
-        pass
-    instance.name = validated_data.get('name', instance.name)
-    [setattr(instance, k, v) for k, v in validated_data.items()]
-
-    instance.save()
-
-    return instance`;
-
-const GullieAPICard = () => {
+const GullieAPICard = ({ translate }: IProps) => {
   const globalTheme = useTheme();
 
   return (
     <Container>
       <Content>
         <Title>Gullie API</Title>
-        <Description>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi.
-        </Description>
+        <Description>{translate('projects.gullieAPI.description')}</Description>
       </Content>
       <Graphics>
         <CodeBlock
-          text={customAPI}
+          text={``}
           language="typescript"
           showLineNumbers
           wrapLines

@@ -7,15 +7,17 @@ import {
   VideoPlayer
 } from './styles';
 
-const GullieManagerCard = () => {
+type IProps = {
+  translate: any;
+};
+
+const GullieManagerCard = ({ translate }: IProps) => {
   return (
     <Container>
       <Content>
         <Title>Gullie Manager</Title>
         <Description>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi.
+          {translate('projects.gullieManager.description')}
         </Description>
       </Content>
       <Graphics>

@@ -21,5 +21,18 @@
     "header": "Creative territory",
     "title": "My Lab"
   },
-  "projects": {}
+  "projects": {
+    "gullieWeb": {
+      "description": "In past few years, we see technology becoming more and more part of our day-to-day lives, including the hospitality industry, where you can look at online menus, order and pay thorugh a mobile device and in many cases, not interact with human sta . Having that in mind, the Gullie app comes with the goal to fill up the gap between people with disability and the new way of ordering."
+    },
+    "gullieManager": {
+      "description": "Web based platform where venue owners can easily manage the content displayed on the online menu, from the dishes and its add ons, to configurate completely di erent menus to di erent times of the day."
+    },
+    "gullieAdmin": {
+      "description": "ABC Web based platform where venue owners can easily manage the content displayed on the online menu, from the dishes and its add ons, to configurate completely di erent menus to di erent times of the day."
+    },
+    "gullieAPI": {
+      "description": "DFG Web based platform where venue owners can easily manage the content displayed on the online menu, from the dishes and its add ons, to configurate completely di erent menus to di erent times of the day."
+    }
+  }
 }

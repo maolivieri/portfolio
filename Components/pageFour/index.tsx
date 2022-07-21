@@ -1,13 +1,11 @@
 import { useState } from 'react';
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { useTheme } from 'styled-components';
-import { BottomControls } from '../Carousel/BottomControls';
 import { CircularControl } from '../Carousel/CircularControl';
-import { SideControls } from '../Carousel/SideControls';
 import { GullieAdminCard } from '../Projects/GullieAdmin';
 import { GullieAPICard } from '../Projects/GullieAPI';
 import { GullieManagerCard } from '../Projects/GullieManager';
 import { GullieWebCard } from '../Projects/GullieWeb';
-import { GullieAPI } from './projects/GullieAPI';
 
 import {
   Container,
@@ -15,7 +13,9 @@ import {
   Body,
   HeaderTitle,
   Title,
-  AbsoluteCircularControl
+  AbsoluteCircularControl,
+  ArrowsWrapper,
+  NavigateArrowButton
 } from './styles';
 
 const PageFour = ({ t }) => {
@@ -68,12 +68,28 @@ const PageFour = ({ t }) => {
           overflow: 'visible'
         }}
       >
-        <GullieWebCard />
-        <GullieManagerCard />
-        <GullieAdminCard />
-        <GullieAPICard />
+        <GullieWebCard translate={t} />
+        <GullieManagerCard translate={t} />
+        <GullieAdminCard translate={t} />
+        <GullieAPICard translate={t} />
       </Body>
       <AbsoluteCircularControl>
+        <ArrowsWrapper>
+          {slideIndex !== 0 && (
+            <NavigateArrowButton
+              onClick={() => setSlideIndex((state) => state - 1)}
+            >
+              <FaAngleLeft />
+            </NavigateArrowButton>
+          )}
+          {slideIndex !== 3 && (
+            <NavigateArrowButton
+              onClick={() => setSlideIndex((state) => state + 1)}
+            >
+              <FaAngleRight />
+            </NavigateArrowButton>
+          )}
+        </ArrowsWrapper>
         <CircularControl
           arrayOfItems={[
             'Gullie Web',

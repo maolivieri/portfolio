@@ -7,16 +7,16 @@ import {
   VideoPlayer
 } from './styles';
 
-const GullieWebCard = () => {
+type IProps = {
+  translate: any;
+};
+
+const GullieWebCard = ({ translate }: IProps) => {
   return (
     <Container>
       <Content>
         <Title>Gullie Web</Title>
-        <Description>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi.
-        </Description>
+        <Description>{translate('projects.gullieWeb.description')}</Description>
       </Content>
       <Graphics>
         <VideoPlayer
