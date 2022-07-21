@@ -24,6 +24,7 @@ interface Props {
 export default function Home<Props>({ toggleTheme }) {
   const [isLoading, setIsLoading] = React.useState(true);
   const [currentSlide, setCurrentSlide] = React.useState(0);
+  const [projectIndex, setProjectIndex] = React.useState(0);
   const [ref, slider] = useKeenSlider<HTMLDivElement>({
     initial: 0,
     rubberband: false,
@@ -40,6 +41,10 @@ export default function Home<Props>({ toggleTheme }) {
       // cleanup
     };
   }, []);
+
+  React.useEffect(() => {
+    setProjectIndex(0);
+  }, [currentSlide]);
 
   const { t } = useTranslation('common');
   const theme = useTheme();
@@ -73,7 +78,11 @@ export default function Home<Props>({ toggleTheme }) {
           <PageOne t={t} />
           <PageTwo t={t} />
           <PageThree t={t} />
-          <PageFour t={t} />
+          <PageFour
+            t={t}
+            projectIndex={projectIndex}
+            setProjectIndex={setProjectIndex}
+          />
         </MobileBody>
         <Body ref={ref} className="keen-slider">
           <PG
@@ -94,10 +103,18 @@ export default function Home<Props>({ toggleTheme }) {
           <PG
             style={{ zIndex: 80, minHeight: '100vh' }}
             className="keen-slider__slide"
-            children={<PageFour t={t} />}
+            children={
+              <PageFour
+                t={t}
+                projectIndex={projectIndex}
+                setProjectIndex={setProjectIndex}
+              />
+            }
           />
         </Body>
-        {slider && <SliderArrows slider={slider} currentSlide={currentSlide} />}
+        {slider && projectIndex === 0 && (
+          <SliderArrows slider={slider} currentSlide={currentSlide} />
+        )}
         {slider && currentSlide !== 3 && (
           <SliderBar slider={slider} currentSlide={currentSlide} />
         )}

@@ -74,6 +74,39 @@ export const NavigateArrowButton = styled.div`
   min-width: 2rem;
 `;
 
+export const NavigateNextAbsoluteComponent = styled.div`
+  position: absolute;
+  right: 0;
+  top: 50%;
+  min-width: 10vw;
+  min-height: 60vh;
+  /* background: rgba(100, 200, 1, 0.4); */
+  transform: translateY(-50%);
+  z-index: 300;
+`;
+
+export const NavigatePrevAbsoluteComponent = styled.div`
+  position: absolute;
+  left: 0;
+  top: 50%;
+  min-width: 10vw;
+  min-height: 60vh;
+  background: ${({ theme }) => theme.colors.background};
+  transform: translateY(-50%);
+  z-index: 300;
+`;
+
+export const HideLastNavigateComponent = styled.div`
+  position: absolute;
+  right: 0;
+  top: 50%;
+  min-width: 10vw;
+  min-height: 60vh;
+  background: ${({ theme }) => theme.colors.background};
+  transform: translateY(-50%);
+  z-index: 300;
+`;
+
 export const ArrowsWrapper = styled.div`
   z-index: 1000;
   position: absolute;
@@ -93,7 +126,8 @@ export const Body = styled(Carousel).attrs((props) => ({
   // pauseOnHover: 'true',
   scrollMode: 'remainder',
   animation: 'zoom',
-  // wrapAround: 'true',
+  cellAlign: 'left',
+  wrapAround: 'true',
   autoplayInterval: 6000
 }))`
   /* background: red; */

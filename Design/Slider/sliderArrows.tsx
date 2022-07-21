@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowRight } from './styles';
 
 import styled from 'styled-components';
+import { Dispatch, SetStateAction } from 'react';
 
 export const Wrapper = styled.div`
   display: block;
@@ -10,8 +11,13 @@ export const Wrapper = styled.div`
   }
 `;
 
+type IProps = {
+  slider: any;
+  currentSlide: number;
+};
+
 // const SliderArrows = ({ slider, currentSlide }) => {
-export const SliderArrows = ({ slider, currentSlide }) => {
+export const SliderArrows = ({ slider, currentSlide }: IProps) => {
   return (
     <Wrapper>
       <div
@@ -24,7 +30,10 @@ export const SliderArrows = ({ slider, currentSlide }) => {
       >
         <ArrowLeft
           disabled={currentSlide === 0}
-          onClick={(e) => e.stopPropagation() || slider.prev()}
+          onClick={(e) => {
+            e.stopPropagation();
+            slider.prev();
+          }}
         />
       </div>
       <div
@@ -37,7 +46,10 @@ export const SliderArrows = ({ slider, currentSlide }) => {
       >
         <ArrowRight
           disabled={currentSlide === slider.details().size - 1}
-          onClick={(e) => e.stopPropagation() || slider.next()}
+          onClick={(e) => {
+            e.stopPropagation();
+            slider.next();
+          }}
         />
       </div>
     </Wrapper>

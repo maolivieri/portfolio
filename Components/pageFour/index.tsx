@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { useTheme } from 'styled-components';
 import { CircularControl } from '../Carousel/CircularControl';
@@ -15,16 +15,23 @@ import {
   Title,
   AbsoluteCircularControl,
   ArrowsWrapper,
-  NavigateArrowButton
+  NavigateArrowButton,
+  NavigateNextAbsoluteComponent,
+  HideLastNavigateComponent,
+  NavigatePrevAbsoluteComponent
 } from './styles';
 
-const PageFour = ({ t }) => {
+type IProps = {
+  t: any;
+  projectIndex: number;
+  setProjectIndex: Dispatch<SetStateAction<number>>;
+};
+
+const PageFour = ({ t, projectIndex, setProjectIndex }: IProps) => {
   const pageTheme = useTheme();
 
-  const [slideIndex, setSlideIndex] = useState(0);
-
   const navigateToIndex = (idx: number) => {
-    setSlideIndex(idx);
+    setProjectIndex(idx);
   };
 
   return (
@@ -33,8 +40,19 @@ const PageFour = ({ t }) => {
         <HeaderTitle>{t('pageFour.header')}</HeaderTitle>
         <Title>{t('pageFour.title')}</Title>
       </Header>
+      {projectIndex !== 0 && (
+        <NavigatePrevAbsoluteComponent
+          onClick={() => setProjectIndex((state) => state - 1)}
+        />
+      )}
+      {projectIndex !== 3 && (
+        <NavigateNextAbsoluteComponent
+          onClick={() => setProjectIndex((state) => state + 1)}
+        />
+      )}
+      {projectIndex === 3 && <HideLastNavigateComponent />}
       <Body
-        slideIndex={slideIndex}
+        slideIndex={projectIndex}
         renderBottomCenterControls={({ slideCount, currentSlide }) => (
           // <BottomControls currentSlide={currentSlide} slideCount={slideCount} />
           <></>
@@ -75,16 +93,16 @@ const PageFour = ({ t }) => {
       </Body>
       <AbsoluteCircularControl>
         <ArrowsWrapper>
-          {slideIndex !== 0 && (
+          {projectIndex !== 0 && (
             <NavigateArrowButton
-              onClick={() => setSlideIndex((state) => state - 1)}
+              onClick={() => setProjectIndex((state) => state - 1)}
             >
               <FaAngleLeft />
             </NavigateArrowButton>
           )}
-          {slideIndex !== 3 && (
+          {projectIndex !== 3 && (
             <NavigateArrowButton
-              onClick={() => setSlideIndex((state) => state + 1)}
+              onClick={() => setProjectIndex((state) => state + 1)}
             >
               <FaAngleRight />
             </NavigateArrowButton>
@@ -102,7 +120,7 @@ const PageFour = ({ t }) => {
             ''
           ]}
           count={8}
-          currentSlide={slideIndex}
+          currentSlide={projectIndex}
           navigateToIndex={navigateToIndex}
         />
       </AbsoluteCircularControl>
