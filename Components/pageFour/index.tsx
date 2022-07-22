@@ -18,7 +18,9 @@ import {
   NavigateArrowButton,
   NavigateNextAbsoluteComponent,
   HideLastNavigateComponent,
-  NavigatePrevAbsoluteComponent
+  NavigatePrevAbsoluteComponent,
+  MobileNavigation,
+  DesktopNavigation
 } from './styles';
 
 type IProps = {
@@ -40,6 +42,12 @@ const PageFour = ({ t, projectIndex, setProjectIndex }: IProps) => {
         <HeaderTitle>{t('pageFour.header')}</HeaderTitle>
         <Title>{t('pageFour.title')}</Title>
       </Header>
+      <MobileNavigation>
+        <GullieWebCard translate={t} />
+        <GullieManagerCard translate={t} />
+        <GullieAdminCard translate={t} />
+        <GullieAPICard translate={t} />
+      </MobileNavigation>
       {projectIndex !== 0 && (
         <NavigatePrevAbsoluteComponent
           onClick={() => setProjectIndex((state) => state - 1)}
@@ -51,15 +59,16 @@ const PageFour = ({ t, projectIndex, setProjectIndex }: IProps) => {
         />
       )}
       {projectIndex === 3 && <HideLastNavigateComponent />}
-      <Body
-        slideIndex={projectIndex}
-        renderBottomCenterControls={({ slideCount, currentSlide }) => (
-          // <BottomControls currentSlide={currentSlide} slideCount={slideCount} />
-          <></>
-        )}
-        renderCenterLeftControls={({ previousSlide }) => (
-          <>
-            {/* {slideIndex !== 0 && (
+      <DesktopNavigation>
+        <Body
+          slideIndex={projectIndex}
+          renderBottomCenterControls={({ slideCount, currentSlide }) => (
+            // <BottomControls currentSlide={currentSlide} slideCount={slideCount} />
+            <></>
+          )}
+          renderCenterLeftControls={({ previousSlide }) => (
+            <>
+              {/* {slideIndex !== 0 && (
               <SideControls
                 navigateToSlide={() => {
                   previousSlide();
@@ -67,11 +76,11 @@ const PageFour = ({ t, projectIndex, setProjectIndex }: IProps) => {
                 }}
               />
             )} */}
-          </>
-        )}
-        renderCenterRightControls={({ nextSlide }) => (
-          <>
-            {/* {slideIndex !== 3 && (
+            </>
+          )}
+          renderCenterRightControls={({ nextSlide }) => (
+            <>
+              {/* {slideIndex !== 3 && (
               <SideControls
                 next
                 navigateToSlide={() => {
@@ -80,17 +89,18 @@ const PageFour = ({ t, projectIndex, setProjectIndex }: IProps) => {
                 }}
               />
             )} */}
-          </>
-        )}
-        style={{
-          overflow: 'visible'
-        }}
-      >
-        <GullieWebCard translate={t} />
-        <GullieManagerCard translate={t} />
-        <GullieAdminCard translate={t} />
-        <GullieAPICard translate={t} />
-      </Body>
+            </>
+          )}
+          style={{
+            overflow: 'visible'
+          }}
+        >
+          <GullieWebCard translate={t} />
+          <GullieManagerCard translate={t} />
+          <GullieAdminCard translate={t} />
+          <GullieAPICard translate={t} />
+        </Body>
+      </DesktopNavigation>
       <AbsoluteCircularControl>
         <ArrowsWrapper>
           {projectIndex !== 0 && (

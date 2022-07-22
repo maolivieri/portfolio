@@ -9,6 +9,14 @@ export const Container = styled.div`
   overflow: hidden;
   padding: 0;
   margin-right: 5rem;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    max-height: 100%;
+    min-height: 100%;
+    margin-bottom: 3rem;
+    margin-right: 0rem;
+  }
 `;
 
 export const Content = styled.div`
@@ -17,6 +25,11 @@ export const Content = styled.div`
   flex-direction: column;
   padding: 1rem 5rem 2rem 2rem;
   width: 40%;
+
+  @media (max-width: 992px) {
+    min-width: 100%;
+    width: 100%;
+  }
 `;
 
 export const Title = styled.h3`
@@ -36,6 +49,11 @@ export const Graphics = styled.div`
   //1920x1080 = ratio of 1.78  //   0.56
   width: 60%;
   height: 100%;
+
+  @media (max-width: 992px) {
+    min-width: 100%;
+    width: 100%;
+  }
 `;
 
 export const VideoPlayer = styled.video`

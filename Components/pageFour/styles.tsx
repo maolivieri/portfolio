@@ -67,6 +67,10 @@ export const AbsoluteCircularControl = styled.div`
   max-height: 15vh;
   margin-right: 15rem;
   margin-top: 1rem;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
 `;
 export const NavigateArrowButton = styled.div`
   display: flex;
@@ -121,6 +125,20 @@ export const ArrowsWrapper = styled.div`
   color: ${({ theme }) => theme.colors.highlights};
 `;
 
+export const MobileNavigation = styled.div`
+  display: none;
+  @media (max-width: 992px) {
+    display: block;
+  }
+`;
+
+export const DesktopNavigation = styled.div`
+  display: block;
+  @media (max-width: 992px) {
+    display: none;
+  }
+`;
+
 export const Body = styled(Carousel).attrs((props) => ({
   // autoplay: 'true',
   // pauseOnHover: 'true',
@@ -130,28 +148,11 @@ export const Body = styled(Carousel).attrs((props) => ({
   wrapAround: 'true',
   autoplayInterval: 6000
 }))`
-  /* background: red; */
   flex: 1;
   min-height: 100%;
-  /* max-width: calc(100% - 20rem); */
   margin: 0 auto;
 
-  /* .slider-frame {
-    overflow: visible !important;
-    overflow-x: hidden;
-  } */
-
   @media (max-width: 992px) {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    padding: 0;
-    margin: 0;
-    overflow-y: auto;
-    overflow-x: hidden;
-    height: 100%;
+    display: none;
   }
 `;
