@@ -6,7 +6,7 @@ import { Dispatch, SetStateAction } from 'react';
 export const Wrapper = styled.div`
   display: block;
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     display: none;
   }
 `;

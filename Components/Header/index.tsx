@@ -6,7 +6,8 @@ import {
   NavLink,
   MainLinks,
   ButtonLinks,
-  LanguageFlag
+  LanguageFlag,
+  Spacer
 } from './styles';
 import ThemeToggle from '../../Design/Toogle';
 import { i18n } from 'next-i18next';
@@ -58,6 +59,7 @@ const Header: React.FC<Props> = ({
           Projects
         </NavLink>
       </MainLinks>
+      <Spacer />
       <ButtonLinks>
         <Language onClick={() => i18n.changeLanguage('pt')}>
           <LanguageFlag

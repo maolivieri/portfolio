@@ -10,7 +10,7 @@ interface ActiveProps {
 export const Container = styled.div`
   /* background: ${(props) => props.theme.colors.background}; */
   width: 100%;
-  height: 60px;
+  /* height: 60px; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,19 +19,33 @@ export const Container = styled.div`
   position: absolute;
   top: 5vh;
 
-  @media (max-width: 768px) {
-    align-items: flex-start;
+  @media (min-width: 768px) {
+    /* justify-content: flex-end; */
+    /* height: 60px; */
+    /* align-items: flex-start; */
+  }
+`;
+
+export const Spacer = styled.div`
+  display: block;
+  flex: 1;
+  /* width: 1rem; */
+
+  @media (min-width: 992px) {
+    display: none;
   }
 `;
 
 export const MainLinks = styled.div`
-  display: flex;
+  display: none;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  flex: 1;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: flex-start;
+  @media (min-width: 992px) {
+    /* flex-direction: column; */
+    display: flex;
+    /* max-width: 60vw; */
   }
 `;
 
@@ -39,14 +53,15 @@ export const ButtonLinks = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-self: end;
 `;
 
 // export const NavLink = styled(StyledLink)`
 export const NavLink = styled.div<ActiveProps>`
   position: relative;
-  font-size: 1.1rem;
-  min-width: 5rem;
-  margin: 0 3rem;
+  font-size: 1.25rem;
+  min-width: 2rem;
+  margin: 0 0.3rem;
   color: ${(props) => props.theme.colors.primary};
   text-decoration: none;
   transition: all 0.2s ease-in-out;
@@ -73,9 +88,11 @@ export const NavLink = styled.div<ActiveProps>`
     outline: none;
     border: 0;
   }
-  @media (max-width: 768px) {
-    font-size: 1.25rem;
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
     margin-bottom: 0.7rem;
+    min-width: 5rem;
+    margin: 0 3rem;
   }
 `;
 
