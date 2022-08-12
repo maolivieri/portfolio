@@ -38,10 +38,14 @@ export const Title = styled.h3`
   color: ${({ theme }) => theme.colors.white};
 `;
 
-export const Description = styled.p`
+export const Description = styled.div`
   color: ${({ theme }) => theme.colors.white};
   opacity: 0.5;
   line-height: 1.5rem;
+
+  p {
+    margin: 0.5rem;
+  }
 `;
 
 export const Graphics = styled.div`

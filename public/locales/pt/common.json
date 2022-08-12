@@ -2,12 +2,12 @@
   "pageOne": {
     "header": "Sempre pensando fora da caixa",
     "title": "Desenvolvedor de Software Full-stack",
-    "content": "Portifólio pessoal e curriculo."
+    "content": "Portifólio pessoal."
   },
   "pageTwo": {
     "header": "E aí, eu sou o",
     "title": "Matheus Olivieri",
-    "firstparagraph": "Graduado em engenharia mas desenvolvedor por paixão, trabalhando em TI na Australia pelos ultimos 4 anos. Quando iniciei minha jornada como desenvolvedor, hà 3 anos atrás, venho trabalhando com projetos pessoais e muito estudo. Sou naturalmente curioso e tenho confiança de que posso entregar um bom código. Meu desejo é continuar trabalhando continuamente para melhorar e aprender novas habilidades de programação.",
+    "firstparagraph": "Graduado em engenharia mas desenvolvedor por paixão, trabalhando em TI na Australia pelos ultimos 5 anos. Quando iniciei minha jornada como desenvolvedor, hà 3 anos atrás, venho trabalhando com projetos pessoais e muito estudo. Sou naturalmente curioso e tenho confiança de que posso entregar um bom código. Meu desejo é continuar trabalhando continuamente para melhorar e aprender novas habilidades de programação.",
     "subtitle": "Quando eu não estou codando, o que estou fazendo?",
     "secondparagraph": "tocando baixo com minha banda, assistindo futebol ou, como um bom Brasileiro, em um churrasco com minha familia e amigos. Amo viajar e sair por ai conhecendo pessoas, mas também sou um grande fã de relaxar e curtir Netflix.",
     "dowload": "Baixar currículo"
@@ -18,21 +18,29 @@
     "content": "Trabalhando como Product Owner eu sempre estive envolvido nos processos e decisoes de DevOps. Há 2 anos atrás eu inicie um projeto pessoal usando Django para o backend e React para o frontend. Sempre valorizei a importancia de ter testes no meu codigo, aplicar CD/CI e tem um código limpo."
   },
   "pageFour": {
-    "header": "Território Criativo",
+    "header": "",
     "title": "Meu Laboratório"
   },
   "projects": {
     "gullieWeb": {
-      "description": "Portuguese A....In past few years, we see technology becoming more and more part of our day-to-day lives, including the hospitality industry, where you can look at online menus, order and pay thorugh a mobile device and in many cases, not interact with human sta . Having that in mind, the Gullie app comes with the goal to fill up the gap between people with disability and the new way of ordering."
+      "description": "O aplicativo Gullie foi criado como o desafio de aplicar minhas habilidades e crescer continuamente. Este aplicativo full-stack inclui um back-end completo, um painel de administração para a equipe interna, um painel de administração do cliente e um aplicativo web de front-end. Gullie Web é o front-end deste aplicativo onde o usuário final pode navegar pelo menu e visualizar seus produtos e detalhes.",
+      "a": "O aplicativo Gullie foi criado como o desafio de aplicar minhas habilidades e crescer continuamente.",
+      "b": "Este aplicativo full-stack inclui um back-end completo, um painel de administração para a equipe interna, um painel de administração do cliente e um aplicativo web de front-end. Gullie Web é o front-end deste aplicativo onde o usuário final pode navegar pelo menu e visualizar seus produtos e detalhes.",
+      "c": "Gullie Web é o front-end deste aplicativo onde o usuário final pode navegar pelo menu e visualizar seus produtos e detalhes."
     },
     "gullieManager": {
-      "description": "Portuguese B....Web based platform where venue owners can easily manage the content displayed on the online menu, from the dishes and its add ons, to configurate completely di erent menus to di erent times of the day."
+      "description": "Anteriormente conhecemos o front-end de Gullie. Agora conheceremos o Gullie Manager; painel de administração do cliente onde os proprietários dos estabelecimentos podem gerenciar facilmente o conteúdo exibido no menu online, desde os pratos e seus complementos, como também para configurar menus completamente diferentes para diferentes momentos do dia.",
+      "a": "Anteriormente conhecemos o front-end de Gullie.",
+      "b": "Agora conheceremos o Gullie Manager; painel de administração do cliente onde os proprietários dos estabelecimentos podem gerenciar facilmente o conteúdo exibido no menu online, desde os pratos e seus complementos, como também para configurar menus completamente diferentes para diferentes momentos do dia."
     },
     "gullieAdmin": {
-      "description": "Portuguese C....Web based platform where venue owners can easily manage the content displayed on the online menu, from the dishes and its add ons, to configurate completely di erent menus to di erent times of the day."
+      "description": "Continuando, agora temos o Gullie Admin. Considerando que o Gullie foi construído como uma plataforma multi-tenanted, o Gullie Admin é o painel de administração onde novas organizações podem ser criadas, as configurações são gerenciadas e os usuários são criados."
     },
     "gullieAPI": {
-      "description": "Portuguese D....Web based platform where venue owners can easily manage the content displayed on the online menu, from the dishes and its add ons, to configurate completely di erent menus to di erent times of the day."
+      "description": "Para finalizar, temos a espinha dorsal de tudo, que é o Gullie API. Uma API REST completa, construída em NodeJS, que usa Prisma.io e Postgres. Esse back-end inclui todas as APIs necessárias para dar suporte ao aplicativo Gullie e foi totalmente implantado na AWS, incluindo pipelines de CI/CD para tornar o desenvolvimento e os testes o mais tranquilos possível.",
+      "a": "Para finalizar, temos a espinha dorsal de tudo, que é o Gullie API.",
+      "b": "Uma API REST completa, construída em NodeJS, que usa Prisma.io e Postgres.",
+      "c": "Esse back-end inclui todas as APIs necessárias para dar suporte ao aplicativo Gullie e foi totalmente implantado na AWS, incluindo pipelines de CI/CD para tornar o desenvolvimento e os testes o mais tranquilos possível."
     }
   }
 }

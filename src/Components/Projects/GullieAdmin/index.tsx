@@ -30,10 +30,7 @@ const GullieAdminCard = ({ translate }: IProps) => {
           muted
           // controls
         >
-          <source
-            src="/images/videos/calendarDragandDrop2.webm"
-            type="video/mp4"
-          />
+          <source src="/videos/gullie_master.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </VideoPlayer>
       </Graphics>

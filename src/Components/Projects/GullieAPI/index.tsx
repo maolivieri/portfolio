@@ -1,6 +1,13 @@
 import { CodeBlock, dracula, github } from 'react-code-blocks';
 import { useTheme } from 'styled-components';
-import { Container, Content, Description, Graphics, Title } from './styles';
+import {
+  Container,
+  Content,
+  Description,
+  Graphics,
+  Title,
+  VideoPlayer
+} from './styles';
 
 type IProps = {
   translate: any;
@@ -13,17 +20,14 @@ const GullieAPICard = ({ translate }: IProps) => {
     <Container>
       <Content>
         <Title>Gullie API</Title>
-        <Description>{translate('projects.gullieAPI.description')}</Description>
+        <Description>
+          <p>{translate('projects.gullieAPI.a')}</p>
+          <p>{translate('projects.gullieAPI.b')}</p>
+          <p>{translate('projects.gullieAPI.c')}</p>
+        </Description>
       </Content>
       <Graphics>
-        <CodeBlock
-          text={``}
-          language="typescript"
-          showLineNumbers
-          wrapLines
-          theme={globalTheme.name === 'dark' ? dracula : github}
-        />
-        {/* <VideoPlayer
+        <VideoPlayer
           // width="100%"
           // height="100%"
           autoPlay
@@ -32,9 +36,9 @@ const GullieAPICard = ({ translate }: IProps) => {
           muted
           // controls
         >
-          <source src="/images/videos/menu.webm" type="video/mp4" />
+          <source src="/videos/gullie_API.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </VideoPlayer> */}
+        </VideoPlayer>
       </Graphics>
     </Container>
   );

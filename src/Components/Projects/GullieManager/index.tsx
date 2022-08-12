@@ -17,7 +17,8 @@ const GullieManagerCard = ({ translate }: IProps) => {
       <Content>
         <Title>Gullie Manager</Title>
         <Description>
-          {translate('projects.gullieManager.description')}
+          <p>{translate('projects.gullieManager.a')}</p>
+          <p>{translate('projects.gullieManager.b')}</p>
         </Description>
       </Content>
       <Graphics>
@@ -30,7 +31,7 @@ const GullieManagerCard = ({ translate }: IProps) => {
           muted
           // controls
         >
-          <source src="/images/videos/productdetails.webm" type="video/mp4" />
+          <source src="/videos/gullie_manager.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </VideoPlayer>
       </Graphics>

@@ -47,12 +47,12 @@ export const Content = styled.div`
 
   @media (min-width: 768px) {
     /* min-width: 40%; */
-    width: 40%;
+    width: 50%;
   }
 
-  @media (min-width: 992px) {
-    width: 40%;
-  }
+  /* @media (min-width: 992px) {
+    width: 50%;
+  } */
 `;
 
 export const Title = styled.h3`
@@ -61,10 +61,13 @@ export const Title = styled.h3`
   color: ${({ theme }) => theme.colors.white};
 `;
 
-export const Description = styled.p`
+export const Description = styled.div`
   color: ${({ theme }) => theme.colors.white};
   opacity: 0.5;
   line-height: 1.5rem;
+  p {
+    margin: 0.5rem;
+  }
 `;
 
 export const Graphics = styled.div`
@@ -77,19 +80,21 @@ export const Graphics = styled.div`
   max-width: calc(60vh * 0.462); */
 
   width: 100%;
-  height: 100%;
+  max-height: 100%;
+  text-align: center;
 
   @media (min-width: 768px) {
-    width: 60%;
+    width: 50%;
     /* min-width: 60%; */
   }
 
-  @media (min-width: 992px) {
-    min-width: 60%;
-  }
+  /* @media (min-width: 992px) {
+    min-width: 50%;
+  } */
 `;
 
 export const VideoPlayer = styled.video`
   max-width: 100%;
-  height: auto;
+  /* height: auto; */
+  /* object-fit: fill; */
 `;
