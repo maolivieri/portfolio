@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import StyledLink from '../../design/styledLink';
 import { darken } from 'polished';
 
 export const PageContainer = styled.div`
@@ -12,11 +11,10 @@ export const PageContainer = styled.div`
   overflow: visible;
   width: 100%;
   min-height: 90%;
-  
+
   @media (max-width: 992px) {
     overflow-x: hidden;
     padding-top: 1rem;
-    
   }
 `;
 
@@ -88,7 +86,7 @@ export const Title = styled.h1`
       : props.theme.colors.primary};
   @media (max-width: 992px) {
     font-size: 10vw;
-  }    
+  }
 `;
 
 export const Subtitle = styled.p`
@@ -99,7 +97,7 @@ export const Subtitle = styled.p`
   /* line-height: 1.3rem; */
   @media (max-width: 992px) {
     font-size: 1rem;
-  }    
+  }
 `;
 
 export const Content = styled.p`
@@ -113,7 +111,7 @@ export const Content = styled.p`
   line-height: 150%;
   @media (max-width: 992px) {
     font-size: 1rem;
-  }     
+  }
 `;
 
 export const DowloadButton = styled.button`

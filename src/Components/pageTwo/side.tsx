@@ -1,9 +1,7 @@
 import styled from 'styled-components';
-import StyledLink from '../../design/styledLink';
 import { darken, transparentize, lighten } from 'polished';
 import { useTheme } from 'styled-components';
-
-import Tooltip from '../../design/tooltip';
+import Tooltip from '../../Design/tooltip';
 
 const Side = () => {
   const theme = useTheme();
@@ -106,12 +104,12 @@ export const LinkItem = styled.a`
     color: ${(props) => darken(0.3, props.theme.colors.primary)};
     outline: none;
     border: 0;
-  };
+  }
 
   @media (max-width: 992px) {
     width: 2.3rem;
     height: 2.3rem;
-  } 
+  }
 `;
 
 export default Side;
