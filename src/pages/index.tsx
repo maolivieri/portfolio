@@ -21,7 +21,7 @@ interface Props {
   toggleTheme(): void;
 }
 
-export default function Home<Props>({ toggleTheme }) {
+export default function Home({ toggleTheme }: Props) {
   const [isLoading, setIsLoading] = React.useState(true);
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const [projectIndex, setProjectIndex] = React.useState(0);
