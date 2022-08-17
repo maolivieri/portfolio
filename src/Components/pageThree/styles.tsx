@@ -41,6 +41,11 @@ export const Techs = styled.div`
   }
 `;
 
+export const BlankIcon = styled.div`
+  width: 1rem;
+  height: 1rem;
+`;
+
 export const TextBody = styled.div`
   width: 35%;
   margin-left: 6rem;
