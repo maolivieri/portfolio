@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^4.16.0",
     "framer-motion": "^4.1.17",
     "keen-slider": "^5.4.1",
     "next": "^12.2.5",
