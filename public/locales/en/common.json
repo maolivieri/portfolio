@@ -13,9 +13,17 @@
     "dowload": "Download Resume"
   },
   "pageThree": {
-    "header": "Technology",
-    "title": "Caixa de ferramentas",
-    "content": "As product owner I was deeply involved on DevOps processes and decisions. 2 years ago I started a personal project using Django for the backend and React for the frontend. I have always valued the importance of tests on my code, CD/CI and clean code. I have recently started an immersion on Node and Typescript and I love React and NextJs."
+    "header": "Technologies",
+    "title": "Toolbox",
+    "pa": "I am passionate about technology, software development, creating logic, developing effective code and 3 years ago I decided to focus on becoming a good programmer. Since then I've been studying and practising a lot, being ready for all challenges.",
+    "pb": "Today I continue to specialize in Typescript, React, React Native and NodeJs, always looking to follow best practices and processes.",
+    "history": {
+      "a": "E há 3 anos atrás eu decidi focar em me tornar um bom programador e inicie um projeto pessoal chamado Gullie, onde utilizei inicialmente Django para o backend e React para o frontend.",
+      "b": "Como procuro sempre o aprendizado continuo, recentemente rescrevi toda a aplicação novamente, dessa vez utilizando NodeJS para o backend e uma mescla de React e Next para o frontend.",
+      "c": "Procurei sempre valorizar a importancia de ter testes no meu codigo, aplicar CI/CD e tem um código limpo.",
+      "d": "Hoje em dia a applicação Gullie está disponível e hospedada na AWS, e é meu parque de diversões, onde consigo aplicar novos conhecimentos e continuar me desenvolvendo.",
+      "e": "Ao lado podemos ver as principais tecnologies que eu utilizei e utilizo atualmente."
+    }
   },
   "pageFour": {
     "header": "Creative territory",

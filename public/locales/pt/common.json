@@ -13,9 +13,17 @@
     "dowload": "Baixar currículo"
   },
   "pageThree": {
-    "header": "Technologias",
-    "title": "Toolbox",
-    "content": "Trabalhando como Product Owner eu sempre estive envolvido nos processos e decisoes de DevOps. Há 2 anos atrás eu inicie um projeto pessoal usando Django para o backend e React para o frontend. Sempre valorizei a importancia de ter testes no meu codigo, aplicar CD/CI e tem um código limpo."
+    "header": "Tecnologias",
+    "title": "Caixa de ferramentas",
+    "pa": "Sou apaixonado por tecnologia, desenvolvimento de software, criação de lógica e por criar códigos eficazez. Há 3 anos atrás eu decidi focar em me tornar um bom programador. Desde então venho estudando e praticando muito, estando pronto para todos os desafios.",
+    "pb": "Hoje continuo me especializando em Typescript, React, React Native e NodeJs, sempre procurando seguir as boas práticas e processos.",
+    "history": {
+      "a": "E há 3 anos atrás eu decidi focar em me tornar um bom programador e inicie um projeto pessoal chamado Gullie, onde utilizei inicialmente Django para o backend e React para o frontend.",
+      "b": "Como procuro sempre o aprendizado continuo, recentemente rescrevi toda a aplicação novamente, dessa vez utilizando NodeJS para o backend e uma mescla de React e Next para o frontend.",
+      "c": "Procurei sempre valorizar a importancia de ter testes no meu codigo, aplicar CI/CD e tem um código limpo.",
+      "d": "Hoje em dia a applicação Gullie está disponível e hospedada na AWS, e é meu parque de diversões, onde consigo aplicar novos conhecimentos e continuar me desenvolvendo.",
+      "e": "Ao lado podemos ver as principais tecnologies que eu utilizei e utilizo atualmente."
+    }
   },
   "pageFour": {
     "header": "",

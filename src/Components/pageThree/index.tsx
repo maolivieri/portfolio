@@ -13,7 +13,7 @@ const PageThree = ({ t }) => {
             `/icons/techs/css.png`,
             `/icons/techs/redux.png`,
             `/icons/techs/gatsby.png`,
-            `/icons/techs/nextjs`,
+            `/icons/techs/next.png`,
             `/icons/techs/jest.png`,
             `/icons/techs/html5.png`
           ]}
@@ -22,7 +22,7 @@ const PageThree = ({ t }) => {
           title="Mobile App"
           subtitle="Sed ut perspiciatis unde omnis iste natus."
           iconsArray={[
-            '/icons/techs/react.png',
+            '/icons/techs/reactnative.png',
             '/icons/techs/expo.png',
             '/icons/techs/null.png',
             '/icons/techs/null.png',
@@ -36,10 +36,10 @@ const PageThree = ({ t }) => {
           subtitle="Sed ut perspiciatis unde omnis iste natus."
           iconsArray={[
             '/icons/techs/postgres.png',
-            '/icons/techs/django.png',
             '/icons/techs/node.png',
-            '/icons/techs/express.png',
-            '/icons/techs/mongo.png',
+            '/icons/techs/django.png',
+            '/icons/techs/prisma.png',
+            '/icons/techs/null.png',
             '/icons/techs/null.png',
             '/icons/techs/null.png'
           ]}
@@ -54,7 +54,7 @@ const PageThree = ({ t }) => {
             '/icons/techs/git.png',
             '/icons/techs/jenkins.png',
             '/icons/techs/nginx.png',
-            '/icons/techs/aws.png'
+            '/icons/techs/awsblack.png'
           ]}
         />
         <TechRow
@@ -87,7 +87,10 @@ const PageThree = ({ t }) => {
       <TextBody>
         <Header>{t('pageThree.header')}</Header>
         <Title>{t('pageThree.title')}</Title>
-        <Content>{t('pageThree.content')}</Content>
+        <Content>
+          <p>{t('pageThree.pa')}</p>
+          <p>{t('pageThree.pb')}</p>
+        </Content>
       </TextBody>
     </Container>
   );
