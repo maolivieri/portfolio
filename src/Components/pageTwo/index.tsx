@@ -29,7 +29,12 @@ const PageTwo = ({ t }) => {
               <Subtitle>{t('pageTwo.subtitle')}</Subtitle>
               <Content>{t('pageTwo.secondparagraph')}</Content>
             </div>
-            <DowloadButton>{t('pageTwo.dowload')}</DowloadButton>
+            <DowloadButton
+              target="_blank"
+              href="/MatheusAguiarOlivieri_Resume2022.pdf"
+            >
+              {t('pageTwo.dowload')}
+            </DowloadButton>
           </BodyContent>
         </Body>
       </Container>

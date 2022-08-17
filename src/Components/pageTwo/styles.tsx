@@ -114,7 +114,7 @@ export const Content = styled.p`
   }
 `;
 
-export const DowloadButton = styled.button`
+export const DowloadButton = styled.a`
   padding: 0.7rem 1.3rem;
   /* margin: 1rem 0rem 1rem 0rem; */
   background-color: ${(props) => props.theme.colors.secondary};
@@ -126,7 +126,7 @@ export const DowloadButton = styled.button`
   font-weight: 600;
   text-align: center;
   text-decoration: none;
-  transition: all 0.2s;
+  transition: all 0.1s;
   cursor: pointer;
   :hover {
     border: 0.1em solid rgba(255, 255, 255, 0.5);

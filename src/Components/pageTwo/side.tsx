@@ -46,10 +46,10 @@ const Side = () => {
         </svg>
       </LinkItem>
       <LinkItem
-        href="https://api.whatsapp.com/send?phone=+610497803676"
+        href="https://api.whatsapp.com/send?phone=5519971568585"
         target="_blank"
       >
-        <Tooltip text="+610497803676" top="-1.7rem" left="0.8rem">
+        <Tooltip text="+55(19)971568585" top="-1.7rem" left="0.8rem">
           <svg
             fill={theme.colors.details}
             xmlns="http://www.w3.org/2000/svg"
