@@ -4,6 +4,10 @@ import { cover, linearGradient, transparentize } from 'polished';
 //#0C1E3C
 //#0E1027
 
+interface RippleProps {
+  isLoading: boolean;
+}
+
 export const Container = styled.div`
   min-height: 100vh;
   /* ${cover()}; */
@@ -43,4 +47,18 @@ export const MobileBody = styled.div`
 export const PG = styled.div`
   overflow: visible;
   z-index: 10;
+`;
+
+export const LoadingRipple = styled.div`
+  border-color: ${({ theme }) => theme.colors.highlights};
+`;
+
+export const LoadingWrapper = styled.div<RippleProps>`
+  z-index: ${({ isLoading }) => (isLoading ? 100000 : -100000)};
+  position: absolute;
+  inset: 0;
+  background: ${({ theme }) => theme.colors.background};
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

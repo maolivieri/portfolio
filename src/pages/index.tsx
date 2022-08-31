@@ -1,5 +1,12 @@
-import React from 'react';
-import { Container, Body, PG, MobileBody } from '../styles/Home';
+import React, { createRef } from 'react';
+import {
+  Container,
+  Body,
+  PG,
+  MobileBody,
+  LoadingWrapper,
+  LoadingRipple
+} from '../styles/Home';
 import { parseCookies } from 'nookies';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
@@ -33,6 +40,15 @@ export default function Home({ toggleTheme }: Props) {
     }
   });
 
+  const scrollFunction = (scrollOffset: number) => {
+    console.log(scrollOffset);
+    if (scrollOffset > 0) {
+      slider.moveToSlide(currentSlide + 1, 2000);
+    } else {
+      slider.moveToSlide(currentSlide - 1, 2000);
+    }
+  };
+
   React.useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -51,23 +67,13 @@ export default function Home({ toggleTheme }: Props) {
 
   return (
     <Layout title="Matheus Aguiar Olivieri">
-      <div
-        style={{
-          zIndex: isLoading ? 100000 : -100000,
-          position: 'absolute',
-          inset: 0,
-          background: theme.colors.background,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}
-      >
+      <LoadingWrapper isLoading={isLoading}>
         <div className={loadingStyles.ldsripple}>
-          <div style={{ borderColor: theme.colors.highlights }}></div>
-          <div style={{ borderColor: theme.colors.highlights }}></div>
-          <div style={{ borderColor: theme.colors.highlights }}></div>
+          <div style={{ borderColor: theme.colors.highlights }} />
+          <div style={{ borderColor: theme.colors.highlights }} />
+          <div style={{ borderColor: theme.colors.highlights }} />
         </div>
-      </div>
+      </LoadingWrapper>
       <Container>
         <Header
           currentSlide={currentSlide}
@@ -84,7 +90,13 @@ export default function Home({ toggleTheme }: Props) {
             setProjectIndex={setProjectIndex}
           />
         </MobileBody>
-        <Body ref={ref} className="keen-slider">
+        <Body
+          ref={ref}
+          className="keen-slider"
+          onWheel={(e) => {
+            scrollFunction(e.deltaY);
+          }}
+        >
           <PG
             style={{ zIndex: 100, minHeight: '100vh' }}
             className="keen-slider__slide"
