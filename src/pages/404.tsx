@@ -1,14 +1,16 @@
-import React from 'react'
+import { useRouter } from 'next/router';
+import React, { useEffect } from 'react';
 
 interface Props {}
 
 const Page404: React.FC<Props> = () => {
-  
-    return (
-      <div>
-          <h1>VAI PALMEIRAS</h1>
-      </div>
-    )
-  }
+  const router = useRouter();
 
-  export default Page404
+  useEffect(() => {
+    router.replace('/');
+  });
+
+  return null;
+};
+
+export default Page404;
