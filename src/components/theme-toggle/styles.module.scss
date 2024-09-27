@@ -1,0 +1,49 @@
+
+.container {
+  display: inline-block;
+  position: relative;
+  height: 2.5rem;
+  width: 4rem;
+}
+
+.toggle {
+  cursor: pointer;
+  background: var(--opaque-bg);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2rem;
+  width: 4rem;
+  border-radius: 24px;
+  padding: 0.25rem;
+}
+
+.indicator {
+  min-width: 2rem;
+  max-width: 2rem;
+  min-height: 2rem;
+  max-height: 2rem;
+  border-radius: 999999px;
+  background: var(--opaque-bg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.on {
+  left: 0;
+}
+
+.icon {
+  min-width: 1.5rem;
+  max-width: 1.5rem;
+  min-height: 1.5rem;
+  max-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 30;
+}
