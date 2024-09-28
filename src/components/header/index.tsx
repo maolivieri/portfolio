@@ -1,13 +1,11 @@
 import styles from './styles.module.scss';
 import { ThemeToggle } from "../theme-toggle";
 import { LanguageButton } from '../language-button';
-import { useLocale, useTranslations } from 'next-intl';
-import { Locale } from '@/i18n/config';
-
+import { useTranslations } from 'next-intl';
 
 export function Header() {
   const t = useTranslations('nav');
-  const locale = useLocale() as Locale;
+
 
   return (
     <nav className={styles.nav}>
@@ -18,8 +16,8 @@ export function Header() {
         <p className={styles['list-item']}>{t('contact')}</p>
       </div>
       <div className={styles.actions}>
-        <LanguageButton language='pt' active={locale} />
-        <LanguageButton language='en' active={locale} />
+        <LanguageButton language='pt' />
+        <LanguageButton language='en' />
         <ThemeToggle />
       </div>
     </nav>

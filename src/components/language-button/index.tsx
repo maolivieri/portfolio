@@ -5,14 +5,15 @@ import styles from './styles.module.scss';
 import { Locale } from '@/i18n/config';
 import { useTransition } from 'react';
 import { setUserLocale } from '@/services/locale';
+import { useLocale } from 'next-intl';
 
 interface Props {
   language: Locale;
-  active: 'pt' | 'en';
 }
 
-export function LanguageButton({ language, active }: Props) {
+export function LanguageButton({ language }: Props) {
   const [isPending, startTransition] = useTransition();
+  const locale = useLocale() as Locale;
 
   function onChange(locale: Locale) {
     startTransition(() => {
@@ -22,7 +23,7 @@ export function LanguageButton({ language, active }: Props) {
 
   return (
     <button
-      className={`${styles.button} ${active === language && styles.active}`}
+      className={`${styles.button} ${locale === language && styles.active}`}
       disabled={isPending}
       onClick={() => onChange(language)}
     >
