@@ -3,6 +3,7 @@
 import { MouseEvent, useState } from "react";
 import styles from './styles.module.scss';
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export function ThemeToggle() {
   const [isDark, setIsDark] = useState<boolean>(true);
@@ -24,7 +25,8 @@ export function ThemeToggle() {
         <div className={styles.icon}>
           <Image src='/moon.png' alt='image of a moon' fill />
         </div>
-        <span className={`${styles.indicator} ${isDark && styles.on}`} />
+        {/* <span className={`${styles.indicator} ${isDark && styles.on}`} /> */}
+        <motion.div className={`${styles.indicator}`} animate={{ x: isDark ? 0 : -32 }} />
       </label>
     </div>
   )
