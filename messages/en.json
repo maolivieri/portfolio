@@ -5,5 +5,11 @@
     "experiences": "Experiences",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "main": {
+    "intro": "Hello, I'm Matheus Olivieri",
+    "title1": "Fullstack",
+    "title2": "software",
+    "title3": "developer"
   }
 }

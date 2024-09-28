@@ -5,5 +5,11 @@
     "experiences": "Experiencias",
     "projects": "Projetos",
     "contact": "Entre em contato"
+  },
+  "main": {
+    "intro": "Olá, sou Matheus Olivieri",
+    "title1": "Desenvolvedor",
+    "title2": "de software",
+    "title3": "fullstack"
   }
 }
