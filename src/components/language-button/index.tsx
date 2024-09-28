@@ -6,6 +6,7 @@ import { Locale } from '@/i18n/config';
 import { useTransition } from 'react';
 import { setUserLocale } from '@/services/locale';
 import { useLocale } from 'next-intl';
+import { motion } from 'framer-motion';
 
 interface Props {
   language: Locale;
@@ -22,12 +23,14 @@ export function LanguageButton({ language }: Props) {
   }
 
   return (
-    <button
+    <motion.button
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
       className={`${styles.button} ${locale === language && styles.active}`}
       disabled={isPending}
       onClick={() => onChange(language)}
     >
       <Image src={`/${language}.png`} fill alt={`${language} flag`} />
-    </button>
+    </motion.button>
   )
 }
