@@ -16,7 +16,7 @@ export function ThemeToggle() {
 
   return (
     <div className={styles.container} onClick={toggleTheme}>
-      <input type="checkbox" checked={isDark} style={{ display: 'none' }} />
+      <input type="checkbox" defaultChecked={isDark} style={{ display: 'none' }} />
       <label className={styles.toggle}>
         <div className={styles.icon}>
           <Image src='/sun.png' alt='image of a sun' fill />
