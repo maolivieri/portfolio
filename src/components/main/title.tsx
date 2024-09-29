@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import styles from './styles.module.scss';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 export function Title() {
   const t = useTranslations('main');
@@ -12,7 +12,7 @@ export function Title() {
   const words = [title1, title2, title3]
 
   // Animation variants for each letter
-  const animation = {
+  const animation: Variants = {
     hidden: { opacity: 0, x: 5 },
     visible: (i: number) => ({
       opacity: 1,
@@ -26,7 +26,7 @@ export function Title() {
     }),
   };
 
-  const lettterAnimationOverlay = {
+  const lettterAnimationOverlay: Variants = {
     hidden: { opacity: 0, x: 2 },
     visible: (i: number) => ({
       opacity: 1,
@@ -40,7 +40,7 @@ export function Title() {
     }),
   };
 
-  const lettterAnimation = {
+  const lettterAnimation: Variants = {
     hidden: { opacity: 0, x: 10 },
     visible: (i: number) => ({
       opacity: 1,
@@ -64,6 +64,7 @@ export function Title() {
             initial="hidden"
             animate="visible"
             variants={animation}
+            whileInView="visible"
             className={styles['title-word']}
           >
             {index < 2 ? word : (
@@ -75,6 +76,7 @@ export function Title() {
                       custom={letterIndex}
                       initial="hidden"
                       animate="visible"
+                      whileInView="visible"
                       variants={lettterAnimationOverlay}
                       className={styles['title-letter']}
                       style={{ color: 'var(--tertiary)' }}
@@ -89,6 +91,7 @@ export function Title() {
                     custom={letterIndex}
                     initial="hidden"
                     animate="visible"
+                    whileInView="visible"
                     variants={lettterAnimation}
                     className={styles['title-letter']}
                   >
