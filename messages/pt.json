@@ -1,10 +1,10 @@
 {
   "nav": {
     "home": "Home",
-    "about": "Sobre mim",
+    "about": "Sobre",
     "experiences": "Experiencias",
     "projects": "Projetos",
-    "contact": "Entre em contato"
+    "contact": "Contato"
   },
   "main": {
     "intro": "Olá, sou Matheus Olivieri",

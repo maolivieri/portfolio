@@ -27,8 +27,10 @@ export function Header() {
         </ LinkButton>
       </div>
       <div className={styles.actions}>
-        <LanguageButton language='pt' />
-        <LanguageButton language='en' />
+        <div className={styles.languages}>
+          <LanguageButton language='pt' />
+          <LanguageButton language='en' />
+        </div>
         <ThemeToggle />
       </div>
     </nav>

@@ -15,12 +15,12 @@
 }
 
 .intro {
-  color: var(--primary);
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: var(--highlight);
+  font-size: clamp(0.75rem, 2vw, 1.5rem);
 }
 
 .title-container {
-  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-size: clamp(1rem, 5vw, 3rem);
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
