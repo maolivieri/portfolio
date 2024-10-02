@@ -1,6 +1,5 @@
 
-
-.main {
+.container {
   margin: 0 auto;
   max-width: 1200px;
   width: 100%; 
@@ -8,13 +7,10 @@
   flex-direction: column;
   justify-content: center;
   padding: 2rem;
+  position: relative;
+  height: 20rem;
 
   @media (min-width: 768px) {
     width: clamp(300px, 80%, 1200px); 
   }
-}
-
-.intro {
-  color: var(--highlight);
-  font-size: clamp(0.75rem, 2vw, 1.5rem);
 }
