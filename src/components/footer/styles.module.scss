@@ -1,5 +1,4 @@
 
-
 .footer {
   position: fixed;
   bottom: 0;
@@ -11,6 +10,8 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  background: var(--transparent-bg);
+  border-radius: 100% 100% 0 0;
 
   p {
     color: var(--primary);

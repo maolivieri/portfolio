@@ -37,44 +37,47 @@ export function Header() {
       });
     };
   }, []);
+
   return (
     <nav className={styles.nav}>
-      <div className={styles.list}>
-        <LinkButton
-          isActive={activeSection === 'home'}
-          handleClick={() => setActiveSection('home')}
-          href='#home'
-        >
-          {t('home')}
-        </ LinkButton>
-        <LinkButton
-          isActive={activeSection === 'about'}
-          handleClick={() => setActiveSection('about')}
-          href='#about'
-        >
-          {t('about')}
-        </ LinkButton>
-        <LinkButton
-          isActive={activeSection === 'experiences'}
-          handleClick={() => setActiveSection('experiences')}
-          href='#experiences'
-        >
-          {t('experiences')}
-        </ LinkButton>
-        <LinkButton
-          isActive={activeSection === "projects"}
-          handleClick={() => setActiveSection('projects')}
-          href='#projects'
-        >
-          {t('projects')}
-        </ LinkButton>
-      </div>
-      <div className={styles.actions}>
-        <div className={styles.languages}>
-          <LanguageButton language='pt' />
-          <LanguageButton language='en' />
+      <div className={styles.container}>
+        <div className={styles.list}>
+          <LinkButton
+            isActive={activeSection === 'home'}
+            handleClick={() => setActiveSection('home')}
+            href='#home'
+          >
+            {t('home')}
+          </ LinkButton>
+          <LinkButton
+            isActive={activeSection === 'about'}
+            handleClick={() => setActiveSection('about')}
+            href='#about'
+          >
+            {t('about')}
+          </ LinkButton>
+          <LinkButton
+            isActive={activeSection === 'experiences'}
+            handleClick={() => setActiveSection('experiences')}
+            href='#experiences'
+          >
+            {t('experiences')}
+          </ LinkButton>
+          <LinkButton
+            isActive={activeSection === "projects"}
+            handleClick={() => setActiveSection('projects')}
+            href='#projects'
+          >
+            {t('projects')}
+          </ LinkButton>
         </div>
-        <ThemeToggle />
+        <div className={styles.actions}>
+          <div className={styles.languages}>
+            <LanguageButton language='pt' />
+            <LanguageButton language='en' />
+          </div>
+          <ThemeToggle />
+        </div>
       </div>
     </nav>
   )

@@ -1,6 +1,20 @@
 
 
 .nav {
+  width: 100%; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--transparent-bg);
+  border-radius: 16px;
+  // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15.1px);
+  -webkit-backdrop-filter: blur(15.1px);
+  z-index: 99999;
+}
+
+.container {
   max-width: 1200px;
   width: 100%; 
   margin: 0 auto;
@@ -10,17 +24,6 @@
   justify-content: space-between;
   flex-direction: column-reverse;
   gap: 0.5rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  /* From https://css.glass */
-background: var(--transparent-bg);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(15.1px);
--webkit-backdrop-filter: blur(15.1px);
-  z-index: 999;
 
   @media (min-width: 768px) {
     width: clamp(300px, 80%, 1200px); 
