@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslations } from "next-intl";
-import styles from './title.module.scss';
+import styles from './styles.module.scss';
 import { motion, Variants } from 'framer-motion';
 
 export function Title() {

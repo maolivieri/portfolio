@@ -6,8 +6,9 @@
   top: 0;
   left: 0;
   right: 0;
-  background: var(--transparent-bg);
-  border-radius: 16px;
+  background: linear-gradient(var(--background), var(--transparent-bg));
+  // background: var(--transparent-bg);
+  // border-radius: 0 0 16px 16px;
   // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(15.1px);
   -webkit-backdrop-filter: blur(15.1px);
