@@ -1,0 +1,37 @@
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 0.5rem;
+
+  @media (min-width: 768px) {
+    gap: 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    gap: 1.5rem;
+  }
+}
+
+.link {
+  margin: 0rem 0.3rem 0rem 0.3rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  width: clamp(1rem, 3vw, 1.5rem);
+  height: clamp(1rem, 3vw, 1.5rem);
+  
+  svg {
+    fill: var(--primary);
+
+    &:hover {
+      fill: var(--highlight)
+    }
+  }
+  
+  :focus {
+    outline: none;
+    border: 0;
+  }
+}

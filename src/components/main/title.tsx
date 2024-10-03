@@ -11,48 +11,25 @@ export function Title() {
   const title3 = t('title3');
   const words = [title1, title2, title3]
 
-  // Animation variants for each letter
-  const animation: Variants = {
-    hidden: { opacity: 0, x: 5 },
-    visible: (i: number) => ({
-      opacity: 1,
-      x: 0,
-      transition: {
-        delay: i * 0.3, // Delay each letter's animation
-        duration: 0.8,
-        type: 'spring',
-        stiffness: 300,
-      },
-    }),
-  };
+  function getAnimationVariants(x: number, duration: number, delay: (i: number) => number): Variants {
+    return {
+      hidden: { opacity: 0, x },
+      visible: (i: number) => ({
+        opacity: 1,
+        x: 0,
+        transition: {
+          delay: delay(i),
+          duration,
+          type: 'spring',
+          stiffness: 300,
+        },
+      }),
+    };
+  }
 
-  const lettterAnimationOverlay: Variants = {
-    hidden: { opacity: 0, x: 2 },
-    visible: (i: number) => ({
-      opacity: 1,
-      x: 0,
-      transition: {
-        delay: i * 0.2, // Delay each letter's animation
-        duration: 5.8,
-        type: 'spring',
-        stiffness: 300,
-      },
-    }),
-  };
-
-  const lettterAnimation: Variants = {
-    hidden: { opacity: 0, x: 10 },
-    visible: (i: number) => ({
-      opacity: 1,
-      x: 0,
-      transition: {
-        delay: i * 0.2 + 0.1, // Delay each letter's animation
-        duration: 5.8,
-        type: 'spring',
-        stiffness: 300,
-      },
-    }),
-  };
+  const animation = getAnimationVariants(5, 0.8, (i) => i * 0.3);
+  const lettterAnimationOverlay = getAnimationVariants(2, 5.8, (i) => i * 0.2);
+  const lettterAnimation = getAnimationVariants(2, 5.8, (i) => (i * 0.2) + 0.15);
 
   return (
     <div className={styles['title-container']}>

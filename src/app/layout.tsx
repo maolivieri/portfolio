@@ -3,6 +3,7 @@ import { Harmattan, Yeseva_One, Work_Sans } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import "./globals.css";
+import { Footer } from "@/components/footer";
 
 const workSans = Work_Sans({ subsets: ["latin"], variable: '--font-body' });
 const raleway = Harmattan({ subsets: ["latin"], variable: '--font-subtitle', weight: ['400', '700'] });
@@ -29,6 +30,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
+        <Footer />
       </body>
     </html>
   );

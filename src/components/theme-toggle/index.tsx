@@ -11,7 +11,7 @@ export function ThemeToggle() {
   const toggleTheme = (e: MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
     e.stopPropagation();
-    document.body.classList.toggle('light-theme');
+    document.body.classList.toggle('dark-theme');
     setIsDark(prevState => !prevState);
   };
 
