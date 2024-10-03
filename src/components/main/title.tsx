@@ -42,6 +42,7 @@ export function Title() {
             animate="visible"
             variants={animation}
             whileInView="visible"
+            viewport={{ amount: 'some' }}
             className={styles['title-word']}
           >
             {index < 2 ? word : (

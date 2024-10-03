@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import "./globals.css";
 import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
 
 const workSans = Work_Sans({ subsets: ["latin"], variable: '--font-body' });
 const raleway = Harmattan({ subsets: ["latin"], variable: '--font-subtitle', weight: ['400', '700'] });
@@ -28,9 +29,10 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={`${workSans.variable} ${raleway.variable} ${poppins.variable}`}>
         <NextIntlClientProvider messages={messages}>
+          <Header />
           {children}
+          <Footer />
         </NextIntlClientProvider>
-        <Footer />
       </body>
     </html>
   );
