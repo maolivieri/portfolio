@@ -5,4 +5,20 @@
   font-size: clamp(0.8rem, 2vw, 1rem);
   cursor: pointer;
   font-weight: 500;
+  position: relative;
+}
+
+.text {
+  z-index: 5;
+  position: relative;
+}
+
+.active {
+  position: absolute;
+  z-index: -1;
+  background: var(--tertiary);
+  bottom: 0;
+  width: 80%;
+  height: 40%;
+  // opacity: 0.3;
 }

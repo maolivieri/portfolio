@@ -1,7 +1,7 @@
 .circle {
   position: absolute;
   right: -25vw;
-  top: -5vw;
+  top: 4rem;
   width: clamp(50vw, 60vw, 70vw); 
   height: clamp(50vw, 60vw, 70vw); 
   // width: 70vw;
@@ -11,7 +11,7 @@
   }
 
   svg {
-    fill: green;
+    fill: rgb(120, 143, 120);
   }
 
   circle {
