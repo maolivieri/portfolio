@@ -1,11 +1,11 @@
 import { MainSection } from "@/components/main";
-import { About } from "@/components/about";
+import { Skills } from "@/components/skills";
 
 export default function Home() {
   return (
     <main>
       <MainSection />
-      <About />
+      <Skills />
     </main>
   );
 }
