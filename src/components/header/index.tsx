@@ -45,7 +45,7 @@ export function Header() {
           <LinkButton
             isActive={activeSection === 'home'}
             handleClick={() => setActiveSection('home')}
-            href='#home'
+            href='#'
           >
             {t('home')}
           </ LinkButton>

@@ -5,6 +5,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 4rem;
+  gap: 0.25rem;
+  padding-right: 1rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  color: var(--primary)
 }

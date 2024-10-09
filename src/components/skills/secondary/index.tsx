@@ -1,9 +1,27 @@
+import { ListItems } from "..";
+import { SecondarySkillCard } from "./secondary-card";
+import styles from "./styles.module.scss";
 
 
-export function SecondarySkills() {
+interface Props {
+  list: ListItems[];
+  reverse?: boolean;
+}
+
+export function SecondarySkills({ list, reverse = false }: Props) {
   return (
-    <div>
-      SKILLS Other OTHER
+    <div className={styles.container}>
+      <div className={`${styles.scrollOne} ${reverse && styles.reverse}`}>
+        {list.map(({ label, src }) => (
+          <SecondarySkillCard key={src} src={src} label={label} />
+        ))}
+      </div>
+      <div className={`${styles.scrollTwo} ${reverse && styles.reverse}`}>
+        {list.map(({ label, src }) => (
+          <SecondarySkillCard key={src} src={src} label={label} />
+        ))}
+      </div>
+      <div className={styles.fade} />
     </div>
   )
 }

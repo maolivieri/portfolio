@@ -8,8 +8,8 @@
   --secondary: #4b634a;
   --tertiary: #bdde00;
   --highlight: #ff8400;
-  --white: #222222;
-  --black: #ffffff;
+  --white: #ffffff;
+  --black: #222222;
   --opaque-bg: rgba(34, 34, 34, 0.2);
   --opaque-font: rgba(75, 99, 74, 0.4);
   --transparent-bg: rgb(245, 245, 245, 0.07);
@@ -24,8 +24,8 @@
   --secondary: #D7DDE5;
   --tertiary: #296af9;
   --highlight: #09dee5;
-  --white: #ffffff;
-  --black: #222222;
+  --white: #222222;
+  --black: #ffffff;
   --opaque-bg: rgba(255, 255, 255, 0.2);
   --opaque-font: rgba(215, 221, 209, 0.4);
   --transparent-bg: rgb(14, 16, 39, 0.07);
