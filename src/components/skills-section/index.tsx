@@ -13,6 +13,7 @@ export interface ListItems {
 }
 
 export function Skills() {
+  const t = useTranslations('nav');
   const userTheme = getUserTheme();
 
   const list: ListItems[] = [
@@ -34,7 +35,6 @@ export function Skills() {
   ]
   const listOne = shiftArray<ListItems>(list, 0);
   const listTwo = shiftArray<ListItems>(list, 10);
-  const t = useTranslations('nav');
 
 
   return (

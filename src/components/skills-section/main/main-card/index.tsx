@@ -4,14 +4,14 @@ import styles from "./styles.module.scss";
 interface Props {
   src: string;
   label: string;
-  width?: number;
-  height?: number;
 }
 
-export function MainSkillCard({ label, src, height = 60, width = 60 }: Props) {
+export function MainSkillCard({ label, src }: Props) {
   return (
     <div className={styles.container}>
-      <Image src={`/techs/${src}`} width={width} height={height} alt={label} />
+      <span className={styles.logo}>
+        <Image src={`/techs/${src}`} fill alt={label} />
+      </span>
       <p className={styles.label}>{label}</p>
     </div>
   )

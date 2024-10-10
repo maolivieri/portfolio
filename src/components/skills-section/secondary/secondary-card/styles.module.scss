@@ -9,7 +9,18 @@
   padding-right: 1rem;
 }
 
+.logo {
+  position: relative;
+  width: 0.8rem;
+  height: 0.8rem;
+
+  @media (min-width: 768px) {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
 .label {
-  font-size: 0.75rem;
+  font-size: clamp(0.6rem, 1.5vw, 0.75rem);
   color: var(--primary)
 }

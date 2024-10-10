@@ -11,5 +11,11 @@
     "title1": "Desenvolvedor",
     "title2": "de software",
     "title3": "fullstack"
+  },
+  "projects": {
+    "miguel": {
+      "title": "Miguel Veiculos",
+      "description": "Site da ......."
+    }
   }
 }
