@@ -1,15 +1,21 @@
+import { TypescriptIcon } from "@/icons/typescript";
 import { MainSkillCard } from "./main-card";
 import styles from "./styles.module.scss";
+import { ReactIcon } from "@/icons/react";
+import { NodeJsIcon } from "@/icons/nodejs";
+import { JavascriptIcon } from "@/icons/javascript";
+import { NextJsIcon } from "@/icons/nextjs";
+import { ReactNativeIcon } from "@/icons/react-native";
 
 export function MainSkills() {
   return (
     <div className={styles.container}>
-      <MainSkillCard src="typescript.svg" label="Typescript" />
-      <MainSkillCard src="react.svg" label="ReactJs" />
-      <MainSkillCard src="nodejs.svg" label="NodeJs" />
-      <MainSkillCard src="javascript.svg" label="Javascript" />
-      <MainSkillCard src="nextjs.svg" label="NextJs" />
-      <MainSkillCard src="react-native.svg" label="React Native" />
+      <MainSkillCard icon={<TypescriptIcon />} label="Typescript" />
+      <MainSkillCard icon={<ReactIcon />} label="ReactJs" />
+      <MainSkillCard icon={<NodeJsIcon />} label="NodeJs" />
+      <MainSkillCard icon={<JavascriptIcon />} label="Javascript" />
+      <MainSkillCard icon={<NextJsIcon />} label="NextJs" />
+      <MainSkillCard icon={<ReactNativeIcon />} label="React Native" />
     </div>
   )
 }

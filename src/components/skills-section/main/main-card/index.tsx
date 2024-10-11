@@ -1,16 +1,17 @@
-import Image from "next/image";
 import styles from "./styles.module.scss";
+import { ReactNode } from "react";
 
 interface Props {
-  src: string;
+  icon: ReactNode;
   label: string;
 }
 
-export function MainSkillCard({ label, src }: Props) {
+export function MainSkillCard({ label, icon }: Props) {
   return (
     <div className={styles.container}>
       <span className={styles.logo}>
-        <Image src={`/techs/${src}`} fill alt={label} />
+        {icon}
+        {/* <Image src={`/techs/${src}`} fill alt={label} /> */}
       </span>
       <p className={styles.label}>{label}</p>
     </div>
