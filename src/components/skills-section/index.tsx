@@ -5,36 +5,52 @@ import { MainSkills } from './main';
 import { SecondarySkills } from './secondary';
 import styles from './styles.module.scss';
 import { useTranslations } from 'next-intl';
-import { getUserTheme } from '@/services/theme';
+
+import { ReactNode } from 'react';
+import { AWSIcon } from '@/icons/aws';
+import { FigmaIcon } from '@/icons/figma';
+import { HTMLIcon } from '@/icons/html';
+import { CSSIcon } from '@/icons/css';
+import { DockerIcon } from '@/icons/docker';
+import { DjangoIcon } from '@/icons/django';
+import { GitIcon } from '@/icons/git';
+import { GraphqlIcon } from '@/icons/graphql';
+import { PostgresIcon } from '@/icons/postgres';
+import { MongoDBIcon } from '@/icons/mongodb';
+import { JestIcon } from '@/icons/jest';
+import { PythonIcon } from '@/icons/python';
+import { ReduxIcon } from '@/icons/redux';
+import { SQLIcon } from '@/icons/sql';
+import { StripeIcon } from '@/icons/stripe';
 
 export interface ListItems {
-  src: string;
+  icon: ReactNode;
   label: string;
 }
 
 export function Skills() {
   const t = useTranslations('nav');
-  const userTheme = getUserTheme();
 
   const list: ListItems[] = [
-    { src: `aws-${userTheme}.svg`, label: "AWS" },
-    { src: "figma.svg", label: "Figma" },
-    { src: "html.svg", label: "HTML" },
-    { src: "css.svg", label: "CSS" },
-    { src: "docker.svg", label: "Docker" },
-    { src: "django.svg", label: "Django" },
-    { src: "git.svg", label: "GIT" },
-    { src: "graphql.svg", label: "GraphQL" },
-    { src: "postgres.svg", label: "Postgres" },
-    { src: "mongodb.svg", label: "MongoDB" },
-    { src: "jest.svg", label: "Jest" },
-    { src: "python.svg", label: "Python" },
-    { src: "redux.svg", label: "Redux" },
-    { src: "sql.svg", label: "SQL" },
-    { src: "stripe.svg", label: "Stripe" },
+    { icon: <AWSIcon />, label: "AWS" },
+    { icon: <FigmaIcon />, label: "Figma" },
+    { icon: <HTMLIcon />, label: "HTML" },
+    { icon: <CSSIcon />, label: "CSS" },
+    { icon: <DockerIcon />, label: "Docker" },
+    { icon: <DjangoIcon />, label: "Django" },
+    { icon: <GitIcon />, label: "GIT" },
+    { icon: <GraphqlIcon />, label: "GraphQL" },
+    { icon: <PostgresIcon />, label: "Postgres" },
+    { icon: <MongoDBIcon />, label: "MongoDB" },
+    { icon: <JestIcon />, label: "Jest" },
+    { icon: <PythonIcon />, label: "Python" },
+    { icon: <ReduxIcon />, label: "Redux" },
+    { icon: <SQLIcon />, label: "SQL" },
+    { icon: <StripeIcon />, label: "Stripe" },
   ]
   const listOne = shiftArray<ListItems>(list, 0);
   const listTwo = shiftArray<ListItems>(list, 10);
+  const listThree = shiftArray<ListItems>(list, 5);
 
 
   return (
@@ -44,6 +60,7 @@ export function Skills() {
       <div className={styles.list}>
         <SecondarySkills list={listOne} />
         <SecondarySkills list={listTwo} reverse />
+        <SecondarySkills list={listThree} />
       </div>
     </section>
   )

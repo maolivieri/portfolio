@@ -11,7 +11,6 @@ export function MainSkillCard({ label, icon }: Props) {
     <div className={styles.container}>
       <span className={styles.logo}>
         {icon}
-        {/* <Image src={`/techs/${src}`} fill alt={label} /> */}
       </span>
       <p className={styles.label}>{label}</p>
     </div>

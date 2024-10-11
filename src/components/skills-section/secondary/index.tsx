@@ -12,13 +12,13 @@ export function SecondarySkills({ list, reverse = false }: Props) {
   return (
     <div className={styles.container}>
       <div className={`${styles.scrollOne} ${reverse && styles.reverse}`}>
-        {list.map(({ label, src }) => (
-          <SecondarySkillCard key={src} src={src} label={label} />
+        {list.map(({ label, icon }) => (
+          <SecondarySkillCard key={label} icon={icon} label={label} />
         ))}
       </div>
       <div className={`${styles.scrollTwo} ${reverse && styles.reverse}`}>
-        {list.map(({ label, src }) => (
-          <SecondarySkillCard key={src} src={src} label={label} />
+        {list.map(({ label, icon }) => (
+          <SecondarySkillCard key={label} icon={icon} label={label} />
         ))}
       </div>
       <div className={styles.fade} />

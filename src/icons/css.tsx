@@ -3,8 +3,8 @@ export function CSSIcon() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 48 48"
-      width="48px"
-      height="48px"
+      width="100%"
+      height="100%"
     >
       <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z" />
       <path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z" />

@@ -4,6 +4,8 @@ export function SQLIcon() {
       xmlns="http://www.w3.org/2000/svg"
       // xmlns:xlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 61 81"
+      width="100%"
+      height="100%"
       fill="#fff"
       fill-rule="evenodd"
       stroke="#000"
