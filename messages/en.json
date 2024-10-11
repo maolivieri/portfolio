@@ -15,7 +15,7 @@
   "projects": {
     "miguel": {
       "title": "Miguel Veiculos",
-      "description": "website for.... ......."
+      "description": "Miguel Veículos is a project I developed for a car dealership, showcasing all available vehicles with detailed information such as price, year, model, and features. It includes a powerful search feature that allows users to filter cars by various criteria like price range, model, year, and color, making it easier to find the right vehicle."
     }
   }
 }

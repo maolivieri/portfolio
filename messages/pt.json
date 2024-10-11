@@ -15,7 +15,7 @@
   "projects": {
     "miguel": {
       "title": "Miguel Veiculos",
-      "description": "Site da ......."
+      "description": "Miguel Veículos é um projeto que desenvolvi para uma concessionária, exibindo todos os veículos disponíveis com informações detalhadas, como preço, ano, modelo e características. O sistema inclui uma ferramenta de busca que permite filtrar os carros por critérios como faixa de preço, modelo, ano e cor, facilitando a busca pelo veículo ideal."
     }
   }
 }

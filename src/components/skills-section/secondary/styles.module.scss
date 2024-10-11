@@ -21,7 +21,6 @@
   white-space: nowrap;       
   animation: scroll 60s linear infinite; 
   animation-delay: -30s;    
-  color: white;    
   position: absolute; 
   
   &.reverse {
@@ -41,7 +40,6 @@
   white-space: nowrap;     
   animation: scroll 60s linear infinite; 
   transform: translateX(100%);
-  color: white;   
   
   &.reverse {
     animation: reversescroll 60s linear infinite; 
@@ -53,10 +51,10 @@
     position: absolute;
     background: linear-gradient(
         90deg,
-        var(--background-light),
+        var(--techs-fade),
         transparent 30%,
         transparent 90%,
-        var(--background-light)
+        var(--techs-fade)
     );
     inset: 0;
 }

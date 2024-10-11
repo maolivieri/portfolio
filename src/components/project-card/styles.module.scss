@@ -1,13 +1,54 @@
 
 .container {
   display: flex;
+  flex-direction: column-reverse;
 }
 
 .card {
   display: flex;
+  box-shadow: var(--drop-shadow);
+  border-radius: 8px;
+  padding: 1rem;
+  flex-direction: column;
+  z-index: 10;
+  gap: 0.25rem;
+
+  h5 {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  p {
+    font-size: clamp(0.75rem, 1.5vw, 1.25rem);
+    font-weight: 400;
+    color: var(--primary);
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: 0.5rem;
+  }
+
+  .techs {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin: 0.25rem 0;
+  }
 }
 
 
 .media {
   display: flex;
+  aspect-ratio: 2 / 1;
+  position: relative;
+  align-items: center;
+  margin: 0 2rem;
+  justify-content: center;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  z-index: 5;
 }
