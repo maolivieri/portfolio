@@ -1,6 +1,6 @@
-import { MainSection } from "@/components/main-section";
-import { ProjectsSection } from "@/components/projects-section";
-import { Skills } from "@/components/skills-section";
+import { Skills } from "@/app/(skills)";
+import { MainSection } from "./(main)";
+import { ProjectsSection } from "./(projects)";
 
 export default function Home() {
   return (

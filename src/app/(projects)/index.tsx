@@ -1,11 +1,11 @@
 import { useTranslations } from 'next-intl';
 import styles from './styles.module.scss';
-import { ProjectCard } from '../project-card';
 import Image from 'next/image';
-import { TechPill } from '../tech-pill';
-import { Button } from '../button';
 import { GithubIcon } from '@/icons/github';
 import { LinkIcon } from '@/icons/link';
+import { ProjectCard } from '@/components/project-card';
+import { TechPill } from '@/components/tech-pill';
+import { Button } from '@/components/button';
 
 export function ProjectsSection() {
   const tt = useTranslations('nav');

@@ -31,7 +31,7 @@ export function ThemeToggle() {
         <div className={styles.icon}>
           <Image src='/sun.png' alt='image of a sun' fill />
         </div>
-        <motion.div className={`${styles.indicator}`} animate={{ x: !isDark ? 0 : -32 }} />
+        <motion.div className={`${styles.indicator}`} animate={{ x: !isDark ? 0 : "-100%" }} />
       </label>
     </div>
   )

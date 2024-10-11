@@ -1,8 +1,8 @@
 'use client'
 
 import { shiftArray } from '@/utils/shiftArray';
-import { MainSkills } from './main';
-import { SecondarySkills } from './secondary';
+import { MainSkills } from './main-skills';
+import { SecondarySkills } from './secondary-skills';
 import styles from './styles.module.scss';
 import { useTranslations } from 'next-intl';
 
