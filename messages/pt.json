@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "home": "Home",
+    "skills": "Habilidades",
+    "experiences": "Experiencias",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "main": {
+    "intro": "Olá, sou Matheus Olivieri",
+    "title1": "Desenvolvedor",
+    "title2": "de software",
+    "title3": "fullstack"
+  },
+  "projects": {
+    "miguel": {
+      "title": "Miguel Veiculos",
+      "description": "Miguel Veículos é um projeto que desenvolvi para uma concessionária, exibindo todos os veículos disponíveis com informações detalhadas, como preço, ano, modelo e características. O sistema inclui uma ferramenta de busca que permite filtrar os carros por critérios como faixa de preço, modelo, ano e cor, facilitando a busca pelo veículo ideal."
+    }
+  }
+}

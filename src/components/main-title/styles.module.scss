@@ -1,0 +1,28 @@
+
+.title-container {
+  font-size: clamp(1rem, 7vw, 5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+}
+
+.title-word {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;  
+  color: var(--secondary);
+}
+
+.title-overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;  
+  color: var(--secondary);
+}
+
+.title-letter {
+  display: inline-block;
+  color: var(--secondary);
+}

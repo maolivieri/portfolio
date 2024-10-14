@@ -1,0 +1,16 @@
+
+
+.pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.125rem 0.25rem;
+  border-radius: 8px;
+  color: var(--primary);
+  background-color: var(--background);
+  font-size: clamp(0.5rem, 1vw, 0.75rem);
+
+  @media (min-width: 1024px) {
+    padding: 0.25rem 0.5rem;
+  }
+}
