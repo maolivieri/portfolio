@@ -2,6 +2,10 @@
 .container {
   display: flex;
   flex-direction: column-reverse;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
 }
 
 .card {
@@ -25,19 +29,23 @@
     color: var(--primary);
   }
 
-  .links {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    margin-top: 0.5rem;
+  @media (min-width: 1024px) {
+   width: 60%;
   }
+}
 
-  .techs {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    margin: 0.25rem 0;
-  }
+.links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.techs {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0.25rem 0;
 }
 
 
@@ -51,4 +59,11 @@
   border-radius: 8px 8px 0 0;
   overflow: hidden;
   z-index: 5;
+
+  @media (min-width: 1024px) {
+    width: 50%;
+    border-radius: 8px;
+    margin: 2rem 0;
+    transform: translateX(-16px);
+   }
 }

@@ -1,11 +1,12 @@
 export function DjangoIcon() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg"
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
       // xmlns:xlink="http://www.w3.org/1999/xlink" 
       version="1.0" id="Layer_1"
       width="100%"
       height="100%"
-      viewBox="0 50 436.505 152.503"
+      viewBox="0 0 436.505 152.503"
       overflow="visible"
       enable-background="new 0 0 436.505 152.503"
     // xml:space="preserve"
