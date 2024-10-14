@@ -5,7 +5,7 @@
   color: var(--white);
   padding: 0.25rem 0.5rem;
   border-radius: 8px;
-  font-size: clamp(0.675rem, 2vw, 1rem);
+  font-size: clamp(0.675rem, 1.3vw, 0.9rem);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -13,8 +13,8 @@
   gap: 0.25rem;
 
     svg {
-    width: clamp(0.675rem, 2vw, 1rem);
-    height: clamp(0.675rem, 2vw, 1rem);
+    width: clamp(0.675rem, 1.2vw, 0.75rem);
+    height: clamp(0.675rem, 1.2vw, 0.75rem);
     fill: var(--white);
   }
 }

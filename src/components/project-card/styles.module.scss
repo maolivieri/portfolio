@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column-reverse;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     flex-direction: row;
   }
 }
@@ -18,20 +18,25 @@
   gap: 0.25rem;
 
   h5 {
-    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-size: clamp(1.25rem, 2.75vw, 1.75rem);
     font-weight: 600;
     color: var(--primary);
   }
 
   p {
-    font-size: clamp(0.75rem, 1.5vw, 1.25rem);
+    font-size: clamp(0.75rem, 1.25vw, 1rem);
     font-weight: 400;
     color: var(--primary);
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
    width: 60%;
+   padding-right: 2rem;
   }
+
+  @media (min-width: 1024px) {
+    width: 55%;
+   }
 }
 
 .links {
@@ -60,10 +65,14 @@
   overflow: hidden;
   z-index: 5;
 
-  @media (min-width: 1024px) {
-    width: 50%;
+  @media (min-width: 768px) {
+    width: calc(40% + 1rem);
     border-radius: 8px;
     margin: 2rem 0;
-    transform: translateX(-16px);
+    margin-left: -1rem;
+   }
+
+   @media (min-width: 1024px) {
+    width: calc(45% + 1rem);
    }
 }

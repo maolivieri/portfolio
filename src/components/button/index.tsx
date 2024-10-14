@@ -21,7 +21,7 @@ export function Button({ children, href = '', disabled = false }: Props) {
     <motion.button
       onClick={handleClick}
       className={styles.button}
-      whileHover={!disabled ? { scale: 1.1, background: "var(--primary)" } : {}}
+      whileHover={!disabled ? { scale: 1.05, background: "var(--primary)" } : {}}
       whileTap={!disabled ? { scale: 0.9 } : {}}
       transition={{ type: "spring", stiffness: 300 }}
       disabled={disabled}

@@ -11,4 +11,10 @@
     color: var(--highlight);
     font-size: clamp(1.25rem, 3vw, 2rem);
   }
+
+  @media (min-width: 768px) {
+    h2 {
+      margin-top: 1rem;
+    }
+  }
 }
