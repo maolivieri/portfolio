@@ -63,13 +63,13 @@ export function Header() {
           >
             {t('projects')}
           </ LinkButton>
-          <LinkButton
+          {/* <LinkButton
             isActive={activeSection === 'experiences'}
             handleClick={() => setActiveSection('experiences')}
             href='#experiences'
           >
             {t('experiences')}
-          </ LinkButton>
+          </ LinkButton> */}
         </div>
         <div className={styles.actions}>
           <div className={styles.languages}>

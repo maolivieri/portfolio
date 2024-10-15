@@ -85,3 +85,7 @@ a {
     width: clamp(300px, 80%, 1200px); 
   } 
 }
+
+section {
+  scroll-margin-top: 4rem;
+}
