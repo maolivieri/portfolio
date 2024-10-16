@@ -12,7 +12,7 @@ const poppins = Yeseva_One({ subsets: ["latin"], variable: '--font-title', weigh
 
 export const metadata: Metadata = {
   title: "Matheus Olivieri",
-  description: "This is the portifolio of Matheus Olivieri",
+  description: "This is the portfolio of Matheus Olivieri",
 };
 
 export default async function RootLayout({

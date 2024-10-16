@@ -16,6 +16,26 @@
     "miguel": {
       "title": "Miguel Veiculos",
       "description": "Miguel Veículos is a project I developed for a car dealership, showcasing all available vehicles with detailed information such as price, year, model, and features. It includes a powerful search feature that allows users to filter cars by various criteria like price range, model, year, and color, making it easier to find the right vehicle."
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "My personal portfolio to showcase my skills and projects as a software developer. It highlights the different apps and solutions I’ve built, with clear descriptions and visuals to demonstrate my work. The portfolio shows my experience in both front-end and back-end development."
+    },
+    "BMW": {
+      "title": "BWM planning app",
+      "description": "dEEP app is a planning application used by BMW engineers and management to track the development of car electronics components and support decision-making. The app integrates data from multiple sources, performs calculations and correlations, and presents the information in an easy-to-understand Gantt chart format."
+    },
+    "gullie-master": {
+      "title": "Gullie Manager",
+      "description": "Gullie Manager is the admin panel I developed to help organizations manage venue details, schedules, products, condiments, menus, tables, and other settings. It provides a comprehensive and intuitive interface for administrators to configure all aspects of their venue operations." 
+    },
+    "gullie-app": {
+      "title": "Gullie App",
+      "description": "Gullie App is the user interface where customers can browse the menu and place orders. It allows users to filter the menu by categories, dietary preferences, and highlights featured products, making the ordering process seamless and user-friendly."
+    },
+    "bepoz": {
+      "title": "MyPlace loyalty apps",
+      "description": "MyPlace is a series of white-label mobile apps tailored for loyalty programs in restaurants, pubs, and universities. These apps allowed clients to customize the look and feel to match their brand. Each solution included a mobile app and an administrative panel (CMS) for managing content. The apps were fully integrated with the Bepoz point of sales system, enabling seamless tracking of customer rewards and transactions."
     }
   }
 }

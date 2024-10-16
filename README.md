@@ -1,4 +1,4 @@
-<h1 align="left">Hey there <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" width="30px">, I'm Matheus Olivieri, and this is my portifolio.</h1>
+<h1 align="left">Hey there <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" width="30px">, I'm Matheus Olivieri, and this is my portfolio.</h1>
 
 
 
