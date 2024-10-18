@@ -26,7 +26,7 @@ export function Button({ children, href = '', disabled = false }: Props) {
       transition={{ type: "spring", stiffness: 300 }}
       disabled={disabled}
       style={{
-        background: "var(--secondary)",
+        background: !disabled ? "var(--secondary)" : "var(--disabled-bg)",
         opacity: disabled ? 0.8 : 1
       }}
     >

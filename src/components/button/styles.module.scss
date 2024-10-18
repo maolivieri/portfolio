@@ -17,4 +17,14 @@
     height: clamp(0.675rem, 1.2vw, 0.75rem);
     fill: var(--white);
   }
+
+  &:disabled {
+    cursor: not-allowed;
+    color: var(--disabled-text);
+    background-color: var(--disabled-bg);
+
+    svg {
+      fill: var(--disabled-text);
+    }
+  }
 }

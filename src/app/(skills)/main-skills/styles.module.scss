@@ -15,8 +15,8 @@
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(3, 10rem);
-    column-gap: 5rem;
-    row-gap: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }

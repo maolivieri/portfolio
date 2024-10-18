@@ -16,7 +16,7 @@ export function Header() {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.8, // Trigger when 80% of the section is in view
+      threshold: 0.8
     };
 
     const observer = new IntersectionObserver((entries) => {
