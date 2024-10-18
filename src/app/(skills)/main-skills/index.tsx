@@ -1,5 +1,5 @@
 import { TypescriptIcon } from "@/icons/typescript";
-import { MainSkillCard } from "./main-card";
+import { MainSkillCard } from "../../../components/skill-main-card";
 import styles from "./styles.module.scss";
 import { ReactIcon } from "@/icons/react";
 import { NodeJsIcon } from "@/icons/nodejs";

@@ -1,5 +1,7 @@
+'use client'
+
 import { ListItems } from "..";
-import { SecondarySkillCard } from "./secondary-card";
+import { SecondarySkillCard } from "../../../components/skill-secondary-card";
 import styles from "./styles.module.scss";
 
 
