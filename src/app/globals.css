@@ -19,6 +19,7 @@
   --project-card-bg: #ffffff;
   --disabled-text: #404040;
   --disabled-bg: #a3a3a3;
+  --tech-pill-bg: rgba(189, 222, 0, 0.5);
 }
 
 .dark-theme {
@@ -40,7 +41,8 @@
   --skils-bg: linear-gradient(#0c1e3c 15%, transparent);
   --project-card-bg: #050822;
   --disabled-text: #a3a3a3;
-  --disabled-bg: #404040
+  --disabled-bg: #404040;
+  --tech-pill-bg: rgba(41, 106, 249, 0.5);
 }
 
 html,

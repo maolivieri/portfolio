@@ -19,9 +19,11 @@ export function ProjectCard({
   return (
     <div className={styles.container}>
       <div className={styles.card}>
-        <h5>{title}</h5>
-        <p>{description}</p>
-        <span className={styles.techs}>{techs}</span>
+        <div className={styles['card-content']}>
+          <h5>{title}</h5>
+          <span className={styles.techs}>{techs}</span>
+          <p>{description}</p>
+        </div>
         <span className={styles.links}>{links}</span>
       </div>
       <div className={styles.media}>
