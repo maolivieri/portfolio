@@ -13,7 +13,7 @@ export function StyledComponentsIcon() {
           <use href="#a" />
         </mask>
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <use
           mask="url(#b)"
           stroke="#4a4a4a"

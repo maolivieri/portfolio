@@ -1,24 +1,19 @@
 'use client'
 
-import { MouseEvent, useEffect, useState } from "react";
+import { MouseEvent, useContext } from "react";
 import styles from './styles.module.scss';
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { setUserTheme } from "@/services/theme";
+import { ThemeContext } from "@/services/theme";
 
 export function ThemeToggle() {
-  const [isDark, setIsDark] = useState<boolean>(false);
-
-  useEffect(() => {
-    setUserTheme('light');
-  }, [])
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  const isDark = theme === 'dark-theme';
 
   function handleToggleTheme(e: MouseEvent<HTMLDivElement>) {
     e.preventDefault();
     e.stopPropagation();
-    document.body.classList.toggle('dark-theme');
-    setUserTheme(isDark ? 'light' : 'dark');
-    setIsDark(prevState => !prevState);
+    toggleTheme();
   };
 
   return (

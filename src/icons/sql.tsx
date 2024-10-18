@@ -7,10 +7,10 @@ export function SQLIcon() {
       width="100%"
       height="100%"
       fill="#fff"
-      fill-rule="evenodd"
+      fillRule="evenodd"
       stroke="#000"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <use href="#A" x=".5" y=".5" />
       <symbol id="A" overflow="visible">

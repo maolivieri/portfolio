@@ -8,7 +8,7 @@ export function DjangoIcon() {
       height="100%"
       viewBox="0 0 436.505 152.503"
       overflow="visible"
-      enable-background="new 0 0 436.505 152.503"
+      enableBackground="new 0 0 436.505 152.503"
     // xml:space="preserve"
     >
       <g>

@@ -1,0 +1,9 @@
+.main {
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(var(--background) 15%, var(--background-light));
+  padding: 6rem 0 6rem 0;
+}

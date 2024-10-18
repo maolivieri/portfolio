@@ -5,6 +5,7 @@ import { getLocale, getMessages } from 'next-intl/server';
 import "./globals.css";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { ThemeProvider } from "@/services/theme";
 
 const workSans = Work_Sans({ subsets: ["latin"], variable: '--font-body' });
 const raleway = Harmattan({ subsets: ["latin"], variable: '--font-subtitle', weight: ['400', '700'] });
@@ -22,17 +23,17 @@ export default async function RootLayout({
 }>) {
   const locale = await getLocale();
 
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
   return (
     <html lang={locale}>
-      <body className={`${workSans.variable} ${raleway.variable} ${poppins.variable}`}>
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          {children}
-          <Footer />
-        </NextIntlClientProvider>
+      <body className={`${workSans.variable} ${raleway.variable} ${poppins.variable}`} >
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
+            <Header />
+            {children}
+            <Footer />
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

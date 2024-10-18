@@ -6,7 +6,7 @@ export function NodeJsIcon() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_337_7900)">
+      <g clipPath="url(#clip0_337_7900)">
         <mask id="mask0_337_7900"
           maskUnits="userSpaceOnUse"
           x="0" y="0" width="289" height="177"
@@ -31,15 +31,15 @@ export function NodeJsIcon() {
           >
           </path>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M61.994 59.196a3.324 3.324 0 0 0-1.699-2.875L32.663 40.313c-.457-.26-.98-.392-1.503-.457H30.9c-.523 0-1.045.196-1.503.457L1.698 56.256A3.35 3.35 0 0 0 0 59.196l.065 42.862c0 .588.327 1.176.85 1.437.522.327 1.175.327 1.633 0l16.462-9.409a3.324 3.324 0 0 0 1.698-2.874v-20.06c0-1.175.653-2.286 1.699-2.874l6.99-4.051c.522-.327 1.11-.457 1.698-.457.588 0 1.176.13 1.633.457l6.99 4.051a3.324 3.324 0 0 1 1.698 2.875V91.21c0 1.177.654 2.287 1.699 2.875l16.331 9.409a1.593 1.593 0 0 0 1.699 0c.522-.261.849-.849.849-1.437V59.196ZM195.127.196c-.522-.261-1.176-.261-1.633 0-.522.327-.849.85-.849 1.437v42.47c0 .392-.196.784-.588 1.045a1.25 1.25 0 0 1-1.176 0l-6.924-3.985a3.367 3.367 0 0 0-3.332 0L152.927 57.17a3.325 3.325 0 0 0-1.698 2.874v31.95c0 1.177.653 2.287 1.698 2.875l27.698 16.008a3.367 3.367 0 0 0 3.332 0l27.698-16.008a3.324 3.324 0 0 0 1.698-2.874V12.349a3.35 3.35 0 0 0-1.698-2.94L195.127.196Zm-2.547 81.28c0 .327-.131.588-.392.719l-9.473 5.488a.968.968 0 0 1-.849 0l-9.472-5.488c-.261-.13-.392-.457-.392-.719V70.5c0-.326.131-.588.392-.718l9.472-5.489a.968.968 0 0 1 .849 0l9.473 5.489c.261.13.392.457.392.718v10.977ZM287.301 70.238c1.046-.588 1.634-1.699 1.634-2.875v-7.775a3.404 3.404 0 0 0-1.634-2.875l-27.502-15.942a3.365 3.365 0 0 0-3.331 0L228.77 56.779a3.325 3.325 0 0 0-1.699 2.874v31.95c0 1.177.654 2.287 1.699 2.875l27.502 15.681c1.045.589 2.286.589 3.266 0l16.658-9.277c.523-.262.849-.85.849-1.438s-.326-1.176-.849-1.437l-27.829-16.008c-.522-.327-.849-.85-.849-1.438v-9.996c0-.588.327-1.176.849-1.438l8.689-4.965a1.593 1.593 0 0 1 1.698 0l8.688 4.965c.523.327.85.85.85 1.438v7.84c0 .588.326 1.176.849 1.438a1.594 1.594 0 0 0 1.698 0l16.462-9.605Z"
             fill="var(--black)"
           >
           </path>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M257.709 68.735a.593.593 0 0 1 .653 0l5.291 3.071c.196.13.327.327.327.588v6.142a.686.686 0 0 1-.327.588l-5.291 3.07a.593.593 0 0 1-.653 0l-5.292-3.07a.685.685 0 0 1-.326-.588v-6.142c0-.261.13-.457.326-.588l5.292-3.07Z"
             fill="#5FA04E"
           >
@@ -66,58 +66,58 @@ export function NodeJsIcon() {
           id="paint0_linear_337_7900" x1="117.844" y1="52.726" x2="92.971" y2="103.459"
           gradientUnits="userSpaceOnUse">
           <stop
-            stop-color="#3F873F"
+            stopColor="#3F873F"
           >
           </stop>
           <stop
             offset=".33"
-            stop-color="#3F8B3D">
+            stopColor="#3F8B3D">
           </stop>
           <stop
             offset=".637"
-            stop-color="#3E9638">
+            stopColor="#3E9638">
           </stop>
           <stop
             offset=".934"
-            stop-color="#3DA92E"
+            stopColor="#3DA92E"
           >
           </stop>
           <stop
             offset="1"
-            stop-color="#3DAE2B"
+            stopColor="#3DAE2B"
           >
           </stop>
         </linearGradient>
         <linearGradient
           id="paint1_linear_337_7900" x1="102.464" y1="79.278" x2="172.246" y2="27.73"
           gradientUnits="userSpaceOnUse"><stop offset=".138"
-            stop-color="#3F873F"
+            stopColor="#3F873F"
           ></stop>
           <stop offset=".402"
-            stop-color="#52A044"
+            stopColor="#52A044"
           ></stop><stop offset=".713"
-            stop-color="#64B749"
+            stopColor="#64B749"
           >
           </stop>
           <stop
             offset=".908"
-            stop-color="#6ABF4B">
+            stopColor="#6ABF4B">
           </stop>
         </linearGradient>
         <linearGradient
           id="paint2_linear_337_7900" x1="74.834" y1="35.163" x2="138.473" y2="35.163"
           gradientUnits="userSpaceOnUse">
           <stop offset=".092"
-            stop-color="#6ABF4B">
+            stopColor="#6ABF4B">
           </stop><stop offset=".287"
-            stop-color="#64B749">
+            stopColor="#64B749">
           </stop>
           <stop offset=".598"
-            stop-color="#52A044"
+            stopColor="#52A044"
           >
           </stop>
           <stop offset=".862"
-            stop-color="#3F873F">
+            stopColor="#3F873F">
           </stop>
         </linearGradient>
         <linearGradient
@@ -125,19 +125,19 @@ export function NodeJsIcon() {
           gradientUnits="userSpaceOnUse">
           <stop
             offset=".092"
-            stop-color="#6ABF4B">
+            stopColor="#6ABF4B">
           </stop>
           <stop
             offset=".287"
-            stop-color="#64B749">
+            stopColor="#64B749">
           </stop>
           <stop
             offset=".598"
-            stop-color="#52A044">
+            stopColor="#52A044">
           </stop>
           <stop
             offset=".862"
-            stop-color="#3F873F">
+            stopColor="#3F873F">
           </stop>
         </linearGradient>
         <clipPath

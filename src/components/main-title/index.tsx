@@ -36,7 +36,7 @@ export function Title() {
       {words.map((word, index) => (
         <>
           <motion.h1
-            key={index}
+            key={word}
             custom={index}
             initial="hidden"
             animate="visible"
@@ -50,7 +50,7 @@ export function Title() {
                 <div className={styles['title-overlay']}>
                   {word.split('').map((letter, letterIndex) => (
                     <motion.span
-                      key={letterIndex}
+                      key={`${letterIndex}-${letter}`}
                       custom={letterIndex}
                       initial="hidden"
                       animate="visible"
@@ -63,10 +63,10 @@ export function Title() {
                     </motion.span>
                   ))}
                 </div>
-                {word.split('').map((letter, letterIndex) => (
+                {word.split('').map((letter, letterIndexT) => (
                   <motion.span
-                    key={letterIndex}
-                    custom={letterIndex}
+                    key={`${letterIndexT}-${letter}-shadow`}
+                    custom={letterIndexT}
                     initial="hidden"
                     animate="visible"
                     whileInView="visible"
