@@ -1,0 +1,26 @@
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  // background: var(--transparent-bg);
+  background: linear-gradient(var(--transparent-bg-light), var(--background-light));
+  backdrop-filter: blur(15.1px);
+  -webkit-backdrop-filter: blur(15.1px);
+  z-index: 99999;
+  border-radius: 100% 100% 0 0;
+
+  p {
+    color: var(--primary);
+    font-size: clamp(0.5rem, 1vw, 0.75rem);
+    font-weight: 400;
+    font-style: italic;
+  }
+}

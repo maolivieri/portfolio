@@ -1,0 +1,31 @@
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding-right: 1rem;
+}
+
+.logo {
+  position: relative;
+  width: 0.8rem;
+  height: 0.8rem;
+
+  @media (min-width: 768px) {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  @media (min-width: 1024px) {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+.label {
+  font-size: clamp(0.6rem, 1.5vw, 0.75rem);
+  color: var(--primary)
+}

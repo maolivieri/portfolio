@@ -1,0 +1,20 @@
+.circle {
+  position: absolute;
+  right: -25vw;
+  top: 4rem;
+  width: clamp(50vw, 60vw, 70vw); 
+  height: clamp(50vw, 60vw, 70vw); 
+  // width: 70vw;
+  // height: 70vw;
+
+  @media (min-width: 768px) {
+  }
+
+  svg {
+    fill: rgb(120, 143, 120);
+  }
+
+  circle {
+    stroke: var(--highlight);
+  }
+}

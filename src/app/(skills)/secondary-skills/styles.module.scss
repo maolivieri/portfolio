@@ -1,0 +1,80 @@
+
+
+.container {
+  position: relative;
+  width: 100%;           
+  overflow: hidden;       
+  white-space: nowrap;    
+  box-sizing: border-box;   
+  padding: 0.25rem 0;
+}
+
+
+.scrollOne {
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: fit-content;
+  white-space: nowrap;       
+  animation: scroll 60s linear infinite; 
+  animation-delay: -30s;    
+  position: absolute; 
+  
+  &.reverse {
+    animation: reversescroll 60s linear infinite; 
+    animation-delay: -30s;    
+  }
+}
+
+.scrollTwo {
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: fit-content;
+  white-space: nowrap;     
+  animation: scroll 60s linear infinite; 
+  transform: translateX(100%);
+  
+  &.reverse {
+    animation: reversescroll 60s linear infinite; 
+  }
+}
+
+.fade {
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(
+        90deg,
+        var(--techs-fade),
+        transparent 30%,
+        transparent 90%,
+        var(--techs-fade)
+    );
+    inset: 0;
+}
+
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes reversescroll {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

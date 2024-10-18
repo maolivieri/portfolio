@@ -1,0 +1,70 @@
+
+.container {
+  display: inline-block;
+  position: relative;
+  height: 1.75rem;
+  width: 3.5rem;
+  margin-left: 1rem;
+
+  @media (min-width: 768px) {
+    height: 2rem;
+    width: 4rem;
+  }
+}
+
+.toggle {
+  cursor: pointer;
+  background: var(--opaque-bg);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 1.75rem;
+  width: 3.5rem;
+  border-radius: 24px;
+  padding: 0.25rem;
+
+  @media (min-width: 768px) {
+    height: 2rem;
+    width: 4rem;
+  }
+}
+
+.indicator {
+  min-width: 1.75rem;
+  max-width: 1.75rem;
+  min-height: 1.75rem;
+  max-height: 1.75rem;
+  border-radius: 999999px;
+  background: var(--opaque-bg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+
+  @media (min-width: 768px) {
+    min-width: 2rem;
+    max-width: 2rem;
+    min-height: 2rem;
+    max-height: 2rem;
+  }
+}
+
+.icon {
+  min-width: 1.25rem;
+  max-width: 1.25rem;
+  min-height: 1.25rem;
+  max-height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 30;
+
+  @media (min-width: 768px) {
+    min-width: 1.5rem;
+    max-width: 1.5rem;
+    min-height: 1.5rem;
+    max-height: 1.5rem;
+  }
+}

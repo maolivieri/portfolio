@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Home",
+    "skills": "Habilidades",
+    "experiences": "Experiencias",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "main": {
+    "intro": "Olá, sou Matheus Olivieri",
+    "title1": "Desenvolvedor",
+    "title2": "de software",
+    "title3": "fullstack"
+  },
+  "projects": {
+    "miguel": {
+      "title": "Miguel Veiculos",
+      "description": "Miguel Veículos é um projeto que desenvolvi para uma concessionária, exibindo todos os veículos disponíveis com informações detalhadas, como preço, ano, modelo e características. O sistema inclui uma ferramenta de busca que permite filtrar os carros por critérios como faixa de preço, modelo, ano e cor, facilitando a busca pelo veículo ideal."
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "Meu portfólio pessoal para apresentar minhas habilidades e projetos como desenvolvedor de software. Ele destaca os diferentes aplicativos e soluções que desenvolvi, com descrições claras e visuais do meu trabalho. O portfólio mostra minha experiência em desenvolvimento front-end e back-end."
+    },
+    "BMW": {
+      "title": "BWM planning app",
+      "description": "Desenvolvi uma aplicação de planejamento utilizada por engenheiros e gestores da BMW para acompanhar o desenvolvimento de componentes eletrônicos de veículos e apoiar a tomada de decisões. O aplicativo integra dados de várias fontes, realiza cálculos e correlações, e apresenta as informações de forma clara em um gráfico de Gantt."
+    },
+    "gullie-master": {
+      "title": "Gullie Manager",
+      "description": "Gullie Manager é o painel administrativo que desenvolvi para ajudar organizações a gerenciar detalhes do estabelecimento, horários, produtos, condimentos, menus, mesas e outras configurações. Ele oferece uma interface completa e intuitiva para os administradores configurarem todos os aspectos das operações do local."
+    },
+    "gullie-app": {
+      "title": "Gullie App",
+      "description": "O Gullie App é a interface de usuário onde os clientes podem visualizar o menu e fazer pedidos. Ele permite filtrar o menu por categorias, preferências alimentares e exibir produtos em destaque, tornando o processo de pedidos prático e fácil de usar."  
+    },
+    "bepoz": {
+      "title": "MyPlace loyalty apps",
+      "description": "MyPlace é uma série de aplicativos móveis white-label voltados para programas de fidelidade em restaurantes, pubs e universidades. Esses aplicativos permitiam que os clientes personalizassem o visual e o estilo para se adequar à sua marca. Cada solução incluía um aplicativo móvel e um painel administrativo (CMS) para gerenciamento de conteúdo. Os aplicativos foram totalmente integrados ao sistema de ponto de venda Bepoz, permitindo o acompanhamento eficiente de recompensas e transações de clientes."
+    }
+  }
+}
