@@ -4,6 +4,7 @@ import { TechPill } from "@/components/tech-pill";
 import { GithubIcon } from "@/icons/github";
 import { LinkIcon } from "@/icons/link";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 
 export function PortfolioProject() {
@@ -13,16 +14,11 @@ export function PortfolioProject() {
       title={t('portfolio.title')}
       description={t('portfolio.description')}
       media={
-        <video
-          width="100%"
-          autoPlay
-          playsInline
-          loop
-          muted
-        >
-          <source src="/projects/portfolio.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <Image
+          src="/projects/portfolio.png"
+          alt='portfolio project image'
+          fill
+        />
       }
       techs={
         <>

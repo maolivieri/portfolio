@@ -24,6 +24,11 @@ export function MiguelVeiculosProject() {
           <source src="/projects/miguel-veiculos.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        //   <Image
+        //   src="/projects/miguel-veiculos.png"
+        //   alt='miguel veiculos project image'
+        //   fill
+        // />
       }
       techs={
         <>
