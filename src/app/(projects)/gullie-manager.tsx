@@ -1,6 +1,6 @@
-import { Button } from "@/Components/button";
-import { ProjectCard } from "@/Components/project-card";
-import { TechPill } from "@/Components/tech-pill";
+import { Button } from "@/components/button";
+import { ProjectCard } from "@/components/project-card";
+import { TechPill } from "@/components/tech-pill";
 import { GithubIcon } from "@/icons/github";
 import { LinkIcon } from "@/icons/link";
 import { useTranslations } from "next-intl";
