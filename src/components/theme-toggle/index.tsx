@@ -21,10 +21,10 @@ export function ThemeToggle() {
       <input type="checkbox" defaultChecked={!isDark} style={{ display: 'none' }} />
       <label className={styles.toggle}>
         <div className={styles.icon}>
-          <Image src='/moon.png' alt='image of a moon' fill />
+          <Image src='/moon.png' alt='image of a moon' sizes='100%' fill />
         </div>
         <div className={styles.icon}>
-          <Image src='/sun.png' alt='image of a sun' fill />
+          <Image src='/sun.png' alt='image of a sun' sizes='100%' fill />
         </div>
         <motion.div className={`${styles.indicator}`} animate={{ x: !isDark ? 0 : "-100%" }} />
       </label>

@@ -18,6 +18,7 @@ export function BMWProject() {
           src="/projects/bmw.png"
           alt='BMW project image'
           fill
+          sizes='100%'
         />
       }
       techs={

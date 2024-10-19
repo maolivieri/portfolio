@@ -17,6 +17,7 @@ export function GullieAppProject() {
         <Image
           src="/projects/gullie-app.png"
           alt='gullie-app project image'
+          sizes='100%'
           fill
         />
       }

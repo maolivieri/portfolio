@@ -30,7 +30,7 @@ export function LanguageButton({ language }: Props) {
       disabled={isPending}
       onClick={() => onChange(language)}
     >
-      <Image src={`/${language}.png`} fill alt={`${language} flag`} />
+      <Image src={`/${language}.png`} fill sizes='100%' alt={`${language} flag`} />
     </motion.button>
   )
 }

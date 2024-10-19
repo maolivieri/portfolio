@@ -17,6 +17,7 @@ export function PortfolioProject() {
         <Image
           src="/projects/portfolio.png"
           alt='portfolio project image'
+          sizes='100%'
           fill
         />
       }
