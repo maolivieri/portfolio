@@ -1,23 +1,40 @@
 
 .container {
+  position: relative;
   display: flex;
   flex-direction: column-reverse;
+  padding: 0 2rem 2rem 2rem;
+  gap: 1rem;
 
   @media (min-width: 768px) {
     flex-direction: row;
+    padding: 2rem 0 2.5rem 2.5rem;
   }
+}
+
+.paper {
+  position: absolute;
+  // box-shadow: var(--drop-shadow);
+  background: var(--project-card-bg);
+  border-radius: 8px;
+  top: 3rem;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  
+  @media (min-width: 768px) {
+    top: 0;
+    right: 10rem;
+    border-radius: 16px;
+   }
 }
 
 .card {
   display: flex;
-  box-shadow: var(--drop-shadow);
-  border-radius: 8px;
-  padding: 1rem;
   flex-direction: column;
   justify-content: space-between;
   z-index: 10;
   gap: 0.25rem;
-  background: var(--project-card-bg);
 
   h5 {
     font-size: clamp(1.25rem, 2.75vw, 1.75rem);
@@ -34,12 +51,12 @@
 
   @media (min-width: 768px) {
    width: 60%;
-   padding-right: 2rem;
+   padding-right: 10rem;
    border-radius: 16px;
   }
 
   @media (min-width: 1024px) {
-    width: 55%;
+    width: 60%;
    }
 }
 
@@ -57,6 +74,7 @@
 
   @media (min-width: 768px) {
     gap: 0.5rem;
+    margin-top: 2rem;
   }
 }
 
@@ -70,7 +88,7 @@
 
 .media {
   display: flex;
-  aspect-ratio: 2 / 1;
+  aspect-ratio: 16 / 9;
   position: relative;
   align-items: center;
   margin: 0 2rem;
@@ -84,12 +102,11 @@
   }
 
   @media (min-width: 768px) {
-    width: calc(30% + 1rem);
+    width: 40%;
     border-radius: 8px;
-    margin: 1rem 0;
-    margin-left: -1rem;
     overflow: hidden;
     z-index: 15;
+    margin: 0;
 
     video {
       border-radius: 8px;
@@ -97,6 +114,6 @@
    }
 
    @media (min-width: 1024px) {
-    width: calc(45% + 1rem);
+    width: 40%;
    }
 }

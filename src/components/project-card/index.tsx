@@ -29,6 +29,7 @@ export function ProjectCard({
       <div className={styles.media}>
         {media}
       </div>
+      <div className={styles.paper} />
     </div>
   )
 }
