@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import styles from './styles.module.scss';
-import { motion, Variants } from 'framer-motion';
+import { motion, Variants } from 'motion/react';
 
 export function Title() {
   const t = useTranslations('main');
@@ -34,52 +34,50 @@ export function Title() {
   return (
     <div className={styles['title-container']}>
       {words.map((word, index) => (
-        <>
-          <motion.h1
-            key={word}
-            custom={index}
-            initial="hidden"
-            animate="visible"
-            variants={animation}
-            whileInView="visible"
-            viewport={{ amount: 'some' }}
-            className={styles['title-word']}
-          >
-            {index < 2 ? word : (
-              <>
-                <div className={styles['title-overlay']}>
-                  {word.split('').map((letter, letterIndex) => (
-                    <motion.span
-                      key={`${letterIndex}-${letter}`}
-                      custom={letterIndex}
-                      initial="hidden"
-                      animate="visible"
-                      whileInView="visible"
-                      variants={lettterAnimationOverlay}
-                      className={styles['title-letter']}
-                      style={{ color: 'var(--tertiary)' }}
-                    >
-                      {letter}
-                    </motion.span>
-                  ))}
-                </div>
-                {word.split('').map((letter, letterIndexT) => (
+        <motion.h1
+          key={word}
+          custom={index}
+          initial="hidden"
+          animate="visible"
+          variants={animation}
+          whileInView="visible"
+          viewport={{ amount: 'some' }}
+          className={styles['title-word']}
+        >
+          {index < 2 ? word : (
+            <>
+              <div className={styles['title-overlay']}>
+                {word.split('').map((letter, letterIndex) => (
                   <motion.span
-                    key={`${letterIndexT}-${letter}-shadow`}
-                    custom={letterIndexT}
+                    key={`${letterIndex}-${letter}`}
+                    custom={letterIndex}
                     initial="hidden"
                     animate="visible"
                     whileInView="visible"
-                    variants={lettterAnimation}
+                    variants={lettterAnimationOverlay}
                     className={styles['title-letter']}
+                    style={{ color: 'var(--tertiary)' }}
                   >
                     {letter}
                   </motion.span>
                 ))}
-              </>
-            )}
-          </motion.h1>
-        </>
+              </div>
+              {word.split('').map((letter, letterIndexT) => (
+                <motion.span
+                  key={`${letterIndexT}-${letter}-shadow`}
+                  custom={letterIndexT}
+                  initial="hidden"
+                  animate="visible"
+                  whileInView="visible"
+                  variants={lettterAnimation}
+                  className={styles['title-letter']}
+                >
+                  {letter}
+                </motion.span>
+              ))}
+            </>
+          )}
+        </motion.h1>
       ))}
     </div>
   )

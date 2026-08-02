@@ -1,10 +1,10 @@
 'use client'
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'motion/react';
 import styles from './styles.module.scss';
 
 export function Profile() {
-  const draw = {
+  const draw: Variants = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: () => {
       const delay = 0.5;

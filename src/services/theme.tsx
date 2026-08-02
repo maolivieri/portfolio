@@ -1,44 +1,45 @@
 'use client'
-import { createContext, useState, useLayoutEffect, ReactNode } from 'react';
-
-type Theme = 'light-theme' | 'dark-theme'
+import { createContext, useCallback, useContext, useMemo, useState, ReactNode } from 'react';
+import { Theme, THEME_COOKIE, THEME_MAX_AGE, defaultTheme } from './theme-config';
 
 interface ThemeContextType {
   theme: Theme,
   toggleTheme: () => void;
 }
 
-export const ThemeContext = createContext({
-  theme: 'light-theme',
+export const ThemeContext = createContext<ThemeContextType>({
+  theme: defaultTheme,
   toggleTheme: () => { },
-} as ThemeContextType);
+});
 
 interface ThemeContextProp {
-  children: ReactNode
+  children: ReactNode;
+  initialTheme: Theme;
 }
 
-export const ThemeProvider = ({ children }: ThemeContextProp) => {
-  const [theme, setTheme] = useState<Theme>('light-theme');
-  const [isThemeLoaded, setIsThemeLoaded] = useState(false);
+export const ThemeProvider = ({ children, initialTheme }: ThemeContextProp) => {
+  const [theme, setTheme] = useState<Theme>(initialTheme);
 
-  useLayoutEffect(() => {
-    if (typeof window !== 'undefined') {
-      const storage = localStorage.getItem('theme') as Theme | undefined;
-      const savedTheme = storage || 'light-theme' as Theme;
-      setTheme(savedTheme);
-      setIsThemeLoaded(true);
-    }
+  const toggleTheme = useCallback(() => {
+    setTheme((current) => {
+      const next: Theme = current === 'light-theme' ? 'dark-theme' : 'light-theme';
+
+      const root = document.documentElement;
+      root.classList.remove(current);
+      root.classList.add(next);
+      document.cookie = `${THEME_COOKIE}=${next}; path=/; max-age=${THEME_MAX_AGE}; samesite=lax`;
+
+      return next;
+    });
   }, []);
 
-  function toggleTheme() {
-    const newTheme = theme === 'light-theme' ? 'dark-theme' : 'light-theme';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-  };
+  const value = useMemo(() => ({ theme, toggleTheme }), [theme, toggleTheme]);
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {isThemeLoaded ? <div className={theme}>{children}</div> : <></>}
+    <ThemeContext.Provider value={value}>
+      {children}
     </ThemeContext.Provider>
   );
 };
+
+export const useTheme = () => useContext(ThemeContext);

@@ -6,6 +6,7 @@ import "./globals.css";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { ThemeProvider } from "@/services/theme";
+import { getUserTheme } from "@/services/theme-server";
 
 const workSans = Work_Sans({ subsets: ["latin"], variable: '--font-body' });
 const raleway = Harmattan({ subsets: ["latin"], variable: '--font-subtitle', weight: ['400', '700'] });
@@ -21,13 +22,16 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const locale = await getLocale();
+  const [locale, messages, theme] = await Promise.all([
+    getLocale(),
+    getMessages(),
+    getUserTheme(),
+  ]);
 
-  const messages = await getMessages();
   return (
-    <html lang={locale}>
+    <html lang={locale} className={theme}>
       <body className={`${workSans.variable} ${raleway.variable} ${poppins.variable}`} >
-        <ThemeProvider>
+        <ThemeProvider initialTheme={theme}>
           <NextIntlClientProvider messages={messages}>
             <Header />
             {children}

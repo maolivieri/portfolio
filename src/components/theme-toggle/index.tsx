@@ -3,7 +3,7 @@
 import { MouseEvent, useContext } from "react";
 import styles from './styles.module.scss';
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ThemeContext } from "@/services/theme";
 
 export function ThemeToggle() {

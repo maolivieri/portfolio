@@ -6,7 +6,7 @@ import { Locale } from '@/i18n/config';
 import { useTransition } from 'react';
 import { setUserLocale } from '@/services/locale';
 import { useLocale } from 'next-intl';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 interface Props {
   language: Locale;
