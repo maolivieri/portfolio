@@ -5,6 +5,8 @@
   justify-content: center;
   margin-top: 1rem;
   gap: 0.5rem;
+  padding: 0;
+  list-style: none;
 
   @media (min-width: 768px) {
     gap: 1rem;
@@ -15,23 +17,32 @@
   }
 }
 
+.item {
+  display: flex;
+}
+
 .link {
+  // Antes os <a> eram filhos diretos do flex container e ficavam blockificados;
+  // agora estão dentro de <li>, então o display precisa ser explícito para o
+  // width/height abaixo continuarem valendo.
+  display: block;
   margin: 0rem 0.3rem 0rem 0.3rem;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   width: clamp(1rem, 3vw, 1.5rem);
   height: clamp(1rem, 3vw, 1.5rem);
-  
-  svg {
-    fill: var(--primary);
 
-    &:hover {
-      fill: var(--highlight)
-    }
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--primary);
   }
-  
-  :focus {
-    outline: none;
-    border: 0;
+
+  // O foco visível vem da regra global :focus-visible em globals.css;
+  // o `outline: none` que existia aqui deixava o teclado sem indicação.
+  &:hover svg,
+  &:focus-visible svg {
+    fill: var(--highlight);
   }
 }

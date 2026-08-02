@@ -7,11 +7,11 @@ interface Props {
 }
 export function SecondarySkillCard({ label, icon }: Props) {
   return (
-    <div className={styles.container}>
-      <span className={styles.logo}>
+    <li className={styles.container}>
+      <span className={styles.logo} aria-hidden="true">
         {icon}
       </span>
       <p className={styles.label}>{label}</p>
-    </div>
+    </li>
   )
 }

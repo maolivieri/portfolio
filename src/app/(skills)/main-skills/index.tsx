@@ -9,13 +9,13 @@ import { ReactNativeIcon } from "@/icons/react-native";
 
 export function MainSkills() {
   return (
-    <div className={styles.container}>
+    <ul className={styles.container}>
       <MainSkillCard icon={<TypescriptIcon />} label="Typescript" />
       <MainSkillCard icon={<ReactIcon />} label="ReactJs" />
       <MainSkillCard icon={<NodeJsIcon />} label="NodeJs" />
       <MainSkillCard icon={<JavascriptIcon />} label="Javascript" />
       <MainSkillCard icon={<NextJsIcon />} label="NextJs" />
       <MainSkillCard icon={<ReactNativeIcon />} label="React Native" />
-    </div>
+    </ul>
   )
 }

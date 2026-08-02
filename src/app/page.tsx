@@ -5,7 +5,7 @@ import styles from './page.module.scss';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main id="main" className={styles.main}>
       <MainSection />
       <Skills />
       <ProjectsSection />

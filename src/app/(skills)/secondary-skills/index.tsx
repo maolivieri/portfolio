@@ -1,5 +1,3 @@
-'use client'
-
 import { ListItems } from "..";
 import { SecondarySkillCard } from "../../../components/skill-secondary-card";
 import styles from "./styles.module.scss";
@@ -13,17 +11,19 @@ interface Props {
 export function SecondarySkills({ list, reverse = false }: Props) {
   return (
     <div className={styles.container}>
-      <div className={`${styles.scrollOne} ${reverse && styles.reverse}`}>
+      <ul className={`${styles.scrollOne} ${reverse ? styles.reverse : ''}`}>
         {list.map(({ label, icon }) => (
           <SecondarySkillCard key={label} icon={icon} label={label} />
         ))}
-      </div>
-      <div className={`${styles.scrollTwo} ${reverse && styles.reverse}`}>
+      </ul>
+      {/* Segunda cópia só existe para o carrossel não ter buraco; para leitores
+          de tela seria a mesma lista de habilidades repetida. */}
+      <ul className={`${styles.scrollTwo} ${reverse ? styles.reverse : ''}`} aria-hidden="true">
         {list.map(({ label, icon }) => (
           <SecondarySkillCard key={label} icon={icon} label={label} />
         ))}
-      </div>
-      <div className={styles.fade} />
+      </ul>
+      <div className={styles.fade} aria-hidden="true" />
     </div>
   )
 }

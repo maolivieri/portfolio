@@ -31,10 +31,13 @@ export function Title() {
   const lettterAnimationOverlay = getAnimationVariants(2, 5.8, (i) => i * 0.2);
   const lettterAnimation = getAnimationVariants(2, 5.8, (i) => (i * 0.2) + 0.15);
 
+  // A frase é lida uma única vez a partir do aria-label: as letras são
+  // divididas em spans só para a animação e a terceira palavra ainda é
+  // duplicada para o efeito de sombra.
   return (
-    <div className={styles['title-container']}>
+    <p className={styles['title-container']} aria-label={words.join(' ')}>
       {words.map((word, index) => (
-        <motion.h1
+        <motion.span
           key={word}
           custom={index}
           initial="hidden"
@@ -43,10 +46,11 @@ export function Title() {
           whileInView="visible"
           viewport={{ amount: 'some' }}
           className={styles['title-word']}
+          aria-hidden="true"
         >
           {index < 2 ? word : (
             <>
-              <div className={styles['title-overlay']}>
+              <span className={styles['title-overlay']}>
                 {word.split('').map((letter, letterIndex) => (
                   <motion.span
                     key={`${letterIndex}-${letter}`}
@@ -61,7 +65,7 @@ export function Title() {
                     {letter}
                   </motion.span>
                 ))}
-              </div>
+              </span>
               {word.split('').map((letter, letterIndexT) => (
                 <motion.span
                   key={`${letterIndexT}-${letter}-shadow`}
@@ -77,8 +81,8 @@ export function Title() {
               ))}
             </>
           )}
-        </motion.h1>
+        </motion.span>
       ))}
-    </div>
+    </p>
   )
 }

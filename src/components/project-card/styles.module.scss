@@ -36,8 +36,9 @@
   z-index: 10;
   gap: 0.25rem;
 
-  h5 {
+  h3 {
     font-size: clamp(1.25rem, 2.75vw, 1.75rem);
+    font-family: var(--font-subtitle);
     font-weight: 600;
     color: var(--primary);
   }
@@ -46,7 +47,8 @@
     font-size: clamp(0.75rem, 1vw, 0.9rem);
     font-weight: 400;
     color: var(--primary);
-    opacity: 0.6;
+    // 0.6 deixava a descrição em 3.85:1 no tema claro, abaixo do mínimo AA.
+    opacity: 0.75;
   }
 
   @media (min-width: 768px) {
@@ -80,9 +82,12 @@
 
 .techs {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.25rem;
   margin: 0.25rem 0 0.5rem 0;
+  padding: 0;
+  list-style: none;
 }
 
 

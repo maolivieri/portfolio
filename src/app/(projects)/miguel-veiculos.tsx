@@ -1,5 +1,6 @@
 import { Button } from "@/components/button";
 import { ProjectCard } from "@/components/project-card";
+import { ProjectVideo } from "@/components/project-video";
 import { TechPill } from "@/components/tech-pill";
 import { GithubIcon } from "@/icons/github";
 import { LinkIcon } from "@/icons/link";
@@ -8,22 +9,19 @@ import { useTranslations } from "next-intl";
 
 export function MiguelVeiculosProject() {
   const t = useTranslations('projects');
+  const tm = useTranslations('media');
+  const title = t('miguel.title');
+
   return (
     <ProjectCard
-      title={t('miguel.title')}
+      title={title}
       description={t('miguel.description')}
       media={
-        <video
-          width="100%"
-          height="100%"
-          autoPlay
-          playsInline
-          loop
-          muted
-        >
-          <source src="/projects/miguel-veiculos.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <ProjectVideo
+          src="/projects/miguel-veiculos.mp4"
+          poster="/projects/miguel-veiculos-poster.webp"
+          label={tm('demoOf', { title })}
+        />
       }
       techs={
         <>

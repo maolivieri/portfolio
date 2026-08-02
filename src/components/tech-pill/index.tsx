@@ -7,6 +7,6 @@ interface Props {
 
 export function TechPill({ tech }: Props) {
   return (
-    <span className={styles.pill}>{tech}</span>
+    <li className={styles.pill}>{tech}</li>
   )
 }

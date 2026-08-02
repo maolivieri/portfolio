@@ -16,12 +16,13 @@ export function LinkButton({ children, isActive = false, handleClick, href }: Pr
     <motion.a
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
-      className={`${styles.button}`}
+      className={styles.button}
       onClick={handleClick}
       href={href}
+      aria-current={isActive ? 'true' : undefined}
     >
-      {isActive && <motion.span className={styles.active} layoutId="activeHeader" />}
+      {isActive && <motion.span className={styles.active} layoutId="activeHeader" aria-hidden="true" />}
       {children}
-    </ motion.a>
+    </motion.a>
   )
 }

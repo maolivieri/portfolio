@@ -1,5 +1,8 @@
 
 .title-container {
+  // As palavras eram <h1>; como agora são spans dentro de um <p>, a fonte de
+  // título precisa ser aplicada explicitamente.
+  font-family: var(--font-title);
   font-size: clamp(1rem, 7vw, 5rem);
   display: flex;
   flex-direction: column;
