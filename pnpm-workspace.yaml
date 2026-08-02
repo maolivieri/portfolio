@@ -1,3 +1,9 @@
+# O pnpm 9 (usado pelo build da Vercel) exige `packages` em qualquer
+# pnpm-workspace.yaml; o pnpm 10 local não. Sem isso o install quebra com
+# "packages field missing or empty". Não é um monorepo: só a raiz.
+packages:
+  - '.'
+
 onlyBuiltDependencies:
   - "@parcel/watcher"
   - "@swc/core"
