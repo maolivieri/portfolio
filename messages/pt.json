@@ -31,11 +31,29 @@
     },
     "gullie-app": {
       "title": "Gullie App",
-      "description": "O Gullie App é a interface de usuário onde os clientes podem visualizar o menu e fazer pedidos. Ele permite filtrar o menu por categorias, preferências alimentares e exibir produtos em destaque, tornando o processo de pedidos prático e fácil de usar."  
+      "description": "O Gullie App é a interface de usuário onde os clientes podem visualizar o menu e fazer pedidos. Ele permite filtrar o menu por categorias, preferências alimentares e exibir produtos em destaque, tornando o processo de pedidos prático e fácil de usar."
     },
     "bepoz": {
       "title": "MyPlace loyalty apps",
       "description": "MyPlace é uma série de aplicativos móveis white-label voltados para programas de fidelidade em restaurantes, pubs e universidades. Esses aplicativos permitiam que os clientes personalizassem o visual e o estilo para se adequar à sua marca. Cada solução incluía um aplicativo móvel e um painel administrativo (CMS) para gerenciamento de conteúdo. Os aplicativos foram totalmente integrados ao sistema de ponto de venda Bepoz, permitindo o acompanhamento eficiente de recompensas e transações de clientes."
     }
+  },
+  "a11y": {
+    "skipToContent": "Pular para o conteúdo principal",
+    "mainNavigation": "Navegação principal",
+    "toggleTheme": "Modo escuro",
+    "switchLanguage": "Mudar idioma para {language}",
+    "languageNames": "{language, select, en {inglês} pt {português} other {{language}}}",
+    "email": "Enviar um e-mail para Matheus Olivieri",
+    "linkedin": "Matheus Olivieri no LinkedIn (abre em nova aba)",
+    "whatsapp": "Falar com Matheus Olivieri no WhatsApp (abre em nova aba)",
+    "resume": "Baixar o currículo de Matheus Olivieri (PDF)",
+    "newTab": "abre em nova aba"
+  },
+  "media": {
+    "play": "Reproduzir a demonstração de {label}",
+    "pause": "Pausar a demonstração de {label}",
+    "demoOf": "Demonstração de {title}",
+    "screenshotOf": "Captura de tela de {title}"
   }
 }

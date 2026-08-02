@@ -1,33 +1,34 @@
 'use client'
 
-import { MouseEvent, useContext } from "react";
 import styles from './styles.module.scss';
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { ThemeContext } from "@/services/theme";
+import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
+import { useTheme } from "@/services/theme";
 
 export function ThemeToggle() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useTheme();
+  const t = useTranslations('a11y');
   const isDark = theme === 'dark-theme';
 
-  function handleToggleTheme(e: MouseEvent<HTMLDivElement>) {
-    e.preventDefault();
-    e.stopPropagation();
-    toggleTheme();
-  };
-
   return (
-    <div className={styles.container} onClick={handleToggleTheme}>
-      <input type="checkbox" defaultChecked={!isDark} style={{ display: 'none' }} />
-      <label className={styles.toggle}>
-        <div className={styles.icon}>
-          <Image src='/moon.png' alt='image of a moon' sizes='100%' fill />
-        </div>
-        <div className={styles.icon}>
-          <Image src='/sun.png' alt='image of a sun' sizes='100%' fill />
-        </div>
-        <motion.div className={`${styles.indicator}`} animate={{ x: !isDark ? 0 : "-100%" }} />
-      </label>
-    </div>
+    <button
+      type="button"
+      role="switch"
+      aria-checked={isDark}
+      aria-label={t('toggleTheme')}
+      className={styles.container}
+      onClick={toggleTheme}
+    >
+      <span className={styles.toggle}>
+        <span className={styles.icon}>
+          <Image src='/moon.png' alt='' aria-hidden="true" sizes='24px' fill />
+        </span>
+        <span className={styles.icon}>
+          <Image src='/sun.png' alt='' aria-hidden="true" sizes='24px' fill />
+        </span>
+        <motion.span className={styles.indicator} animate={{ x: !isDark ? 0 : "-100%" }} />
+      </span>
+    </button>
   )
 }

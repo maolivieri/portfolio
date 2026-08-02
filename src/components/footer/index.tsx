@@ -3,9 +3,9 @@ import { ContactDetails } from "../contact-section";
 
 export function Footer() {
   return (
-    <div className={styles.footer}>
+    <footer className={styles.footer}>
       <ContactDetails />
       <p>2024 © Matheus Olivieri</p>
-    </div>
+    </footer>
   )
 }

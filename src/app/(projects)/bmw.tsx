@@ -1,5 +1,5 @@
 import { Button } from "@/components/button";
-import { ProjectCard } from "@/components/project-card";
+import { PROJECT_MEDIA_SIZES, ProjectCard } from "@/components/project-card";
 import { TechPill } from "@/components/tech-pill";
 import { GithubIcon } from "@/icons/github";
 import { LinkIcon } from "@/icons/link";
@@ -9,16 +9,19 @@ import Image from "next/image";
 
 export function BMWProject() {
   const t = useTranslations('projects');
+  const tm = useTranslations('media');
+  const title = t('BMW.title');
+
   return (
     <ProjectCard
-      title={t('BMW.title')}
+      title={title}
       description={t('BMW.description')}
       media={
         <Image
           src="/projects/bmw.png"
-          alt='BMW project image'
+          alt={tm('screenshotOf', { title })}
           fill
-          sizes='100%'
+          sizes={PROJECT_MEDIA_SIZES}
         />
       }
       techs={

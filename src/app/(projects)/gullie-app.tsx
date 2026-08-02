@@ -1,5 +1,5 @@
 import { Button } from "@/components/button";
-import { ProjectCard } from "@/components/project-card";
+import { PROJECT_MEDIA_SIZES, ProjectCard } from "@/components/project-card";
 import { TechPill } from "@/components/tech-pill";
 import { GithubIcon } from "@/icons/github";
 import { LinkIcon } from "@/icons/link";
@@ -9,15 +9,18 @@ import Image from "next/image";
 
 export function GullieAppProject() {
   const t = useTranslations('projects');
+  const tm = useTranslations('media');
+  const title = t('gullie-app.title');
+
   return (
     <ProjectCard
-      title={t('gullie-app.title')}
+      title={title}
       description={t('gullie-app.description')}
       media={
         <Image
           src="/projects/gullie-app.png"
-          alt='gullie-app project image'
-          sizes='100%'
+          alt={tm('screenshotOf', { title })}
+          sizes={PROJECT_MEDIA_SIZES}
           fill
         />
       }

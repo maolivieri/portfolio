@@ -1,5 +1,3 @@
-'use client'
-
 import { shiftArray } from '@/utils/shiftArray';
 import { MainSkills } from './main-skills';
 import { SecondarySkills } from './secondary-skills';

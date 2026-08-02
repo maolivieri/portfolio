@@ -1,7 +1,10 @@
 
 .container {
+  all: unset;
+  box-sizing: border-box;
   display: inline-block;
   position: relative;
+  cursor: pointer;
   height: 1.75rem;
   width: 3.5rem;
   margin-left: 1rem;
@@ -13,7 +16,6 @@
 }
 
 .toggle {
-  cursor: pointer;
   background: var(--opaque-bg);
   position: relative;
   display: flex;

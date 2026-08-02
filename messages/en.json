@@ -27,7 +27,7 @@
     },
     "gullie-master": {
       "title": "Gullie Manager",
-      "description": "Gullie Manager is the admin panel I developed to help organizations manage venue details, schedules, products, condiments, menus, tables, and other settings. It provides a comprehensive and intuitive interface for administrators to configure all aspects of their venue operations." 
+      "description": "Gullie Manager is the admin panel I developed to help organizations manage venue details, schedules, products, condiments, menus, tables, and other settings. It provides a comprehensive and intuitive interface for administrators to configure all aspects of their venue operations."
     },
     "gullie-app": {
       "title": "Gullie App",
@@ -37,5 +37,23 @@
       "title": "MyPlace loyalty apps",
       "description": "MyPlace is a series of white-label mobile apps tailored for loyalty programs in restaurants, pubs, and universities. These apps allowed clients to customize the look and feel to match their brand. Each solution included a mobile app and an administrative panel (CMS) for managing content. The apps were fully integrated with the Bepoz point of sales system, enabling seamless tracking of customer rewards and transactions."
     }
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content",
+    "mainNavigation": "Main navigation",
+    "toggleTheme": "Dark mode",
+    "switchLanguage": "Switch language to {language}",
+    "languageNames": "{language, select, en {English} pt {Portuguese} other {{language}}}",
+    "email": "Send an email to Matheus Olivieri",
+    "linkedin": "Matheus Olivieri on LinkedIn (opens in a new tab)",
+    "whatsapp": "Message Matheus Olivieri on WhatsApp (opens in a new tab)",
+    "resume": "Download Matheus Olivieri's resume (PDF)",
+    "newTab": "opens in a new tab"
+  },
+  "media": {
+    "play": "Play the {label} demo",
+    "pause": "Pause the {label} demo",
+    "demoOf": "Demo of {title}",
+    "screenshotOf": "Screenshot of {title}"
   }
 }

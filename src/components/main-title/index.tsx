@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import styles from './styles.module.scss';
-import { motion, Variants } from 'framer-motion';
+import { motion, Variants } from 'motion/react';
 
 export function Title() {
   const t = useTranslations('main');
@@ -31,56 +31,58 @@ export function Title() {
   const lettterAnimationOverlay = getAnimationVariants(2, 5.8, (i) => i * 0.2);
   const lettterAnimation = getAnimationVariants(2, 5.8, (i) => (i * 0.2) + 0.15);
 
+  // A frase é lida uma única vez a partir do aria-label: as letras são
+  // divididas em spans só para a animação e a terceira palavra ainda é
+  // duplicada para o efeito de sombra.
   return (
-    <div className={styles['title-container']}>
+    <p className={styles['title-container']} aria-label={words.join(' ')}>
       {words.map((word, index) => (
-        <>
-          <motion.h1
-            key={word}
-            custom={index}
-            initial="hidden"
-            animate="visible"
-            variants={animation}
-            whileInView="visible"
-            viewport={{ amount: 'some' }}
-            className={styles['title-word']}
-          >
-            {index < 2 ? word : (
-              <>
-                <div className={styles['title-overlay']}>
-                  {word.split('').map((letter, letterIndex) => (
-                    <motion.span
-                      key={`${letterIndex}-${letter}`}
-                      custom={letterIndex}
-                      initial="hidden"
-                      animate="visible"
-                      whileInView="visible"
-                      variants={lettterAnimationOverlay}
-                      className={styles['title-letter']}
-                      style={{ color: 'var(--tertiary)' }}
-                    >
-                      {letter}
-                    </motion.span>
-                  ))}
-                </div>
-                {word.split('').map((letter, letterIndexT) => (
+        <motion.span
+          key={word}
+          custom={index}
+          initial="hidden"
+          animate="visible"
+          variants={animation}
+          whileInView="visible"
+          viewport={{ amount: 'some' }}
+          className={styles['title-word']}
+          aria-hidden="true"
+        >
+          {index < 2 ? word : (
+            <>
+              <span className={styles['title-overlay']}>
+                {word.split('').map((letter, letterIndex) => (
                   <motion.span
-                    key={`${letterIndexT}-${letter}-shadow`}
-                    custom={letterIndexT}
+                    key={`${letterIndex}-${letter}`}
+                    custom={letterIndex}
                     initial="hidden"
                     animate="visible"
                     whileInView="visible"
-                    variants={lettterAnimation}
+                    variants={lettterAnimationOverlay}
                     className={styles['title-letter']}
+                    style={{ color: 'var(--tertiary)' }}
                   >
                     {letter}
                   </motion.span>
                 ))}
-              </>
-            )}
-          </motion.h1>
-        </>
+              </span>
+              {word.split('').map((letter, letterIndexT) => (
+                <motion.span
+                  key={`${letterIndexT}-${letter}-shadow`}
+                  custom={letterIndexT}
+                  initial="hidden"
+                  animate="visible"
+                  whileInView="visible"
+                  variants={lettterAnimation}
+                  className={styles['title-letter']}
+                >
+                  {letter}
+                </motion.span>
+              ))}
+            </>
+          )}
+        </motion.span>
       ))}
-    </div>
+    </p>
   )
 }
