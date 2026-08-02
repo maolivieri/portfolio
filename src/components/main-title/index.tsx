@@ -28,12 +28,30 @@ export function Title() {
   }
 
   const animation = getAnimationVariants(5, 0.8, (i) => i * 0.3);
-  const lettterAnimationOverlay = getAnimationVariants(2, 5.8, (i) => i * 0.2);
-  const lettterAnimation = getAnimationVariants(2, 5.8, (i) => (i * 0.2) + 0.15);
+
+  // Cada letra entra em --tertiary e volta para --secondary assim que a própria
+  // entrada termina, formando um brilho que percorre a palavra. Isso era feito
+  // duplicando a palavra em duas camadas sobrepostas, o que fazia a cor final
+  // depender da ordem de pintura entre o overlay absoluto e as letras
+  // transformadas — frágil e fora de sincronia. Agora é uma camada só.
+  const letterDelay = (i: number) => i * 0.2;
+  const letterAnimation: Variants = {
+    hidden: { opacity: 0, x: 2, color: 'var(--tertiary)' },
+    visible: (i: number) => ({
+      opacity: 1,
+      x: 0,
+      color: 'var(--secondary)',
+      transition: {
+        delay: letterDelay(i),
+        type: 'spring',
+        stiffness: 300,
+        color: { delay: letterDelay(i) + 0.35, duration: 0.25, ease: 'easeOut' },
+      },
+    }),
+  };
 
   // A frase é lida uma única vez a partir do aria-label: as letras são
-  // divididas em spans só para a animação e a terceira palavra ainda é
-  // duplicada para o efeito de sombra.
+  // divididas em spans apenas para a animação.
   return (
     <p className={styles['title-container']} aria-label={words.join(' ')}>
       {words.map((word, index) => (
@@ -48,39 +66,19 @@ export function Title() {
           className={styles['title-word']}
           aria-hidden="true"
         >
-          {index < 2 ? word : (
-            <>
-              <span className={styles['title-overlay']}>
-                {word.split('').map((letter, letterIndex) => (
-                  <motion.span
-                    key={`${letterIndex}-${letter}`}
-                    custom={letterIndex}
-                    initial="hidden"
-                    animate="visible"
-                    whileInView="visible"
-                    variants={lettterAnimationOverlay}
-                    className={styles['title-letter']}
-                    style={{ color: 'var(--tertiary)' }}
-                  >
-                    {letter}
-                  </motion.span>
-                ))}
-              </span>
-              {word.split('').map((letter, letterIndexT) => (
-                <motion.span
-                  key={`${letterIndexT}-${letter}-shadow`}
-                  custom={letterIndexT}
-                  initial="hidden"
-                  animate="visible"
-                  whileInView="visible"
-                  variants={lettterAnimation}
-                  className={styles['title-letter']}
-                >
-                  {letter}
-                </motion.span>
-              ))}
-            </>
-          )}
+          {index < 2 ? word : word.split('').map((letter, letterIndex) => (
+            <motion.span
+              key={`${letterIndex}-${letter}`}
+              custom={letterIndex}
+              initial="hidden"
+              animate="visible"
+              whileInView="visible"
+              variants={letterAnimation}
+              className={styles['title-letter']}
+            >
+              {letter}
+            </motion.span>
+          ))}
         </motion.span>
       ))}
     </p>
